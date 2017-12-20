@@ -112,7 +112,6 @@
 		<script type="text/javascript" src="js/rem.min.js" ></script>
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript">
-			mui.init();
 		(function($) {
 				$.init();
 				var btns = $('.btn');
@@ -148,6 +147,7 @@
 				});
 			})(mui);
 	window.onload=function(){
+		$(".mui-dtpicker-active-for-page").removeClass(".mui-dtpicker-active-for-page");
 		//搜索框聚焦
 		 $("#search").click(function(){
 		 	$(".sinput").focus();

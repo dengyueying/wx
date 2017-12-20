@@ -31,6 +31,7 @@ section
 	width: 1rem;
 	height: 1rem;
 	margin-right: 0.31rem;
+	display: block;
 }
 .pic-list li .tet{
 	color: #666666;
@@ -46,6 +47,7 @@ section
 	width: 0.5rem;
 	height: 0.5rem;
 	margin-right: 0.33rem;
+	display: block;
 }
 .chain-list .tet{
 	color: #999999;
