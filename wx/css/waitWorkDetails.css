@@ -138,6 +138,7 @@ section>.ic-list{
 	background: #fff;
 	font-size: 0.3rem;
 	color: rgb(10,180,230);
+	border-bottom:1px solid #ecedee;
 }
 .create-right {
     background: url(../img/create-right.png) no-repeat;
@@ -166,6 +167,7 @@ section>.ic-list{
 }
 .box .ic-list:nth-of-type(1){
 	margin: 0;
+	border-top: none;
 }
 @media (max-width:375px) { 
   .ic-list li:before{

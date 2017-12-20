@@ -24,9 +24,7 @@
     color: #fff;
     background: rgb(250,64,27);
    border-radius:50%;
-   height: 0.34rem;
-   line-height: 0.34rem;
-   padding: 0 0.1rem;
+   padding: 0.04rem 0.1rem;
 }
 
 .mui-bar-tab .mui-tab-item{
@@ -40,4 +38,9 @@
 	font-size: 0.32rem;
 	line-height: 0.32rem;
 	height: 0.32rem;
+}
+@media (max-width:375px) { 
+  .mui-tab-item .mui-badge{
+	padding: 1px 5px;
+	}
 }
