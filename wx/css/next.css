@@ -46,7 +46,8 @@
 	font-size: 0.32rem;
 }
 .mui-checkbox input[type=checkbox]{
-	top: inherit;
+	top: 50%;
+	transform: translateY(-50%);
 	right: 0.32rem;
 	width: 0.54rem;
 	height: 0.54rem;
