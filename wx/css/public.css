@@ -3,6 +3,9 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+body::-webkit-scrollbar,section::-webkit-scrollbar{
+	display:none;
+	}
 p,ul{
 	margin: 0;
 	padding: 0;
