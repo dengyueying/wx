@@ -108,46 +108,47 @@
 		</footer>
 		
 		<script src="js/mui.min.js"></script>
-		<script type="text/javascript" src="js/mui.picker.min.js" ></script>
+		<!--<script type="text/javascript" src="js/mui.picker.min.js" ></script>-->
 		<script type="text/javascript" src="js/rem.min.js" ></script>
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript">
-		(function($) {
-				$.init();
-				var btns = $('.btn');
-				var start,end,lg;
-				btns.each(function(i, btn) {
-					btn.setAttribute('data-options','{"beginYear":'+new Date().getFullYear()+'}');
-					btn.addEventListener('tap', function() {
-						var optionsJson = this.getAttribute('data-options') || '{}';
-						var options = JSON.parse(optionsJson);
-						var id = this.getAttribute('id');
-						var picker = new $.DtPicker(options);
-						picker.show(function(rs) {
-							btn.getElementsByTagName("span")[1].innerHTML=rs.text;
-							picker.dispose();
-							start=document.getElementById("startTime").innerHTML;
-							end=document.getElementById("endTime").innerHTML;
-							lg=document.getElementById("timeLong");
-							
-							if(end!="" && start!=""){
-								alert(start);
-								var date1 = new Date(start);
-								var date2 = new Date(end);
-								 
-								var s1 = date1.getTime(),s2 = date2.getTime();
-								var total = (s2 - s1)/1000;
-								var day = parseInt(total / (24*60*60));//计算整数天数
-								var afterDay = total - day*24*60*60;//取得算出天数后剩余的秒数
-								var hour = parseFloat(afterDay/(60*60)).toFixed(1);//计算整数小时数
-								lg.innerHTML=day*24-0+parseFloat(hour);
-							}
-						});
-					}, false);
-				});
-			})(mui);
+		
 	window.onload=function(){
-		$(".mui-dtpicker-active-for-page").removeClass("mui-dtpicker-active-for-page");
+//		(function($) {
+//				$.init();
+//				var btns = $('.btn');
+//				var start,end,lg;
+//				btns.each(function(i, btn) {
+//					btn.setAttribute('data-options','{"beginYear":'+new Date().getFullYear()+'}');
+//					btn.addEventListener('tap', function() {
+//						var optionsJson = this.getAttribute('data-options') || '{}';
+//						var options = JSON.parse(optionsJson);
+//						var id = this.getAttribute('id');
+//						var picker = new $.DtPicker(options);
+//						picker.show(function(rs) {
+//							btn.getElementsByTagName("span")[1].innerHTML=rs.text;
+//							picker.dispose();
+//							start=document.getElementById("startTime").innerHTML;
+//							end=document.getElementById("endTime").innerHTML;
+//							lg=document.getElementById("timeLong");
+//							
+//							if(end!="" && start!=""){
+//								alert(start);
+//								var date1 = new Date(start);
+//								var date2 = new Date(end);
+//								 
+//								var s1 = date1.getTime(),s2 = date2.getTime();
+//								var total = (s2 - s1)/1000;
+//								var day = parseInt(total / (24*60*60));//计算整数天数
+//								var afterDay = total - day*24*60*60;//取得算出天数后剩余的秒数
+//								var hour = parseFloat(afterDay/(60*60)).toFixed(1);//计算整数小时数
+//								lg.innerHTML=day*24-0+parseFloat(hour);
+//							}
+//						});
+//					}, false);
+//				});
+//			})(mui);
+			
 		//搜索框聚焦
 		 $("#search").click(function(){
 		 	$(".sinput").focus();
@@ -173,7 +174,6 @@
 		 $(".people li").click(function(){
 		 	$(".backdrop").addClass("mui-hidden");
 		 });
-		 
 	}
 		</script>
 	</body>
