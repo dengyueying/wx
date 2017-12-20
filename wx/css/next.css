@@ -34,9 +34,12 @@
 .mui-input-group .mui-input-row:after{
 	left: 0;
 	background: rgb(236,237,238);
+	z-index: 2;
 }
 .mui-checkbox label{
 	padding: 0.34rem 0.4rem;
+	position: relative;
+	z-index: 1;
 }
 .mui-checkbox input[type=checkbox]:checked:before{
 	color:rgb(0,180,230) !important;
@@ -44,6 +47,9 @@
 .box label{
 	color:#666;
 	font-size: 0.32rem;
+}
+.box{
+	border-bottom: none;
 }
 .mui-checkbox input[type=checkbox]{
 	top: 50%;
