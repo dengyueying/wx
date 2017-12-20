@@ -131,6 +131,7 @@ section>.ic-list{
 	position: relative;
 	display: flex;
 	align-items: center;
+	border-bottom:1px solid #ecedee;
 }
 .speed{
 	height: 0.94rem;
@@ -138,7 +139,6 @@ section>.ic-list{
 	background: #fff;
 	font-size: 0.3rem;
 	color: rgb(10,180,230);
-	border-bottom:1px solid #ecedee;
 }
 .create-right {
     background: url(../img/create-right.png) no-repeat;

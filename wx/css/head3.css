@@ -33,9 +33,9 @@ section{
 .mui-bar .head-title {
     color: rgb(243,243,243);
     font-size: 0.38rem;
-    font-weight: 100;
-        height: 0.98rem;
-        line-height: 0.98rem;
+    height: 0.98rem;
+    line-height: 0.98rem;
+    font-weight: normal;
 }
 .icon-share{
 	width: 0.08rem;
