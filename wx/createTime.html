@@ -6,7 +6,7 @@
 		<title>创建请假事件</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.min.css" rel="stylesheet" />
-		<!--<link rel="stylesheet" href="css/mui.picker.min.css" />-->
+		<link rel="stylesheet" href="css/mui.picker.min.css" />
 		<link rel="stylesheet" href="css/public.css" />
 		<link rel="stylesheet" href="css/head3.css" />
 		<link rel="stylesheet" href="css/create.css" />
@@ -58,6 +58,7 @@
 				<div class="cont sheight border">
 					<span class="text">附件</span>		
 				</div>
+				<textarea name="" rows="" cols="" oninput="if(value.length>50)value=value.slice(0,50)" placeholder="填写会签内容,请填写少于50字" class="csign border"></textarea>
 				<div class="last bordersb">
 					<div class="cont tic">
 							<span class="text vertical">「审批」</span>
@@ -108,46 +109,46 @@
 		</footer>
 		
 		<script src="js/mui.min.js"></script>
-		<!--<script type="text/javascript" src="js/mui.picker.min.js" ></script>-->
+		<script type="text/javascript" src="js/mui.picker.min.js" ></script>
 		<script type="text/javascript" src="js/rem.min.js" ></script>
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript">
 		
 	window.onload=function(){
-//		(function($) {
-//				$.init();
-//				var btns = $('.btn');
-//				var start,end,lg;
-//				btns.each(function(i, btn) {
-//					btn.setAttribute('data-options','{"beginYear":'+new Date().getFullYear()+'}');
-//					btn.addEventListener('tap', function() {
-//						var optionsJson = this.getAttribute('data-options') || '{}';
-//						var options = JSON.parse(optionsJson);
-//						var id = this.getAttribute('id');
-//						var picker = new $.DtPicker(options);
-//						picker.show(function(rs) {
-//							btn.getElementsByTagName("span")[1].innerHTML=rs.text;
-//							picker.dispose();
-//							start=document.getElementById("startTime").innerHTML;
-//							end=document.getElementById("endTime").innerHTML;
-//							lg=document.getElementById("timeLong");
-//							
-//							if(end!="" && start!=""){
-//								alert(start);
-//								var date1 = new Date(start);
-//								var date2 = new Date(end);
-//								 
-//								var s1 = date1.getTime(),s2 = date2.getTime();
-//								var total = (s2 - s1)/1000;
-//								var day = parseInt(total / (24*60*60));//计算整数天数
-//								var afterDay = total - day*24*60*60;//取得算出天数后剩余的秒数
-//								var hour = parseFloat(afterDay/(60*60)).toFixed(1);//计算整数小时数
-//								lg.innerHTML=day*24-0+parseFloat(hour);
-//							}
-//						});
-//					}, false);
-//				});
-//			})(mui);
+		(function($) {
+				$.init();
+				var btns = $('.btn');
+				var start,end,lg;
+				btns.each(function(i, btn) {
+					btn.setAttribute('data-options','{"beginYear":'+new Date().getFullYear()+'}');
+					btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							btn.getElementsByTagName("span")[1].innerHTML=rs.text;
+							picker.dispose();
+							start=document.getElementById("startTime").innerHTML;
+							end=document.getElementById("endTime").innerHTML;
+							lg=document.getElementById("timeLong");
+							
+							if(end!="" && start!=""){
+								alert(start);
+								var date1 = new Date(start);
+								var date2 = new Date(end);
+								 
+								var s1 = date1.getTime(),s2 = date2.getTime();
+								var total = (s2 - s1)/1000;
+								var day = parseInt(total / (24*60*60));//计算整数天数
+								var afterDay = total - day*24*60*60;//取得算出天数后剩余的秒数
+								var hour = parseFloat(afterDay/(60*60)).toFixed(1);//计算整数小时数
+								lg.innerHTML=day*24-0+parseFloat(hour);
+							}
+						});
+					}, false);
+				});
+			})(mui);
 			
 		//搜索框聚焦
 		 $("#search").click(function(){
