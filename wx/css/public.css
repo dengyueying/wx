@@ -24,6 +24,10 @@ body{
 	overflow-x: hidden;
 	overflow-y: auto;
 }
+.mui-content{
+	padding-top: 0.98rem !important;
+	padding-bottom: 0.98rem !important;
+}
 section{
 	width: 100%;
 	height: auto;
