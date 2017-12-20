@@ -1,0 +1,39 @@
+.mui-content{
+	background: rgb(237, 236, 236);
+}
+.mui-bar-tab{
+	background: #fff;
+	box-shadow: none;
+	border-top: 1px solid rgb(223,223,223);
+}
+.mui-tab-item{
+	position: relative;
+	border-left: 1px solid rgb(223,223,223);
+}
+.mui-bar-tab .mui-tab-item:first-child{
+	border: none;
+}
+.mui-tab-item .mui-badge {
+    font-size: 0.28rem;
+    position: absolute;
+    top:0.19rem;
+    color: #fff;
+    background: rgb(250,64,27);
+   border-radius:50%;
+   height: 0.34rem;
+   line-height: 0.38rem;
+   padding: 0 0.1rem;
+}
+
+.mui-bar-tab .mui-tab-item{
+	color: #1a1a1a;
+	height: 0.98rem;
+}
+.mui-bar-tab .mui-tab-item.mui-active{
+	color: rgb(0,166,228);
+}
+.mui-tab-label{
+	font-size: 0.32rem;
+	line-height: 0.32rem;
+	height: 0.32rem;
+}

@@ -1,0 +1,17 @@
+section{
+	padding: 0.98rem 0.34rem 0.2rem;
+}
+ .list .title span{
+ 	color: rgb(0,166,228);
+ }
+.list .wait{
+	color: #f9cc18;
+}
+
+.text p{
+	height: 0.52rem;
+	line-height: 0.52rem;
+}
+.text p .answer{
+	color: #1A1A1A;
+}

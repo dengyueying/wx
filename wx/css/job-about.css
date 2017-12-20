@@ -1,0 +1,39 @@
+.mui-content,body{
+	background: #fff;
+}
+.job-tabbar .mui-content{
+	background: #fff;
+}
+.job-tabbar .list .head{
+	height: 1rem;
+	color: #1A1A1A;
+	display: flex;
+	align-items: center;
+}
+.job-tabbar .list p{
+	color: #1A1A1A;
+	font-size: 0.3rem;
+}
+.job-tabbar .list .title{
+	font-size: 0.28rem;
+}
+.job-tabbar .classify{
+	width: 0.28rem;
+	height: 0.28rem;
+	margin-left: 0.12rem;
+}
+.job-tabbar .list li{
+	display: flex;
+	height: 1.26rem;
+	align-items: center;
+}
+.job-tabbar .list li img{
+	width:0.38rem;
+	height: 0.38rem;
+	margin-right: 0.22rem;
+}
+.job-tabbar .list .job{
+	color: #999999;
+	font-size: 0.26rem;
+	margin-left: 0.25rem;
+}

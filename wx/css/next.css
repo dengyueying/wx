@@ -1,0 +1,62 @@
+.next-list li p span{
+	font-size: 0.3rem;
+	color: #666;
+}
+.result:after{
+	display: none;
+}
+.next-list li p{
+	display: flex;
+}
+.next-list .number{
+	color: #fff;
+	background: #666;
+	border-radius: 50%;
+	width: 0.32rem;
+	height: 0.32rem;
+	display: block;
+    text-align: center;
+    line-height: 0.32rem;
+}
+.tic:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: rgb(236,237,238);
+    display: block;
+    top: 0;
+    left: 1rem;
+}
+.mui-input-group:after,.mui-input-group:before{
+	display: none;
+}
+.mui-input-group .mui-input-row:after{
+	left: 0;
+	background: rgb(236,237,238);
+}
+.mui-checkbox label{
+	padding: 0.34rem 0.4rem;
+}
+.mui-checkbox input[type=checkbox]:checked:before{
+	color:rgb(0,180,230) !important;
+}
+.box label{
+	color:#666;
+	font-size: 0.32rem;
+}
+.mui-checkbox input[type=checkbox]{
+	top: inherit;
+	right: 0.32rem;
+	width: 0.54rem;
+	height: 0.54rem;
+}
+
+.mui-input-group .mui-input-row{
+	height: inherit;
+	display: flex;
+	align-items: center;
+}
+.mui-checkbox input[type=checkbox]:before{
+	font-size: 0.54rem;
+}

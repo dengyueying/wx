@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>创建报销事件</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/head3.css" />
+		<link rel="stylesheet" href="css/create.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="" class="mui-action-back back"></a>
+			<h1 class="head-title">报销</h1>
+		</header>
+		<section>
+			<p class="release pad"><span class="create-left"></span>发起工作</p>
+			<div class="box nbtbox">
+				<div class="cont border">
+					<span class="text">报销金额</span>		
+					<input class="money" type="number" oninput="if(value.length>8)value=value.slice(0,8)" name="" id="" value="" placeholder="请输入金额数(元)"/>
+				</div>
+				<div class="cont border">
+					<span class="text">所在部门</span>		
+					<input class="money" type="text" name="" id="" oninput="if(value.length>8)value=value.slice(0,8)" value="" placeholder="如：人事部"/>
+				</div>	
+			</div>
+			<div class="box box2 nbtbox">
+				<div class="cont readd">
+					<span class="text">报销明细(元)</span>		
+					<img src="img/add.png" />
+				</div>
+				<div class="cont">
+					<span class="text info">项目名称</span>
+					<input type="text" class="project money" name="" id="" value="" oninput="if(value.length>8)value=value.slice(0,8)" placeholder="请输入费用项目名称"/>
+					<img src="img/delete.png"/>
+				</div>
+				<ul class="price border">
+					<li>
+						<p class="info">单价</p>
+						<input type="number" oninput="if(value.length>6)value=value.slice(0,6)" name="" id="" value="" placeholder="输入"/>
+					</li>
+					<li>
+						<p class="info">数量</p>
+						<input type="number" oninput="if(value.length>6)value=value.slice(0,6)" name="" id="" value="" placeholder="输入"/>
+					</li>
+					<li>
+						<p class="info">总计</p>
+						<input type="number" name="" oninput="if(value.length>8)value=value.slice(0,8)" id="" value="" placeholder="输入"/>
+					</li>
+				</ul>
+				<div class="cont explain">
+					<span class="text">报销说明</span>
+					<textarea name="" rows="" cols="" oninput="if(value.length>50)value=value.slice(0,50)" placeholder="请输入费用明细描述,请填写少于50字"></textarea>
+				</div>
+			</div>
+			<div class="box box3 nbtbox">
+				<div class="cont sheight border">
+					<span class="text">附件</span>		
+				</div>
+				<div class="cont sheight border">
+					<span class="text">会签</span>		
+				</div>
+				<textarea name="" rows="" cols="" oninput="if(value.length>50)value=value.slice(0,50)" placeholder="填写会签内容,请填写少于50字" class="csign border"></textarea>
+				<div class="last bordersb">
+					<div class="cont tic">
+							<span class="text vertical">「主办」</span>
+							<span class="text">王先森</span>
+							<img src="img/add.png" />
+					</div>
+					<div class="cont tic">
+							<span class="text vertical">「经办」</span>
+							<span class="text">王先森</span>
+							<img src="img/add.png" />
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<span class="mui-action-back">回退</span>
+			<span>保存</span>
+			<span>转交下一步</span>
+		</footer>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

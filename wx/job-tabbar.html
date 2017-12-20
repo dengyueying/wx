@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>工作</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/head3.css" />
+		<link rel="stylesheet" href="css/head2.css" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/job-about.css" />
+		<link rel="stylesheet" href="css/job-chat.css" />
+		<link rel="stylesheet" href="css/job-work.css" />
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="" class="mui-action-back back"></a>
+			<h1 id="title" class="head-title">已发布</h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="#tabbar">
+				<span class="mui-tab-label">发起工作</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-chat">
+				<span class="mui-badge" id="badge">6</span>
+				<span class="mui-tab-label" id="second">待办工作</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-contact">
+				<span class="mui-tab-label">工作流</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<div id="tabbar" class="mui-control-content mui-active job-tabbar">
+				<ul class="list">
+					<div class="head bordersb pad">
+						<p class="title">按分类</p>
+						<img src="img/classify.png" class="classify"/>
+					</div>
+					
+					<li class="bordersb pad">
+						<img src="img/case.png"/>
+						<p>人事<span class="job">共四个工作</span></p>
+					</li>
+					<li class="bordersb pad">
+						<img src="img/case.png"/>
+						<p>财务<span class="job">共四个工作</span></p>
+					</li>
+					<li class="bordersb pad">
+						<img src="img/case.png"/>
+						<p>销售<span class="job">共四个工作</span></p>
+					</li>
+				</ul>
+			</div>
+			<div id="tabbar-with-chat" class="mui-control-content job-chat">
+				<ul class="list">
+					<li class="bordersb pad">
+						<p class="classify"><span>请假申请</span><span class="time">2017-10-10  10:10:10</span></p>
+						<p class="detail">
+							<span class="step">1</span>
+							<span class="handle">(主办)</span>
+							<span class="depart">部门审批</span>
+							<span class="time2">2017-10-12</span>
+						</p>
+					</li>
+					<li class="bordersb pad">
+						<p class="classify"><span>请假申请</span><span class="time">2017-10-10  10:10:10</span></p>
+						<p class="detail">
+							<span class="step">1</span>
+							<span class="handle">(主办)</span>
+							<span class="depart">部门审批</span>
+							<span class="time2">2017-10-12</span>
+						</p>
+					</li>
+					<li class="bordersb pad">
+						<p class="classify"><span>请假申请</span><span class="time">2017-10-10  10:10:10</span></p>
+						<p class="detail">
+							<span class="step">12</span>
+							<span class="handle">(主办)</span>
+							<span class="depart">部门审批</span>
+							<span class="time2">2017-10-12</span>
+						</p>
+					</li>
+				</ul>	
+			</div>
+			<div id="tabbar-with-contact" class="mui-control-content job-work">
+				<div class="head pad">
+					<p class="title">工作流内容</p>
+					<img src="img/classify.png" class="classify"/>
+				</div>
+				<ul class="list pad">
+					<li>
+						<img src="img/work2.png"/>
+						<p>已完成</p>
+					</li>
+					<li>
+						<img src="img/work3.png"/>
+						<p>已办结</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" src="js/common.js" ></script>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script>
+		window.onload=function(){
+			var title = document.getElementById("title");
+			var rt=$("#second").position().left;
+			var rw=$("#second").outerWidth(true);
+			$("#badge").css("left",rt-0+rw-0+4+"px");
+			
+			//更换标题
+			mui('.mui-bar-tab').on('tap', 'a', function(e) {
+				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
+			});
+			
+			  //多余字数...
+		      $(".list li .text").each(function () {
+		        if($(this).text().length>36){
+		          var demoHtml = $(this).html().substr(0,36)+'...';
+		          $(this).html(demoHtml);
+		        }
+		      });
+		      
+		      $(".job-tabbar .list li").click(function(){
+		      	mui.openWindow({
+							url: 'work.html',
+							id: 'work',
+						});
+		      });
+		       $(".job-chat .list li").click(function(){
+		      	mui.openWindow({
+							url: 'waitWorkDetails.html',
+							id: 'waitWorkDetails',
+						});
+		      });
+		      $(".job-work").click(function(){
+				mui.openWindow({
+					url: 'classify.html',
+					id: 'classify',
+				});
+			});
+		}
+	</script>
+</html>

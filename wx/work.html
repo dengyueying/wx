@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/head3.css" />
+		<link rel="stylesheet" href="css/job-work.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="" class="mui-action-back back"></a>
+			<h1 class="head-title">人事工作</h1>
+		</header>
+		<section class="job-work">
+				<div class="head pad">
+						<p class="title">人事分类</p>
+						<img src="img/classify.png" class="classify"/>
+					</div>
+				<ul class="list pad">
+					<li id="leave">
+						<img src="img/work1.png"/>
+						<p>请假</p>
+					</li>
+					<li id="total">
+						<img src="img/work1.png"/>
+						<p>报销</p>
+					</li>
+					<li>
+						<img src="img/work1.png"/>
+						<p>加班</p>
+					</li>
+					<li>
+						<img src="img/work1.png"/>
+						<p>考勤</p>
+					</li>
+			</div>	
+		</section>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript">
+			mui.init();
+			$("#leave").click(function(){
+				mui.openWindow({
+					url: 'createTime.html',
+					id: 'createTime',
+				});
+			});
+			$("#total").click(function(){
+				mui.openWindow({
+					url: 'create.html',
+					id: 'create',
+				});
+			})
+		</script>
+	</body>
+
+</html>

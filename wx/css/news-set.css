@@ -1,0 +1,32 @@
+.content{
+	padding-bottom: 0.2rem;
+}	
+.list::after,.list::before{
+	display: none;
+}	
+			.mui-content>.mui-table-view:first-child{
+				margin: 0;
+			}
+			.mui-table-view-cell:after{
+				left: 0;
+			}
+			.mui-table-view-cell{
+				padding: 0;
+				margin: 0;
+				height: 1.32rem;
+				line-height:1.32rem;
+			}
+			.mui-table-view-cell>a:not(.mui-btn){
+				padding: 0;
+				margin: 0;
+				color: #1A1A1A;
+				font-size: 0.3rem;
+				padding: 0 0.34rem;
+			}
+			.mui-table-view-cell:after{
+				background: rgb(236,237,238);
+			}
+#tabbar-with-map .list li{
+	margin: 0;
+	padding: 0;
+}
