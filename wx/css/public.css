@@ -3,9 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-body::-webkit-scrollbar,section::-webkit-scrollbar{
-	display:none;
-	}
 p,ul{
 	margin: 0;
 	padding: 0;
@@ -27,13 +24,11 @@ body{
 .mui-content{
 	padding-top: 0.98rem !important;
 	padding-bottom: 0.98rem !important;
+	background: #fff;
 }
 section{
 	width: 100%;
 	height: auto;
-}
-.mui-content{
-	background: #fff;
 }
 .content{
 	width: 100%;
