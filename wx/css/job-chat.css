@@ -24,7 +24,7 @@
 .job-chat .detail .step{
 	background:#f9cc18;
 	color: #fff;
-	padding:0.04rem 0.12rem;
+	padding:0.02rem 0.1rem;
 	border-radius: 50%;
 }
 .job-chat .detail .handle{
@@ -40,6 +40,6 @@
 }
 @media (max-width:375px) { 
   .job-chat .detail .step{
-	padding: 1px 4px;
+	padding: 1px 5px;
 }
 }
