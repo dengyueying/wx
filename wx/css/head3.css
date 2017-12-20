@@ -41,6 +41,8 @@ section{
 	height: 0.44rem;
 	position: absolute;
 	right: 0.34rem;
+	top:50%;
+	transform: translateY(-50%);
 	display: block;
 	background: url(../img/share.png) no-repeat;
 	background-size: 100% 100%;

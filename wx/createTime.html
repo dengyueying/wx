@@ -74,33 +74,33 @@
 			
 		</section>
 		<div class="mui-backdrop backdrop mui-hidden">
-				<div class="person">
-					<div class="head pad">
-						<i class="fail2" id="fail"></i>
-						<p>选择人员</p>
-					</div>
-					<div class="search">
-						<input type="search" name="t" class="mui-input-clear sinput" placeholder="">
-						<label id="search" for="t">
-							<i class="icon-sous2"></i>
-							搜索
-						</label>
-					</div>
-					<ul class="people">
-						<li>
-							<img src="img/portrait.png" alt="" />
-							<span>王先森</span>
-						</li><li>
-							<img src="img/portrait.png" alt="" />
-							<span>王先森</span>
-						</li>
-						<li>
-							<img src="img/portrait.png" alt="" />
-							<span>王先森</span>
-						</li>
-					</ul>
+			<div class="person">
+				<div class="head pad">
+					<i class="fail2" id="fail"></i>
+					<p>选择人员</p>
 				</div>
+				<div class="search">
+					<input type="search" name="t" class="mui-input-clear sinput" placeholder="">
+					<label id="search" for="t">
+						<i class="icon-sous2"></i>
+						搜索
+					</label>
+				</div>
+				<ul class="people">
+					<li>
+						<img src="img/portrait.png" alt="" />
+						<span>王先森</span>
+					</li><li>
+						<img src="img/portrait.png" alt="" />
+						<span>王先森</span>
+					</li>
+					<li>
+						<img src="img/portrait.png" alt="" />
+						<span>王先森</span>
+					</li>
+				</ul>
 			</div>
+		</div>
 		<footer>
 			<span class="mui-action-back">回退</span>
 			<span>保存</span>
@@ -140,7 +140,7 @@
 								var day = parseInt(total / (24*60*60));//计算整数天数
 								var afterDay = total - day*24*60*60;//取得算出天数后剩余的秒数
 								var hour = parseFloat(afterDay/(60*60)).toFixed(1);//计算整数小时数
-								lg.innerHTML=day*24+parseFloat(hour);
+								lg.innerHTML=day*24-0+parseFloat(hour);
 							}
 						});
 					}, false);

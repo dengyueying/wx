@@ -45,6 +45,8 @@ select{
 	height: 0.36rem;
 	position: absolute;
 	left: 0.34rem;
+	top:50%;
+	transform: translateY(-50%);
 	z-index: 66;
 }
 .head p{
