@@ -44,30 +44,13 @@
 					</div>
 				</div>
 			<p class="release pad mysp">事物提醒</p>
-			<div class="box">
-				<form class="mui-input-group">
-					<div class="mui-input-row mui-checkbox">
-						<label>下一步办理人</label>
-						<input name="checkbox1" value="Item 3" type="checkbox" >
-					</div>
-					<div class="mui-input-row mui-checkbox">
-						<label>发起人</label>
-						<input name="checkbox1" value="Item 4" type="checkbox">
-					</div>
-					<div class="mui-input-row mui-checkbox">
-						<label>全部经办人</label>
-						<input name="checkbox1" value="Item 4" type="checkbox">
-					</div>
-				</form>
-				<!--<p class="speed pad">提醒内容<span class="create-right"></span></p>-->
+			<div class="box checkbox">
+				<p><span>下一步办理人</span><span class="check"></span></p>
+				<p><span>发起人</span><span class="check"></span></p>
+				<p><span>全部经办人</span><span class="check"></span></p>
 			</div>
-			<div class="box">
-				<form class="mui-input-group">
-					<div class="mui-input-row mui-checkbox">
-						<label>结束流程</label>
-						<input name="checkbox1" value="Item 4" type="checkbox">
-					</div>
-				</form>
+			<div class="box checkbox">
+				<p><span>结束流程</span><span class="check"></span></p>
 			</div>
 		</section>
 		<footer>
@@ -77,6 +60,16 @@
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript" src="js/rem.min.js" ></script>
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script>
+			$(".check").click(function(){
+		 		if($(this).hasClass("checked")){
+		 			$(this).removeClass("checked");
+		 		}
+		 		else{
+		 			$(this).addClass("checked");
+		 		}
+		 	})
+		</script>
 	</body>
 
 </html>
