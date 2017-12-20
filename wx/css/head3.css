@@ -10,6 +10,7 @@ section{
     padding: 0 0.34rem;
     display: flex;
     align-items: center;
+    box-shadow: none;
 }
 .mui-bar .back {
     width: 0.36rem;
