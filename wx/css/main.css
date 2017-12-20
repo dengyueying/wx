@@ -41,6 +41,6 @@
 }
 @media (max-width:375px) { 
   .mui-tab-item .mui-badge{
-	padding: 1px 5px;
+	padding: 2px 5px;
 	}
 }
