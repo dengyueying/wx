@@ -28,34 +28,42 @@
     top: 0;
     left: 1rem;
 }
+.mui-input-group:after,.mui-input-group:before{
+	display: none;
+}
+.mui-input-group .mui-input-row:after{
+	left: 0;
+	background: rgb(236,237,238);
+	z-index: 2;
+}
+.mui-checkbox label{
+	padding: 0.34rem 0.4rem;
+	position: relative;
+	z-index: 1;
+}
+.mui-checkbox input[type=checkbox]:checked:before{
+	color:rgb(0,180,230) !important;
+}
+.box label{
+	color:#666;
+	font-size: 0.32rem;
+}
 .box{
 	border-bottom: none;
 }
-.checkbox p{
-	display: flex;
-	align-items: center;
-	padding: 0.33rem 0.34rem;
-	background: #FFF;
-	border-bottom: 1px solid #ECEDEE;
-	position: relative;
-}
-.checkbox p span{
-	color: #666666;
-	font-size: 0.32rem;
-	height: 0.32rem;
-	line-height: 0.32rem;
-}
-.checkbox p span.check{
-	width: 0.46rem;
-	height: 0.46rem;
-	background: url(../img/check.png) no-repeat;
-	background-size: 100% 100%;
-	position: absolute;
-	right: 0.34rem;
+.mui-checkbox input[type=checkbox]{
 	top: 50%;
 	transform: translateY(-50%);
+	right: 0.32rem;
+	width: 0.54rem;
+	height: 0.54rem;
 }
-.checkbox p span.checked{
-	background: url(../img/checked.png) no-repeat;
-	background-size: 100% 100%;
+
+.mui-input-group .mui-input-row{
+	height: inherit;
+	display: flex;
+	align-items: center;
+}
+.mui-checkbox input[type=checkbox]:before{
+	font-size: 0.54rem;
 }
