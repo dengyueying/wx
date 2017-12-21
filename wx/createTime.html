@@ -22,7 +22,7 @@
 			<p class="release pad"><span class="create-left"></span>发起工作</p>
 			<div class="box nbtbox">
 				<div class="cont border">
-					<span class="text">请假类型</span>		
+					<span class="text">请假类型</span>
 					<select name="">
 						<option value="">年假</option>
 						<option value="">事假</option>
@@ -34,17 +34,17 @@
 					<span class="create-right"></span>
 				</div>
 				<div class="cont btn border" type="date">
-					<span class="text">开始时间</span>		
+					<span class="text">开始时间</span>
 					<span class="text dtime" id="startTime"></span>
 					<span class="create-right"></span>
-				</div>	
+				</div>
 				<div class="cont btn border">
-					<span class="text">结束时间</span>		
+					<span class="text">结束时间</span>
 					<span class="text dtime" id="endTime"></span>
 					<span class="create-right"></span>
-				</div>	
+				</div>
 				<div class="cont border">
-					<span class="text">时长</span>		
+					<span class="text">时长</span>
 					<span class="text dtime" id="timeLong"></span>
 				</div>
 			</div>
@@ -56,22 +56,23 @@
 			</div>
 			<div class="box box3 nbtbox">
 				<div class="cont sheight border">
-					<span class="text">附件</span>		
+					<span class="text">附件</span>
 				</div>
+				<textarea class="tarea" name="" rows="" cols="" placeholder="请输入请假事由,请填写少于50字" oninput="if(value.length>50)value=value.slice(0,50)"></textarea>
 				<div class="last bordersb">
 					<div class="cont tic">
-							<span class="text vertical">「审批」</span>
-							<span class="text">王先森</span>
-							<img src="img/add.png" class="add"/>
+						<span class="text vertical">「审批」</span>
+						<span class="text">王先森</span>
+						<img src="img/add.png" class="add" />
 					</div>
 					<div class="cont tic">
-							<span class="text vertical">「抄送」</span>
-							<span class="text">王先森</span>
-							<img src="img/add.png" class="add"/>
+						<span class="text vertical">「抄送」</span>
+						<span class="text">王先森</span>
+						<img src="img/add.png" class="add" />
 					</div>
 				</div>
 			</div>
-			
+
 		</section>
 		<div class="mui-backdrop backdrop mui-hidden">
 			<div class="person">
@@ -90,7 +91,8 @@
 					<li>
 						<img src="img/portrait.png" alt="" />
 						<span>王先森</span>
-					</li><li>
+					</li>
+					<li>
 						<img src="img/portrait.png" alt="" />
 						<span>王先森</span>
 					</li>
@@ -106,75 +108,75 @@
 			<span>保存</span>
 			<span>转交下一步</span>
 		</footer>
-		
+
 		<script src="js/mui.min.js"></script>
-		<script type="text/javascript" src="js/mui.picker.min.js" ></script>
-		<script type="text/javascript" src="js/rem.min.js" ></script>
-		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/mui.picker.min.js"></script>
+		<script type="text/javascript" src="js/rem.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript">
-		
-	window.onload=function(){
-		(function($) {
-				$.init();
-				var btns = $('.btn');
-				var start,end,lg;
-				btns.each(function(i, btn) {
-					btn.setAttribute('data-options','{"beginYear":'+new Date().getFullYear()+'}');
-					btn.addEventListener('tap', function() {
-						var optionsJson = this.getAttribute('data-options') || '{}';
-						var options = JSON.parse(optionsJson);
-						var id = this.getAttribute('id');
-						var picker = new $.DtPicker(options);
-						picker.show(function(rs) {
-							btn.getElementsByTagName("span")[1].innerHTML=rs.text;
-							picker.dispose();
-							start=document.getElementById("startTime").innerHTML;
-							end=document.getElementById("endTime").innerHTML;
-							lg=document.getElementById("timeLong");
-							
-							if(end!="" && start!=""){
-								alert(start);
-								var date1 = new Date(start);
-								var date2 = new Date(end);
-								 
-								var s1 = date1.getTime(),s2 = date2.getTime();
-								var total = (s2 - s1)/1000;
-								var day = parseInt(total / (24*60*60));//计算整数天数
-								var afterDay = total - day*24*60*60;//取得算出天数后剩余的秒数
-								var hour = parseFloat(afterDay/(60*60)).toFixed(1);//计算整数小时数
-								lg.innerHTML=day*24-0+parseFloat(hour);
-							}
-						});
-					}, false);
+			window.onload = function() {
+				(function($) {
+					$.init();
+					var btns = $('.btn');
+					var start, end, lg;
+					btns.each(function(i, btn) {
+						btn.setAttribute('data-options', '{"beginYear":' + new Date().getFullYear() + '}');
+						btn.addEventListener('tap', function() {
+							var optionsJson = this.getAttribute('data-options') || '{}';
+							var options = JSON.parse(optionsJson);
+							var id = this.getAttribute('id');
+							var picker = new $.DtPicker(options);
+							picker.show(function(rs) {
+								btn.getElementsByTagName("span")[1].innerHTML = rs.text;
+								picker.dispose();
+								start = document.getElementById("startTime").innerHTML;
+								end = document.getElementById("endTime").innerHTML;
+								lg = document.getElementById("timeLong");
+
+								if(end != "" && start != "") {
+									alert(start);
+									var date1 = new Date(start);
+									var date2 = new Date(end);
+
+									var s1 = date1.getTime(),
+										s2 = date2.getTime();
+									var total = (s2 - s1) / 1000;
+									var day = parseInt(total / (24 * 60 * 60)); //计算整数天数
+									var afterDay = total - day * 24 * 60 * 60; //取得算出天数后剩余的秒数
+									var hour = parseFloat(afterDay / (60 * 60)).toFixed(1); //计算整数小时数
+									lg.innerHTML = day * 24 - 0 + parseFloat(hour);
+								}
+							});
+						}, false);
+					});
+				})(mui);
+
+				//搜索框聚焦
+				$("#search").click(function() {
+					$(".sinput").focus();
 				});
-			})(mui);
-			
-		//搜索框聚焦
-		 $("#search").click(function(){
-		 	$(".sinput").focus();
-		 });
-		  $(".sinput").focus(function(){
-		 	$(this).parent().addClass("search-active");
-		 });
-		 
-		 //搜索框失焦
-		 $(".sinput").blur(function(){
-		 	$(this).parent().removeClass("search-active");
-		 });
-		 
-		 //关闭选择人员
-		 $("#fail").click(function(){
-		 	$(".backdrop").addClass("mui-hidden");
-		 });
-		 
-		 //打开选择人员
-		 $(".add").click(function() {
-		 	$(".backdrop").removeClass("mui-hidden");
-		 });
-		 $(".people li").click(function(){
-		 	$(".backdrop").addClass("mui-hidden");
-		 });
-	}
+				$(".sinput").focus(function() {
+					$(this).parent().addClass("search-active");
+				});
+
+				//搜索框失焦
+				$(".sinput").blur(function() {
+					$(this).parent().removeClass("search-active");
+				});
+
+				//关闭选择人员
+				$("#fail").click(function() {
+					$(".backdrop").addClass("mui-hidden");
+				});
+
+				//打开选择人员
+				$(".add").click(function() {
+					$(".backdrop").removeClass("mui-hidden");
+				});
+				$(".people li").click(function() {
+					$(".backdrop").addClass("mui-hidden");
+				});
+			}
 		</script>
 	</body>
 
