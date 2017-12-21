@@ -125,11 +125,7 @@ input{
 .box3 .text{
 	color:rgb(10,180,230);
 }
-.tarea{
-	height: 1.64rem;
-	padding: 0.3rem 0.34rem;
-	border-bottom: 1px solid rgb(236,237,238);
-}
+
 .cont .vertical{
 	color: #666666;
 	margin-right: 0.2rem;
