@@ -11,7 +11,7 @@ textarea::-webkit-input-placeholder {
 section {
 	background: #fff;
 	padding-bottom: 0.98rem;
-	background: red;
+	height: auto;
 }
 
 .release {
