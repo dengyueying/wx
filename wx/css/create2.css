@@ -8,8 +8,6 @@ font-size: 0.32rem;
 section{
 	background: #fff;
 	padding-bottom: 0.98rem;
-	height: 900px !important;
-	background: green;
 }
 .release{
 	height: 0.94rem;
@@ -168,6 +166,9 @@ input{
 }
 .nbtbox{
 	border-bottom: none;
+}
+.box div{
+	background: #fff;
 }
 footer{
 	position: fixed;
