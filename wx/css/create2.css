@@ -3,13 +3,30 @@ section{
 	padding-bottom: 0.98rem;
 	height: 900px !important;
 }
-
+.release{
+	height: 0.94rem;
+	line-height: 0.94rem;
+	color: #666666;
+	font-size: 0.32rem;
+	background:#F3F3F3;
+	display: flex;
+    align-items: center;
+}
 .cont{
 	display: flex;
 	padding: 0 0.34rem;
 	height: 1.26rem;
 	align-items: center;
 	position: relative;
+}
+.cont img{
+	width: 0.46rem;
+	height: 0.46rem;
+	position: absolute;
+	right: 0.34rem;
+	z-index: 2;
+	transform: translateY(-50%);
+	top: 50%;
 }
 input{
 	flex: 1;
