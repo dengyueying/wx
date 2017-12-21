@@ -31,7 +31,7 @@ section{
 input{
 	flex: 1;
 }
-.boxs{
+.box{
 	border-bottom: 1px solid #ecedee;
 	border-top: 1px solid #ecedee;
 	padding-bottom: 0.2rem;
