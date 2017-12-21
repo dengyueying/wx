@@ -64,6 +64,22 @@ input{
 	left: 0.34rem;
 	bottom: 0;
 }
+.cont span,.cont input{
+	color: #1A1A1A;
+	font-size: 0.32rem;
+}
+.cont img{
+	width: 0.46rem;
+	height: 0.46rem;
+	position: absolute;
+	right: 0.34rem;
+	z-index: 2;
+	transform: translateY(-50%);
+	top: 50%;
+}
+.project{
+	padding-right: 0.6rem !important;
+}
 .box{
 	border-bottom: 1px solid #ecedee;
 	border-top: 1px solid #ecedee;
