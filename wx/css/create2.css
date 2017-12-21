@@ -9,6 +9,7 @@ section{
 	background: #fff;
 	padding-bottom: 0.98rem;
 	height: 900px !important;
+	background: red;
 }
 .release{
 	height: 0.94rem;
@@ -102,6 +103,44 @@ input{
 	margin-top: 0.5rem !important;
 	height: 0.44rem !important;
 	line-height: 0.32rem !important;
+}
+.sheight{
+	height: 0.92rem;
+	line-height: 0.92rem;
+}
+.box3 .text{
+	color:rgb(10,180,230);
+}
+.csign{
+	height: 1.64rem;
+	padding: 0.3rem 0.34rem;
+	border-bottom: 1px solid rgb(236,237,238);
+}
+.zl{
+	height: 0;
+	padding: 0;
+	border: none;
+}
+.cont .vertical{
+	color: #666666;
+	margin-right: 0.2rem;
+}
+.tic{
+	position: relative;
+	padding-left: 0.7rem;
+}
+.tic:after{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 1px;
+	background:rgb(236,237,238);
+	display: block;
+	bottom: 0;
+	left: 1rem;
+}
+.last{
+	padding-bottom: 0.7rem;
 }
 .box{
 	border-bottom: 1px solid #ecedee;
