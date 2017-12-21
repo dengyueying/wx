@@ -107,7 +107,5 @@ select{
 	margin-right: 0.22rem;
 }
 .box .csign{
-	height: 0 !important;
-	padding: 0 !important;
-	border: none !important;
+	display: none;
 }
