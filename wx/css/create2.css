@@ -1,7 +1,6 @@
 section{
 	background: #fff;
 	padding-bottom: 0.98rem;
-	height: 900px !important;
 }
 .release{
 	height: 0.94rem;
@@ -30,6 +29,12 @@ section{
 }
 input{
 	flex: 1;
+}
+.box{
+	border-bottom: 1px solid #ecedee;
+	border-top: 1px solid #ecedee;
+	padding-bottom: 0.2rem;
+	background:#F3F3F3;
 }
 .nbtbox{
 	border-bottom: none;
