@@ -38,7 +38,7 @@ input{
 .money{
 	padding-left: 0.39rem !important;
 }
-.box{
+.boxs{
 	border-bottom: 1px solid #ecedee;
 	border-top: 1px solid #ecedee;
 	padding-bottom: 0.2rem;
@@ -47,7 +47,7 @@ input{
 .nbtbox{
 	border-bottom: none;
 }
-.box div{
+.boxs div{
 	background: #fff;
 }
 .readd:after{
