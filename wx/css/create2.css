@@ -9,7 +9,7 @@ section{
 	background: #fff;
 	padding-bottom: 0.98rem;
 	height: 900px !important;
-	background: red;
+	background: green;
 }
 .release{
 	height: 0.94rem;
@@ -103,6 +103,24 @@ input{
 	margin-top: 0.5rem !important;
 	height: 0.44rem !important;
 	line-height: 0.32rem !important;
+}
+.explain{
+	position: relative;
+	height: initial;
+	border-bottom: 1px solid rgb(236,237,238);
+}
+.explain textarea{
+	width: 100%;
+	height: 2.4rem;
+	padding: 0.34rem 0 !important;
+	text-indent:1.6rem;
+	line-height: 0.6rem !important;
+}
+.explain .text{
+	position: absolute;
+	left: 0.34rem;
+	top: 0.47rem;
+	line-height: 0.32rem;
 }
 .sheight{
 	height: 0.92rem;
