@@ -43,11 +43,14 @@ li{
 .pad{
 	padding: 0 0.34rem;
 }
-input,textarea{
+input{
 	border: none !important;
-	padding: 0;
-	margin: 0;
+	padding: 0 !important;
+	margin: 0 !important;
 }
 textarea{
 	display: block;
+	border: none;
+	padding: 0;
+	margin: 0;
 }
