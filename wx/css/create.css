@@ -125,11 +125,7 @@ input{
 .box3 .text{
 	color:rgb(10,180,230);
 }
-.csign{
-	height: 1.64rem !important;
-	padding: 0.3rem 0.34rem !important;
-	border-bottom: 1px solid rgb(236,237,238) !important;
-}
+
 .cont .vertical{
 	color: #666666;
 	margin-right: 0.2rem;
