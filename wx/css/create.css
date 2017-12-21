@@ -130,6 +130,11 @@ input{
 	padding: 0.3rem 0.34rem;
 	border-bottom: 1px solid rgb(236,237,238);
 }
+.zl{
+	height: 0;
+	padding: 0;
+	border: none;
+}
 .cont .vertical{
 	color: #666666;
 	margin-right: 0.2rem;
