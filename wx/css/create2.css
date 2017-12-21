@@ -4,6 +4,13 @@ section{
 	height: 900px !important;
 }
 
+.cont{
+	display: flex;
+	padding: 0 0.34rem;
+	height: 1.26rem;
+	align-items: center;
+	position: relative;
+}
 input{
 	flex: 1;
 }
