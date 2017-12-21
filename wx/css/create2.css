@@ -11,8 +11,6 @@ textarea::-webkit-input-placeholder {
 section {
 	background: #fff;
 	padding-bottom: 0.98rem;
-	height:100%;
-	overflow-y: auto;
 }
 
 .release {

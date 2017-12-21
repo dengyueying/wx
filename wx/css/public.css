@@ -28,7 +28,9 @@ body{
 }
 section{
 	width: 100%;
-	height: auto;
+	height:100%;
+	overflow: hidden;
+	overflow-y: auto;
 }
 .content{
 	width: 100%;
