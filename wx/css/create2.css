@@ -1,3 +1,10 @@
+.border{
+	border-bottom: 1px solid rgb(236,237,238);
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+color: #999; 
+font-size: 0.32rem;
+}
 section{
 	background: #fff;
 	padding-bottom: 0.98rem;
@@ -11,6 +18,16 @@ section{
 	background:#F3F3F3;
 	display: flex;
     align-items: center;
+}
+.create-left{
+	width: 0.14rem;
+	height: 0.24rem;
+	background: url(../img/create-left.png) no-repeat;
+	background-size: 100% 100%;
+	margin-right: 0.12rem;
+}
+input{
+	flex: 1;
 }
 .cont{
 	display: flex;
