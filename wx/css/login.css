@@ -28,3 +28,6 @@ input::-webkit-input-placeholder{
 	background: rgb(0, 166, 228);
 	color: #fff;
 }
+.mui-btn a,.head-title a{
+	color: #fff;
+}
