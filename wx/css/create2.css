@@ -9,7 +9,6 @@ section{
 	background: #fff;
 	padding-bottom: 0.98rem;
 	height: 900px !important;
-	background: red;
 }
 .release{
 	height: 0.94rem;
@@ -79,6 +78,30 @@ input{
 }
 .project{
 	padding-right: 0.6rem !important;
+}
+.price{
+	background: #fff;
+	display: flex;
+	padding-top: 0.5rem;
+	padding-bottom: 1.1rem;
+}
+.price li{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.info{
+	color: #666666;
+	font-size: 0.32rem;
+}
+.price li input::-webkit-input-placeholder{text-align: center;} 
+.price li input{
+	text-align: center;
+	margin-top: 0.5rem !important;
+	height: 0.44rem !important;
+	line-height: 0.32rem !important;
 }
 .box{
 	border-bottom: 1px solid #ecedee;
