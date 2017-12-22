@@ -100,9 +100,9 @@
 								btn.getElementsByTagName("span")[1].innerHTML = rs.text;
 								picker.dispose();
 								start = document.getElementById("startTime").innerHTML;
-								start=start.replace(/T/, (" "));
+								start=start.replace(" ","T");
 								end = document.getElementById("endTime").innerHTML;
-								end=end.replace(/T/, (" "));
+								end=end.replace(" ","T");
 								lg = document.getElementById("timeLong");
 
 								if(end != "" && start != "") {
