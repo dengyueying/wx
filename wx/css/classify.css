@@ -11,6 +11,7 @@ section{
 .text p{
 	height: 0.52rem;
 	line-height: 0.52rem;
+	font-size: 0.3rem;
 }
 .text p .answer{
 	color: #1A1A1A;
