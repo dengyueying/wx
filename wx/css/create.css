@@ -161,6 +161,24 @@ input{
 .last{
 	padding-bottom: 0.7rem;
 }
+.pic-list{
+	display: flex;
+}
+.picbox{
+	border-bottom: 1px solid rgb(236,237,238);
+	padding: 0.22rem 0.34rem;
+}
+.pic-list li{
+	margin-left: 0.44rem;
+}
+.pic-list li:first-child{
+	margin: 0;
+}
+.pic-list li img{
+	width: 1.18rem;
+	height: 1.18rem;
+	display: block;
+}
 footer{
 	position: fixed;
 	bottom: 0;
