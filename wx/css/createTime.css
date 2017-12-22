@@ -1,13 +1,3 @@
-.cont .create-right{
-	background: url(../img/create-right.png) no-repeat;
-	background-size: 100% 100%;
-	width: 0.18rem;
-	height: 0.28rem;
-	position: absolute;
-	right: 0.34rem;
-	transform: translateY(-50%);
-	top: 50%;
-}
 .dtime{
 	margin-left: 0.39rem;
 }
