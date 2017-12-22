@@ -100,16 +100,20 @@
 								btn.getElementsByTagName("span")[1].innerHTML = rs.text;
 								picker.dispose();
 								start = document.getElementById("startTime").innerHTML;
+								start=start.replace(/T/, (" "));
 								end = document.getElementById("endTime").innerHTML;
+								end=end.replace(/T/, (" "));
 								lg = document.getElementById("timeLong");
 
 								if(end != "" && start != "") {
 									alert(start);
 									var date1 = new Date(start);
 									var date2 = new Date(end);
+									alert(date1);
 
 									var s1 = date1.getTime(),
 										s2 = date2.getTime();
+										alert(s1);
 									var total = (s2 - s1) / 1000;
 									var day = parseInt(total / (24 * 60 * 60)); //计算整数天数
 									var afterDay = total - day * 24 * 60 * 60; //取得算出天数后剩余的秒数
