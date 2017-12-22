@@ -125,10 +125,21 @@
 
 				//打开选择人员
 				$(".add").click(function() {
-					mui.openWindow({
-						url: 'contacts.html',
-						id: 'contacts',
-					});
+//					mui.openWindow({
+//						url: 'contacts.html',
+//						id: 'contacts',
+//					});
+if (navigator.getUserMedia) { // 标准的API
+    navigator.getUserMedia({ "video": true }, function (stream) {
+        video.src = stream;
+        video.play();
+    }, errocb);
+} else if (navigator.webkitGetUserMedia) { // WebKit 核心的API
+    navigator.webkitGetUserMedia({ "video": true }, function (stream) {
+        video.src = window.webkitURL.createObjectURL(stream);
+        video.play();
+    }, errocb);
+ }
 				});
 			}
 		</script>

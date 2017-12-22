@@ -64,6 +64,11 @@ input{
 	color: #1A1A1A;
 	font-size: 0.32rem;
 }
+.cont .fl-input{
+	width: auto;
+	text-align: right;
+	right: 0.34rem !important;
+}
 .cont img{
 	width: 0.46rem;
 	height: 0.46rem;

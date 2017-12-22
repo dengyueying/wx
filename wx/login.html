@@ -19,7 +19,7 @@
 	<body>
 		<header class="mui-bar mui-bar-nav">
 			<a href="" class="mui-action-back back"></a>
-			<h1 id="title" class="head-title"><a href="job-tabbar.html">返回</a></h1>
+			<h1 id="title" class="head-title"><a href="">返回</a></h1>
 		</header>
 		<section>
 		<div class="box">
@@ -37,6 +37,12 @@
 				mui.openWindow({
 					url: 'news-tabbar.html',
 					id: 'news-tabbar',
+				});
+			});
+			$("#btn").click(function() {
+				mui.openWindow({
+					url: 'job-tabbar.html',
+					id: 'job-tabbar',
 				});
 			});
 		</script>
