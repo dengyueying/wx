@@ -18,8 +18,8 @@ html{
 	overflow: hidden;
 }
 body{
-	overflow-x: hidden;
-	overflow-y: auto;
+	overflow: hidden;
+	position: relative;
 }
 .mui-content{
 	padding-top: 0.98rem !important;
@@ -57,4 +57,7 @@ textarea{
 	padding: 0;
 	margin: 0;
 	color:#1A1A1A;
+}
+.mui-bar{
+	position: absolute;
 }
