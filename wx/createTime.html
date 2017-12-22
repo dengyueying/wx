@@ -10,7 +10,6 @@
 		<link rel="stylesheet" href="css/public.css" />
 		<link rel="stylesheet" href="css/head3.css" />
 		<link rel="stylesheet" href="css/create.css" />
-		<link rel="stylesheet" href="css/createTime.css" />
 	</head>
 
 	<body>
@@ -23,7 +22,7 @@
 				<div class="box nbtbox">
 					<div class="cont border">
 						<span class="text">请假类型</span>
-						<select name="">
+						<select class="fl-right">
 							<option value="">年假</option>
 							<option value="">事假</option>
 							<option value="">病假</option>
@@ -35,22 +34,22 @@
 					</div>
 					<div class="cont btn border" type="date">
 						<span class="text">开始时间</span>
-						<span class="text dtime" id="startTime"></span>
+						<span class="text fl-right" id="startTime"></span>
 						<span class="create-right"></span>
 					</div>
 					<div class="cont btn border">
 						<span class="text">结束时间</span>
-						<span class="text dtime" id="endTime"></span>
+						<span class="text fl-right" id="endTime"></span>
 						<span class="create-right"></span>
 					</div>
 					<div class="cont border">
-						<span class="text">时长</span>
-						<span class="text dtime" id="timeLong"></span>
+						<span class="text">时长(小时)</span>
+						<span class="text fl-right" id="timeLong"></span>
 					</div>
 				</div>
 				<div class="box box2 nbtbox">
 					<div class="cont explain">
-						<span class="text">请假事由</span>
+						<p class="text pad">请假事由</p>
 						<textarea name="" rows="" cols="" placeholder="请输入请假事由,请填写少于50字" oninput="if(value.length>50)value=value.slice(0,50)"></textarea>
 					</div>
 				</div>
