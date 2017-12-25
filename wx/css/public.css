@@ -20,8 +20,6 @@ html{
 body{
 	overflow: hidden;
 	-webkit-overflow-scrolling: touch;
-	display: flex;
-	flex-direction: column;
 }
 .mui-content{
 	padding-top: 0.98rem !important;
@@ -34,8 +32,6 @@ section,.mui-content{
 	overflow: hidden;
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
-	flex: 1;
-	position: inherit;
 }
 .content{
 	width: 100%;
@@ -65,7 +61,4 @@ textarea{
 }
 .mui-table-view-cell>a:not(.mui-btn){
 	color: #1A1A1A;
-}
-footer{
-	position: inherit;
 }
