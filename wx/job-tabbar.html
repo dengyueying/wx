@@ -111,11 +111,12 @@
 	<script src="js/mui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
 	<script>
+		window.onload=function(){
 			var title = document.getElementById("title");
 			var rt=$("#second").position().left;
 			var rw=$("#second").outerWidth(true);
-			$("#badge").css("left",rt-0+rw-0+10+"px");
-			
+			$("#badge").css("left",rt-0+rw-0+4+"px");
+		}
 			//更换标题
 			mui('.mui-bar-tab').on('tap', 'a', function(e) {
 				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
