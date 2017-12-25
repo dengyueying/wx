@@ -176,10 +176,23 @@
 				mui('#' + parent.id).popover('toggle');
 				mui.toast("你刚点击了\"" + a.innerHTML + "\"按钮");
 			});
-			$('textarea').bind('focus',function(){
-	            $('.mui-bar-nav').css('position','fixed');  
-		   });
-		          
+			
+		   $(function () {
+			    var u = navigator.userAgent, app = navigator.appVersion;
+			    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+			    var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+			    if (isAndroid) {
+			        alert("安卓机！");
+			    }
+			    if (isIOS) {
+			        $('textarea').bind('focus',function(){
+			            $('.mui-bar-nav').css('position','fixed');  
+				   });
+			    }
+			    else{
+			    	alert("浏览器")
+			    }
+			});     
 		</script>
 	</body>
 
