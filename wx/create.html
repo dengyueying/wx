@@ -176,8 +176,12 @@
 				mui('#' + parent.id).popover('toggle');
 				mui.toast("你刚点击了\"" + a.innerHTML + "\"按钮");
 			});
-			$('textarea').bind('focus',function(){  
+			$('textarea').bind('focus',function(){
 				alert($("body").height());
+				setTimeout(function(){
+					alert($("body").height());
+				},3000);
+				
 //	            $('footer').css('position','static');  
 	            $('footer').css("top",$(window).height()+'px');  
 		        }).bind('blur',function(){  
