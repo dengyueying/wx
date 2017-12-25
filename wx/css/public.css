@@ -60,9 +60,6 @@ textarea{
 	margin: 0;
 	color:#1A1A1A;
 }
-.mui-bar{
-	position: absolute;
-}
 .mui-table-view-cell>a:not(.mui-btn){
 	color: #1A1A1A;
 }

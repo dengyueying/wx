@@ -11,6 +11,7 @@ section{
     display: flex;
     align-items: center;
     box-shadow: none;
+    position: absolute;
 }
 .mui-bar .back {
     width: 0.36rem;
