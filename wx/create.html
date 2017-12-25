@@ -123,6 +123,7 @@
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript" src="js/cslCamera.js" ></script>
 		<script type="text/javascript">
+			//添加图片
 			var img;
 			var callBack=function(album){
 				//alert(album);
@@ -182,20 +183,20 @@
 				str+='</div>';
 				$("#pjbox").append(str)
 			});
-			//添加图片
-			mui('body').on('tap', '.mui-popover-action li>input', function() {
-				var a = this,
-					parent;
-				//根据点击按钮，反推当前是哪个actionsheet
-				for (parent = a.parentNode; parent != document.body; parent = parent.parentNode) {
-					if (parent.classList.contains('mui-popover-action')) {
-						break;
-					}
-				}
-				//关闭actionsheet
-				mui('#' + parent.id).popover('toggle');
-				mui.toast("你刚点击了\"" + a.innerHTML + "\"按钮");
-			});
+//			//添加图片
+//			mui('body').on('tap', '.mui-popover-action li>input', function() {
+//				var a = this,
+//					parent;
+//				//根据点击按钮，反推当前是哪个actionsheet
+//				for (parent = a.parentNode; parent != document.body; parent = parent.parentNode) {
+//					if (parent.classList.contains('mui-popover-action')) {
+//						break;
+//					}
+//				}
+//				//关闭actionsheet
+//				mui('#' + parent.id).popover('toggle');
+//				mui.toast("你刚点击了\"" + a.innerHTML + "\"按钮");
+//			});
 		</script>
 	</body>
 

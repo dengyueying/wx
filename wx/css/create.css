@@ -170,6 +170,7 @@ input{
 }
 .pic-list{
 	display: flex;
+	overflow-x: scroll;
 }
 .picbox{
 	border-bottom: 1px solid rgb(236,237,238);
