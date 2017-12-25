@@ -176,6 +176,13 @@
 				mui('#' + parent.id).popover('toggle');
 				mui.toast("你刚点击了\"" + a.innerHTML + "\"按钮");
 			});
+			$('textarea').bind('focus',function(){  
+//	            $('footer').css('position','static');  
+	            $('footer').height($(window).height()+'px');  
+		        }).bind('blur',function(){  
+		            $('footer').css({'position':'fixed','bottom':'0'});  
+		            //或者$('#viewport').height('auto');  
+		        });
 		</script>
 	</body>
 
