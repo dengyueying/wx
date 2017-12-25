@@ -19,7 +19,6 @@ html{
 }
 body{
 	overflow: hidden;
-	position: relative;
 }
 .mui-content{
 	padding-top: 0.98rem !important;
