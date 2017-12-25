@@ -177,6 +177,7 @@ input{
 }
 .pic-list li{
 	margin-left: 0.44rem;
+	position: relative;
 }
 .pic-list li:first-child{
 	margin: 0;
@@ -227,4 +228,14 @@ select{
 .tcor{
 	color: 0.38rem;
 	color: rgb(233,62,34);
+}
+.icon-picx{
+	width: 0.32rem;
+	height: 0.32rem;
+	display: block;
+	background: url(../img/icon-picx.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top:-0.06rem;
+	right:-0.06rem;
 }

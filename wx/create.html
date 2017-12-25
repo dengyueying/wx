@@ -68,20 +68,16 @@
 				</div>
 				<div class="cont sheight border">
 					<span class="text">添加图片</span>		
-					<a href="#picture"><img src="img/add.png" /></a>
+					<!--<a href="#picture"><img id="picture" src="img/add.png" /></a>-->
+					<img src="img/add.png" />
 				</div>
-				<!--<div class="picbox">
+				<div class="picbox">
 					<ul class="pic-list">
-						<li>
-							<img src="img/pic.png"/>
-						</li><li>
-							<img src="img/pic.png"/>
-						</li>
-						<li>
-							<img src="img/pic.png"/>
+						<li id="picture">
+							<img src="img/icon-pic.png"/>
 						</li>
 					</ul>
-				</div>-->
+				</div>
 				<div class="cont sheight border">
 					<span class="text">会签</span>		
 				</div>
@@ -105,7 +101,7 @@
 			<span>保存</span>
 			<span>转交下一步</span>
 		</footer>
-		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+		<!--<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
 			<ul class="mui-table-view">
 				<li class="mui-table-view-cell">
 					<input class="camera" type="file" capture="camera" accept="image/*" value="拍照"/>
@@ -121,12 +117,33 @@
 					<a href="#picture"><b>取消</b></a>
 				</li>
 			</ul>
-		</div>
+		</div>-->
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript" src="js/rem.min.js" ></script>
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript" src="js/cslCamera.js" ></script>
 		<script type="text/javascript">
+			var img;
+			var callBack=function(album){
+				//alert(album);
+				console.log(album);
+				album.forEach(function(val,idx){
+					var picx=$("<i class='icon-picx'></i>");
+					var li=$("<li></li>");
+					var img=$("<img/>");
+					img.attr("src",val.data);
+					li.append(img);
+					li.append(picx);
+					$("#picture").before(li);
+				});
+			}
+			var carera=new $.Pgater($("#picture"),callBack);
+			$(".pic-list").on("tap","li i",function(){
+				var that=$(this);
+				setTimeout(function(){
+					that.parent().remove();
+				},350)
+			})
 			var str;
 			//打开选择人员
 			$(".add").click(function() {
