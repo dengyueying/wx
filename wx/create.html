@@ -176,18 +176,6 @@
 				mui('#' + parent.id).popover('toggle');
 				mui.toast("你刚点击了\"" + a.innerHTML + "\"按钮");
 			});
-			$('textarea').bind('focus',function(){
-				$(".head-title").html($("body").height());
-				setTimeout(function(){
-					$(".head-title").html($("body").height());
-				},3000);
-				
-//	            $('footer').css('position','static');  
-	            $('footer').css("top",$(window).height()+'px');  
-		        }).bind('blur',function(){  
-		            $('footer').css({'position':'fixed','bottom':'0'});  
-		            //或者$('#viewport').height('auto');  
-		        });
 		</script>
 	</body>
 
