@@ -175,22 +175,18 @@
 				//关闭actionsheet
 				mui('#' + parent.id).popover('toggle');
 				mui.toast("你刚点击了\"" + a.innerHTML + "\"按钮");
+				galleryImgs();
 			});
-			
-		   $(function () {
-			    var u = navigator.userAgent, app = navigator.appVersion;
-			    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
-			    var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-			    if (isAndroid) {
-			        alert("安卓机！");
-			    }
-			    if (isIOS) {
-			    	alert("ios！");
-			        $('textarea').bind('focus',function(){
-			            $('.mui-bar-nav').css('position','fixed');  
-				   });
-			    }
-			});     
+			 //从相册选择照片  
+       function galleryImgs() {    
+            plus.gallery.pick(function(e) {    
+                var name = e.substr(e.lastIndexOf('/') + 1);  
+               compressImage(e,name);  
+            }, function(e) {    
+            }, {    
+                filter: "image"    
+            });    
+        }  
 		</script>
 	</body>
 
