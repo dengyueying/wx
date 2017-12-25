@@ -68,9 +68,9 @@
 				</div>
 				<div class="cont sheight border">
 					<span class="text">添加图片</span>		
-					<img src="img/add.png" id="pic"/>
+					<a href="#picture"><img src="img/add.png" /></a>
 				</div>
-				<div class="picbox">
+				<!--<div class="picbox">
 					<ul class="pic-list">
 						<li>
 							<img src="img/pic.png"/>
@@ -81,7 +81,7 @@
 							<img src="img/pic.png"/>
 						</li>
 					</ul>
-				</div>
+				</div>-->
 				<div class="cont sheight border">
 					<span class="text">会签</span>		
 				</div>
@@ -105,7 +105,21 @@
 			<span>保存</span>
 			<span>转交下一步</span>
 		</footer>
-		
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#">拍照</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">从手机相册选择</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript" src="js/rem.min.js" ></script>
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
@@ -148,6 +162,20 @@
 				str+='</div>';
 				$("#pjbox").append(str)
 			});
+			//添加图片
+			mui('body').on('tap', '.mui-popover-action li>a', function() {
+			var a = this,
+				parent;
+			//根据点击按钮，反推当前是哪个actionsheet
+			for (parent = a.parentNode; parent != document.body; parent = parent.parentNode) {
+				if (parent.classList.contains('mui-popover-action')) {
+					break;
+				}
+			}
+			//关闭actionsheet
+			mui('#' + parent.id).popover('toggle');
+			mui.toast("你刚点击了\"" + a.innerHTML + "\"按钮");
+		})
 		</script>
 	</body>
 
