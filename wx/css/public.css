@@ -32,7 +32,7 @@ section,.mui-content{
 	height:100%;
 	overflow: hidden;
 	overflow-y: scroll;
-	position: absolute;
+	-webkit-overflow-scrolling: touch;
 }
 .content{
 	width: 100%;
