@@ -45,6 +45,9 @@
 					id: 'test',
 				});
 			});
+			$("input").bind("focus",function(){
+				$("button").scrollIntoViewIfNeeded();
+			});
 		</script>
 	</body>
 

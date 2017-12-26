@@ -59,8 +59,8 @@
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
 	<script>
 		$("input").bind("focus",function(){
-			$("header").scrollIntoView(false);
-			$("footer").scrollIntoView(false);
+			$("header").scrollIntoViewIfNeeded(false);
+			$("footer").scrollIntoViewIfNeeded(false);
 		})
 	</script>
 </body>
