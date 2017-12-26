@@ -9,6 +9,10 @@ section{
 	background: #fff;
 	padding-bottom: 0.98rem;
 }
+section .contentbox{
+	height: auto;
+	width: 100%;
+}
 .release{
 	height: 0.94rem;
 	line-height: 0.94rem;
