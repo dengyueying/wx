@@ -5,16 +5,9 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 color: #999; 
 font-size: 0.32rem;
 }
-section,footer,header{
-	display: block;
-}
 section{
 	background: #fff;
 	padding-bottom: 0.98rem;
-}
-section .contentbox{
-	height: auto;
-	width: 100%;
 }
 .release{
 	height: 0.94rem;

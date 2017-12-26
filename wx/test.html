@@ -56,5 +56,13 @@
 		</div>
 	</div>
 	<footer></footer>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script>
+		$("input").bind("focus",function(){
+			$("header").css("position","static");
+		}).bind("blur",function(){
+			$("header").css("position","fixed");
+		});
+	</script>
 </body>
 </html>
