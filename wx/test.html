@@ -1,71 +1,138 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-	<title>Document</title>
-	<style>
-		html,body{
-			width: 100%;
-			height: 100%;
-		}
-		header,footer,.main{
-			display: block;
-		}
-		header,footer{
-				background: red;
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<style>
+			body,html,.all{
 				width: 100%;
-				z-index: 888;
+				height: 100%;
+				overflow: hidden;
 			}
-			header{
-				position: fixed;
-				top: 0;
-				left: 0;
-				height: 45px;
+			*{
+				margin: 0;
+				padding: 0;
 			}
-			footer{
-				position: fixed;
-				bottom: 0;
-				left: 0;
-				height: 45px;
+			li{
+				list-style: none;
 			}
-		.main{
-			width: 100%;
-			overflow-y: scroll;
-			position: absolute;
-			top: 45px;
-			bottom: 45px;
-			-webkit-overflow-scrolling: touch;
-		}
-		.main .content{
-			height: 2000px;
-			background: #ededed;
-		}
-		p{
-			height: 900px;
-		}
-		input{
-			background: #fff;
-		}
-	</style>
-</head>
-<body>
-	<header></header>
-	<div class="main">
-		<div class="content">
-			<h1>dfhhdshj</h1>
-			<h1>dfh\hj</h1>
-			<p>dsj就看见是打开</p>
-			<input />
+			header,footer{
+				width: 100%;
+				height: 40px;
+				background: #ccc;
+			}
+			.all{
+				display: flex;
+				flex-direction: column;
+			}
+			section{
+				flex: 1;
+				width: 100%;
+				overflow: auto;
+			}
+			section ul li{
+				height: 50px;
+				width: 100%;
+				text-align: center;
+				line-height: 50px;
+				background: #ddd;
+				border-top: 1px solid #333;
+			}
+			.pre{
+				height: 50px;
+				line-height: 50px;
+				width: 100%;
+				text-align: center;
+				position: relative;
+			}
+			.pre::after{
+				position: absolute;
+				display: block;
+				content: "";
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background:linear-gradient(gold,red);
+				top:15px;
+				left:100px;
+				animation: ro 0.5s infinite;
+			}
+			.pre::before{
+				position: absolute;
+				display: block;
+				content: "";
+				width: 14px;
+				height: 14px;
+				border-radius: 50%;
+				background:#fff;
+				top:18px;
+				left:103px;
+				z-index: 999;
+			}
+			
+			@keyframes ro{
+				0%{
+					transform: rotate(0)
+				}
+				50%{
+					transform: rotate(180deg)
+				}
+				100%{
+					transform: rotate(360deg)
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="all">
+			<header></header>
+			<section id="list">
+				<ul>
+					<li>0001</li>
+					<li>0002</li>
+					<li>0003</li>
+					<li>0004</li>
+					<li>0005</li>
+					<li>0006</li>
+					<li>0007</li>
+					<li>0008</li>
+					<li>0009</li>
+					<li>0010</li>
+					<li>0011</li>
+					<li>0012</li>
+					<li>0013</li>
+					<li>0014</li>
+					<li>0015</li>
+					<li>0016</li>
+					<li>0017</li>
+					<li>0018</li>
+					<li>0019</li>
+					<li>0020</li>
+					<li>0021</li>
+					<li>0022</li>
+					<li>0023</li>
+					<li>0024</li>
+					<li>0025</li>
+					<li>0026</li>
+					<li>0027</li>
+					<li>0028</li>
+					<li>0029</li>
+					<li>0030</li>
+					<li>0031</li>
+					<li>0032</li>
+					<li>0033</li>
+					<li>0034</li>
+					<li>0035</li>
+					<li>0036</li>
+					<li>0037</li>
+					<li>0038</li>
+					<li>0039</li>
+					<li>0040</li>
+					<input type="" name="" id="" value="" />
+				</ul>
+			</section>
+			<footer></footer>
 		</div>
-	</div>
-	<footer></footer>
-	<script type="text/javascript" src="js/jquery.min.js" ></script>
-	<script>
-		$("input").bind("focus",function(){
-			$("header").scrollIntoViewIfNeeded(false);
-			$("footer").scrollIntoViewIfNeeded(false);
-		})
-	</script>
-</body>
+	</body>
 </html>
