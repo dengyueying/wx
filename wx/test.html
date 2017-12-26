@@ -9,7 +9,7 @@
 			display: block;
 		}
 		header,footer{
-				background: gold;
+				background: red;
 				width: 100%;
 				z-index: 888;
 			}
@@ -60,6 +60,7 @@
 	<script>
 		$("input").bind("focus",function(){
 			$("header").css("position","static");
+			$("footer").css("position","static");
 		}).bind("blur",function(){
 			$("header").css("position","fixed");
 		});
