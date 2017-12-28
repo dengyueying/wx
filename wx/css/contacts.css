@@ -85,3 +85,8 @@ body{
 	border-radius: 0.1rem;
 	margin-right: 0.22rem;
 }
+.result{
+	line-height: 2rem;
+	text-align: center;
+	display: none;
+}

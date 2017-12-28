@@ -25,23 +25,29 @@
 			</div>
 		</div>
 		<ul class="people">
-			<li>
+			<p class="result">未搜索到相关结果</p>
+			<li class="mui-action-back">
 				<img src="img/portrait.png" alt="" />
 				<span>王先森</span>
 			</li>
-			<li>
+			<li class="mui-action-back">
 				<img src="img/portrait.png" alt="" />
 				<span>王先森</span>
 			</li>
-			<li>
+			<li class="mui-action-back">
 				<img src="img/portrait.png" alt="" />
 				<span>王先森</span>
+			</li>
+			<li class="mui-action-back">
+				<img src="img/portrait.png" alt="" />
+				<span>等等等</span>
 			</li>
 		</ul>
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript" src="js/rem.min.js" ></script>
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript">
+			var inputVal,n;
 			//搜索框聚焦
 				$("#search").click(function() {
 					$(".sinput").focus();
@@ -52,12 +58,31 @@
 
 				//搜索框失焦
 				$(".sinput").blur(function() {
-					$(this).parent().removeClass("search-active");
+					if(inputVal==""){
+						$(this).parent().removeClass("search-active");
+					}
 				});
 
-				$(".people li").click(function() {
-					plus.webview.currentWebview().close();
-				});
+				$(".sinput").on("input",function(){
+					n=0;
+					inputVal=$(".sinput").val().replace(" ", "");
+					$(".sinput").val(inputVal);
+					for (var i=0;i<$(".people li").length;i++) {
+						if ($(".people li").eq(i).children("span").text().indexOf(inputVal) !=-1) {  
+			                $(".people li").eq(i).show();  
+			                n+=1;
+			            }
+						else{
+							$(".people li").eq(i).hide(); 
+						}
+					}
+					if(n==0){
+						$(".result").show();
+					}
+					else{
+						$(".result").hide();
+					}
+				})
 		</script>
 	</body>
 

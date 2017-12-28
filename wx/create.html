@@ -140,10 +140,9 @@
 			}
 			var carera=new $.Pgater($("#picture"),callBack);
 			$(".pic-list").on("tap","li i",function(){
-				var that=$(this);
-				setTimeout(function(){
-					that.parent().remove();
-				},350)
+				setTimeout($.proxy(function(){
+					$(this).parent().remove();
+				},this),350)
 			})
 			var str;
 			//打开选择人员
