@@ -20,7 +20,6 @@ html{
 body{
 	overflow: hidden;
 	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
 }
 .mui-content{
 	padding-top: 0.98rem !important;
@@ -30,6 +29,7 @@ body{
 section,.mui-content{
 	width: 100%;
 	height: auto;
+	-webkit-overflow-scrolling: touch;
 }
 .content{
 	width: 100%;
