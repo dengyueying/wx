@@ -119,11 +119,11 @@ section>.ic-list{
 .con .shou{
 	padding-left: 0.3rem;
 }
-.con .second,.alineNext{
-	/*position: absolute;*/
-	/*top: 0;*/
+/*.con .second,.alineNext{
+	position: absolute;
+	top: 0;
 	height: 100%;
-}
+}*/
 .mysp{
 	border-top:1px solid #ecedee;
 	margin-top: 0.38rem;
@@ -153,9 +153,6 @@ section>.ic-list{
     top:50%;
     transform: translateY(-50%);
 }
-    .box3 .text{
-    	margin-right: 0.22rem;
-    }
 .boxspeed .active{
 	width: 0.28rem;
 	height: 0.18rem;
