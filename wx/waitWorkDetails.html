@@ -17,7 +17,7 @@
 			<a href="" class="mui-action-back back"></a>
 			<h1 class="head-title">办理工作</h1>
 		</header>
-		<section>
+		<section class="test">
 			<div class="test">
 				<p class="release pad"><span class="create-left"></span>发起工作</p>
 				<ul class="ic-list pad">
@@ -71,6 +71,7 @@
 						<p class="speed pad">审批进度</p>
 						<span class="create-right"></span>
 					</div>
+					<div id="listbox" class="listbox">
 					<ul class="ic-list pad">
 						<li>
 							<p class="result"><span class="point">「加班登记」</span>由<span class="point">「王先森」</span>发起<span class="num">1</span></p>
@@ -94,7 +95,9 @@
 						<li>
 							<p><span>发起时间:</span><span class="info">2017-10-10 10:10</span></p>
 						</li>
-					</ul>
+					</ul>	
+					</div>
+					
 				</div>
 			</div>
 		</section>
@@ -108,14 +111,25 @@
 		<script type="text/javascript" src="js/rem.min.js"></script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript">
-			var n, m, x, y;
+			var n, m, x, y,h;
 			window.onload = function() {
 				changeSize();
 				window.onresize = function() {
 					changeSize();
 				}
+				$(window).scroll(function(){
+					if($(window).scrollTop()>0){
+						console.log("scroll:"+$(window).scrollTop());
+						console.log("h:"+$(window).outerHeight());
+						$("footer").css("position","absolute");
+						$("footer").css("bottom",-$(window).scrollTop());		
+					}
+					else{
+						$("footer").css("position","fixed");
+						$("footer").css("bottom",0);	
+					}
+				})
 			}
-
 			function changeSize() {
 				n = 0, m = 0, x = 0, y = 0;
 				$(".shou").each(function() {
@@ -142,24 +156,16 @@
 			});
 			//查看审批进度
 			$("#boxspeed").click(function() {
+				$("#listbox").toggle();
+				h=$("#listbox").outerHeight(true);
 				if($(this).children("span").hasClass("active")) {
 					$(this).children("span").removeClass("active");
+					$(window).scrollTop($(window).scrollTop()-0-h);
 				} else {
 					$(this).children("span").addClass("active");
-					console.log($("footer").scrollTop());
-					$("section").scrollTop(0);
-					console.log($("section").scrollTop());
+					$(window).scrollTop($(window).scrollTop()-0+h);
 				}
-				$(".box .ic-list").toggle();
 			});
-			$(window).scroll(function() {
-				console.log($(document).height());
-				console.log($(window).height());
-				console.log($(window).scrollTop());
-				if($(window).scrollTop() == $(document).height() - $(window).height()) {
-					alert(1)
-				}
-			})
 		</script>
 	</body>
 

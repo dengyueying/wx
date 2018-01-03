@@ -34,6 +34,7 @@ section{
 }
 input{
 	flex: 1;
+	font-size: 0.3rem;
 }
 .money{
 	padding-left: 0.39rem !important;
@@ -118,9 +119,8 @@ input{
 	line-height: 0.6rem !important;
 	padding: 0.2rem 0.34rem;
 }
-input,textarea,.cont .alineNext{
-	color: #666;
-	font-size: 0.3rem;
+textarea{
+	font-size: 0.32rem;
 }
 .explain .text{
 	line-height: 0.92rem;

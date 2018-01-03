@@ -14,13 +14,6 @@ body,
 	height: 100%;
 	width: 100%;
 }
-html{
-	overflow: hidden;
-}
-body{
-	overflow: hidden;
-	overflow-y: scroll;
-}
 .mui-content{
 	padding-top: 0.98rem !important;
 	padding-bottom: 0.98rem !important;
@@ -29,6 +22,7 @@ body{
 section,.mui-content{
 	width: 100%;
 	height: auto;
+	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 }
 .content{

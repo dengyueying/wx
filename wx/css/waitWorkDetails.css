@@ -166,6 +166,8 @@ section>.ic-list{
 	margin-top: 0.2rem;
 	border-bottom:1px solid #ecedee;
 	border-top:1px solid #ecedee;
+}
+.listbox{
 	display: none;
 }
 .box .ic-list:nth-of-type(1){
