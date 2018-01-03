@@ -30,6 +30,7 @@ body,
 section,.mui-content{
 	width: 100%;
 	height: auto;
+	overflow: hidden;
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 }

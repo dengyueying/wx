@@ -157,28 +157,21 @@
 
 	$("input").focus(function(){
 		flag=true;
-		$("footer").css("position","absolute");
-		$("footer").css("bottom",-$(window).scrollTop());
+//		$("footer").css("position","absolute");
+//		$("footer").css("bottom",-$(window).scrollTop());
 	}).blur(function(){
 		flag=false;
-		$("footer").css("position","fixed");
-		$("footer").css("bottom",0);
+//		$("footer").css("position","fixed");
+//		$("footer").css("bottom",0);
 	});
 	$("textarea").focus(function(){
 		flag=true;
-		
-		console.log($(window).scrollTop());
-		$("footer").css("position","absolute");
-		$("footer").css("bottom",-$(window).scrollTop());
-		setTimeout(function(){
-			$("textarea").val($("body").outerHeight());
-			$("input").val($(window).scrollTop());
-			$("header").css("top",0);
-		},300);
+//		$("footer").css("position","absolute");
+//		$("footer").css("bottom",-$(window).scrollTop());
 	}).blur(function(){
 		flag=false;
-		$("footer").css("position","fixed");
-		$("footer").css("bottom",0);
+//		$("footer").css("position","fixed");
+//		$("footer").css("bottom",0);
 	});
     //手指接触屏幕
     document.addEventListener("touchstart", function(e) {
