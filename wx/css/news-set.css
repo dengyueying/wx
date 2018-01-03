@@ -10,7 +10,7 @@
 			.mui-table-view-cell:after{
 				left: 0;
 			}
-			.mui-table-view-cell{
+			.classify li{
 				padding: 0;
 				margin: 0;
 				height: 1.32rem;

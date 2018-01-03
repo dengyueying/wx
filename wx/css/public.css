@@ -14,6 +14,14 @@ body,
 	height: 100%;
 	width: 100%;
 }
+.mui-table-view-cell{
+	padding: 0;
+	margin: 0;
+	height: auto;
+}
+.mui-table-view-cell:after{
+	display: none;
+}
 .mui-content{
 	padding-top: 0.98rem !important;
 	padding-bottom: 0.98rem !important;

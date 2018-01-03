@@ -96,12 +96,12 @@
 			<div id="tabbar-with-contact" class="mui-control-content">
 				<div class="content pad">
 					<ul class="list">
-						<li>
+						<li class="mui-table-view-cell">
 							<p class="title bordersb mui-ellipsis">更新</p>
 							<p class="text">大幅回复的豪华设计费好久发货换地方复合肥个地方贵航股份</p>
 							<p class="look"><a>查看详情</a></p>
 						</li>
-						<li>
+						<li class="mui-table-view-cell">
 							<p class="title bordersb mui-ellipsis">更新</p>
 							<p class="text">大幅回复的豪华设计费好久发货换地方复合肥个地方贵航股份大幅回复的豪华设计费好久发货换地方复合肥个地方贵航股份</p>
 							<p class="look"><a>查看详情</a></p>
@@ -110,7 +110,7 @@
 				</div>
 			</div>
 			<div id="tabbar-with-map" class="mui-control-content news-map">
-				<ul class="mui-table-view list">
+				<ul class="mui-table-view list classify">
 					<li class="mui-table-view-cell">
 						<a>
 							这是分类1
@@ -145,7 +145,7 @@
 		          $(this).html(demoHtml);
 		        }
 		    });
-		    $(".list li .look a").click(function(){
+		    $(".list li").click(function(){
 		      	mui.openWindow({
 					url: 'details.html',
 					id: 'details',
