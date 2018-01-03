@@ -1,79 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link href="css/mui.min.css" rel="stylesheet" />
+		<meta charset="utf-8">
+		<title>新闻</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
 		<link rel="stylesheet" href="css/public.css" />
 		<link rel="stylesheet" href="css/head3.css" />
 		<link rel="stylesheet" href="css/news-about.css" />
-		<link rel="stylesheet" href="css/classify.css" />
+		<script type="text/javascript" src="js/rem.min.js" ></script>
 	</head>
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
 			<a href="" class="mui-action-back back"></a>
-			<h1 class="head-title">工作流</h1>
+			<h1 class="head-title">新闻</h1>
 		</header>
 		<section>
-			<ul class="list">
-				<div class="release-time">
-					<span>
-						10:00
-					</span>
+				<div class="content pad">
+					<ul class="list">
+						<div class="release-time">
+							<span>
+								10:00
+							</span>
+						</div>
+						<li>
+							<p class="title bordersb mui-ellipsis">更新</p>
+							<p class="text">大幅回复的豪华设计费好久发货换地方复合肥个地方贵航股份</p>
+							<p class="look"><a>查看详情</a></p>
+						</li>
+						<li>
+							<p class="title bordersb mui-ellipsis">更新</p>
+							<p class="text">大幅回复的豪华设计费好久发货换地方复合肥个地方贵航股份大幅回复的豪华设计费好久发货换地方复合肥个地方贵航股份</p>
+							<p class="look"><a>查看详情</a></p>
+						</li>
+						<div class="release-time">
+							<span>
+								10:00
+							</span>
+						</div>
+						
+						<li>
+							<p class="title bordersb mui-ellipsis">更新</p>
+							<p class="text">大幅回复的豪华设计费好久发货换地方复合肥个地方贵航股份</p>
+							<p class="look"><a>查看详情</a></p>
+						</li>
+					</ul>	
 				</div>
-				<li>
-					<p class="title bordersb mui-ellipsis">王先森的<span>「报审申请」</span>需要您的批准</p>
-					<div class="text">
-						<p>
-							<span>申请人:</span>
-							<span class="answer">王先森</span>
-						</p>
-						<p>
-							<span class="name">部门:</span>
-							<span  class="answer">技术部</span>
-						</p>
-						<p>
-							<span class="name">事由:</span>
-							<span  class="answer">公司开销日常，先垫付出来的</span>
-						</p>
-					</div>
-					<span class="look wait">待审批</span>
-				</li>
-				<li>
-					<p class="title bordersb">更新</p>
-					<div class="text">
-						<p>
-							<span>申请人:</span>
-							<span class="answer">王先森</span>
-						</p>
-						<p>
-							<span class="name">部门:</span>
-							<span  class="answer">技术部</span>
-						</p>
-						<p>
-							<span class="name">事由:</span>
-							<span  class="answer">公司开销日常，先垫付出来的</span>
-						</p>
-					</div>
-					<span class="look">已同意</span>
-				</li>
-			</ul>	
 		</section>
-		<script src="js/mui.min.js"></script>
-		<script type="text/javascript" src="js/rem.min.js" ></script>
-		<script type="text/javascript" src="js/jquery.min.js" ></script>
-		<script type="text/javascript">
-			mui.init();
-			$(".wait").click(function(){
-				mui.openWindow({
-					url: 'createTime.html',
-					id: 'createTime',
-				});
-			});
-		</script>
 	</body>
-
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script>
+			 $(".list li .text").each(function () {
+		        if($(this).text().length>37){
+		          var demoHtml = $(this).html().substr(0,37)+'...';
+		          $(this).html(demoHtml);
+		        }
+		    });
+		    $(".list li .look a").click(function(){
+		      	mui.openWindow({
+					url: 'details.html',
+					id: 'details',
+				});
+		    });
+		    $(".news-map .list li").click(function(){
+		      	mui.openWindow({
+					url: 'classify.html',
+					id: 'classify',
+				});
+		    });
+	</script>
 </html>
