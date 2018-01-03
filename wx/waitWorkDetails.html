@@ -118,11 +118,15 @@
 					changeSize();
 				}
 				$("input").focus(function(){
-					$(window).on("swipeup",function(){
-						$('input').blur();
+					document.addEventListener("swipeup",function(){
+					     $('input').blur();
 						$("textarea").blur();
-//						alert($(window).outerHeight());
-					})
+					});
+					document.addEventListener("swipedown",function(){
+					     $('input').blur();
+						$("textarea").blur();
+						alert($(window).outerHeight());
+					});
 				})
 //				$("input").focus(function(){
 //					$("footer").css("position","absolute");
