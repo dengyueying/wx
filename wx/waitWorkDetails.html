@@ -166,14 +166,15 @@
 	});
 	$("textarea").focus(function(){
 		flag=true;
-		$("header").css("top",$(window).scrollTop());
+		
 		console.log($(window).scrollTop());
 		$("footer").css("position","absolute");
 		$("footer").css("bottom",-$(window).scrollTop());
 		setTimeout(function(){
 			$("textarea").val($("body").outerHeight());
 			$("input").val($(window).outerHeight());
-		},1000);
+			$("header").css("top",$(window).scrollTop());
+		},300);
 	}).blur(function(){
 		flag=false;
 		$("footer").css("position","fixed");
