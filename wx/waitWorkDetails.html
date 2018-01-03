@@ -118,23 +118,15 @@
 					changeSize();
 				}
 				$("input").focus(function(){
-					$("footer").css("position","absolute");
-					$("footer").css("bottom",-$(window).scrollTop());
-					$(window).scroll(function(){
-					$("textarea").blur();
-					$("input").blur();
-				})
+					$("footer").css("position","absolute";"bottom",-$(window).scrollTop()));
+					funScroll();
 				}).blur(function(){
 					$("footer").css("position","fixed");
 					$("footer").css("bottom",0);
 				});
 				$("textarea").focus(function(){
-					$("footer").css("position","absolute");
-					$("footer").css("bottom",-$(window).scrollTop());
-					$(window).scroll(function(){
-						$("textarea").blur();
-						$("input").blur();
-					})
+					$("footer").css("position","absolute";"bottom",-$(window).scrollTop()));
+					funScroll();
 				}).blur(function(){
 					$("footer").css("position","fixed");
 					$("footer").css("bottom",0);
@@ -179,12 +171,13 @@
 			};
 			
 			function funScroll(){
-				if($(window).scrollTop()>0){
+				$(window).scroll(function(){
+					if($(window).scrollTop()>0){
 						console.log("scroll:"+$(window).scrollTop());
 						console.log("h:"+$(window).outerHeight());
-						$("footer").css("position","absolute");
 						$("footer").css("bottom",-$(window).scrollTop());		
 					}
+				})
 			}
 		</script>
 	</body>
