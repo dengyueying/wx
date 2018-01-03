@@ -124,6 +124,7 @@
 				}).blur(function(){
 					$("footer").css("position","fixed");
 					$("footer").css("bottom",0);
+					$ (window).unbind ('scroll');
 				});
 				$("textarea").focus(function(){
 					$("footer").css("position","absolute");
@@ -132,6 +133,7 @@
 				}).blur(function(){
 					$("footer").css("position","fixed");
 					$("footer").css("bottom",0);
+					$ (window).unbind ('scroll');
 				});
 				
 			}
