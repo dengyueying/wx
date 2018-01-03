@@ -120,8 +120,8 @@ section>.ic-list{
 	padding-left: 0.3rem;
 }
 .con .second,.alineNext{
-	position: absolute;
-	top: 0;
+	/*position: absolute;*/
+	/*top: 0;*/
 	height: 100%;
 }
 .mysp{
