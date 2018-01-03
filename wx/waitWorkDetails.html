@@ -117,36 +117,30 @@
 				window.onresize = function() {
 					changeSize();
 				}
-				$(window).scroll(function(){
-					if($(window).scrollTop()>0){
-						console.log("scroll:"+$(window).scrollTop());
-						console.log("h:"+$(window).outerHeight());
-						$("footer").css("position","absolute");
-						$("footer").css("bottom",-$(window).scrollTop());		
-					}
-					else{
-						$("footer").css("position","fixed");
-						$("footer").css("bottom",0);	
-					}
+				$("input").focus(function(){
+					$("footer").css("position","absolute");
+					$("footer").css("bottom",-$(window).scrollTop());
+					$(window).scroll(function(){
+					$("textarea").blur();
+					$("input").blur();
 				})
+				}).blur(function(){
+					$("footer").css("position","fixed");
+					$("footer").css("bottom",0);
+				});
+				$("textarea").focus(function(){
+					$("footer").css("position","absolute");
+					$("footer").css("bottom",-$(window).scrollTop());
+					$(window).scroll(function(){
+						$("textarea").blur();
+						$("input").blur();
+					})
+				}).blur(function(){
+					$("footer").css("position","fixed");
+					$("footer").css("bottom",0);
+				});
+				
 			}
-			function changeSize() {
-				n = 0, m = 0, x = 0, y = 0;
-				$(".shou").each(function() {
-					n = $(this).outerWidth(true);
-					if(n > m) {
-						m = n;
-					}
-				});
-				$(".aline").each(function() {
-					x = $(this).outerWidth(true);
-					if(x > y) {
-						y = x;
-					}
-				});
-				$(".second").css("left", m - 0 + 22 + "px");
-				$(".alineNext").css("left", y - 0 + 30 + "px");
-			};
 			//	进入下一步
 			$("#next").click(function() {
 				mui.openWindow({
@@ -166,6 +160,32 @@
 					$(window).scrollTop($(window).scrollTop()-0+h);
 				}
 			});
+			function changeSize() {
+				n = 0, m = 0, x = 0, y = 0;
+				$(".shou").each(function() {
+					n = $(this).outerWidth(true);
+					if(n > m) {
+						m = n;
+					}
+				});
+				$(".aline").each(function() {
+					x = $(this).outerWidth(true);
+					if(x > y) {
+						y = x;
+					}
+				});
+				$(".second").css("left", m - 0 + 22 + "px");
+				$(".alineNext").css("left", y - 0 + 30 + "px");
+			};
+			
+			function funScroll(){
+				if($(window).scrollTop()>0){
+						console.log("scroll:"+$(window).scrollTop());
+						console.log("h:"+$(window).outerHeight());
+						$("footer").css("position","absolute");
+						$("footer").css("bottom",-$(window).scrollTop());		
+					}
+			}
 		</script>
 	</body>
 
