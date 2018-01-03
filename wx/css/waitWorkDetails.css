@@ -119,11 +119,11 @@ section>.ic-list{
 .con .shou{
 	padding-left: 0.3rem;
 }
-/*.con .second,.alineNext{
+.con .second,.alineNext{
 	position: absolute;
 	top: 0;
 	height: 100%;
-}*/
+}
 .mysp{
 	border-top:1px solid #ecedee;
 	margin-top: 0.38rem;
