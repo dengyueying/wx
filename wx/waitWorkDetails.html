@@ -168,6 +168,9 @@
 		flag=true;
 		$("footer").css("position","absolute");
 		$("footer").css("bottom",-$(window).scrollTop());
+		setTimeout(function(){
+			alert($("body").outerHeight());
+		},1000);
 	}).blur(function(){
 		flag=false;
 		$("footer").css("position","fixed");
