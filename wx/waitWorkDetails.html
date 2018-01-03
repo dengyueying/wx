@@ -169,7 +169,8 @@
 		$("footer").css("position","absolute");
 		$("footer").css("bottom",-$(window).scrollTop());
 		setTimeout(function(){
-			alert($("body").outerHeight());
+			$("textarea").val($("body").outerHeight());
+			$("input").val($(window).outerHeight());
 		},1000);
 	}).blur(function(){
 		flag=false;
