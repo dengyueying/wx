@@ -2,8 +2,8 @@
 	border-bottom: 1px solid rgb(236,237,238);
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
-color: #999; 
-font-size: 0.32rem;
+color: rgb(194,192,192); 
+font-size: 0.3rem;
 }
 section{
 	background: #fff;
@@ -62,7 +62,7 @@ input{
 }
 .cont span,.cont input{
 	color: #1A1A1A;
-	font-size: 0.32rem;
+	font-size: 0.3rem;
 }
 .cont .fl-input{
 	width: auto;
@@ -117,6 +117,10 @@ input{
 	height: 2.2rem;
 	line-height: 0.6rem !important;
 	padding: 0.2rem 0.34rem;
+}
+input,textarea,.cont .alineNext{
+	color: #666;
+	font-size: 0.3rem;
 }
 .explain .text{
 	line-height: 0.92rem;
@@ -205,6 +209,7 @@ footer span{
 	border-left: 1px solid rgb(223,223,223);
 	text-align: center;
 	color:rgb(10,180,230);
+	font-size: 0.32rem;
 }
 footer span:first-child{
 	border: none;
