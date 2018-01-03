@@ -220,28 +220,11 @@ var startx, starty;
         var endx, endy;
         endx = e.changedTouches[0].pageX;
         endy = e.changedTouches[0].pageY;
-        var direction = getDirection(startx, starty, endx, endy);
-        switch (direction) {
-            case 0:
-//              alert("未滑动！");
-                break;
-            case 1:
-                console.log("向上！");
-                $('input').blur();
-				$("textarea").blur();
-                break;
-            case 2:
-                console.log("向下！");
-                $('input').blur();
-				$("textarea").blur();
-                break;
-            case 3:
-//              alert("向左！")
-                break;
-            case 4:
-//              alert("向右！")
-                break;
-            default:
+        console.log(starty);
+        console.log(endy);
+        if(endy!=starty){
+        	$("input").blur();
+        	$("textarea").blur();
         }
        }
     }, false);
