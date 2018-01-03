@@ -117,6 +117,13 @@
 				window.onresize = function() {
 					changeSize();
 				}
+				$("input").focus(function(){
+					$(window).on("swipeup",function(){
+						$('input').blur();
+						$("textarea").blur();
+//						alert($(window).outerHeight());
+					})
+				})
 //				$("input").focus(function(){
 //					$("footer").css("position","absolute");
 //					$("footer").css("bottom",-$(window).scrollTop());
@@ -150,7 +157,7 @@
 				h=$("#listbox").outerHeight(true);
 				if($(this).children("span").hasClass("active")) {
 					$(this).children("span").removeClass("active");
-					$(window).scrollTop($(window).scrollTop()-0-h);
+					$(window).scrollTop($(window).scrollTop());
 				} else {
 					$(this).children("span").addClass("active");
 					$(window).scrollTop($(window).scrollTop()-0+h);
@@ -176,11 +183,13 @@
 			
 			function funScroll(){
 				$(window).scroll(function(){
-					if($(window).scrollTop()>0){
-						console.log("scroll:"+$(window).scrollTop());
-						console.log("h:"+$(window).outerHeight());
-						$("footer").css("bottom",-$(window).scrollTop());		
-					}
+					$('input').blur();
+					$("textarea").blur();
+//					if($(window).scrollTop()>0){
+//						console.log("scroll:"+$(window).scrollTop());
+//						console.log("h:"+$(window).outerHeight());
+//						$("footer").css("bottom",-$(window).scrollTop());		
+//					}
 				})
 			}
 		</script>
