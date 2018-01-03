@@ -17,8 +17,8 @@
 			<a href="" class="mui-action-back back"></a>
 			<h1 class="head-title">办理工作</h1>
 		</header>
-		<section class="test">
-			<div class="test">
+		<section>
+			<!--<div class="test">-->
 				<p class="release pad"><span class="create-left"></span>发起工作</p>
 				<ul class="ic-list pad">
 					<li>
@@ -99,7 +99,7 @@
 					</div>
 					
 				</div>
-			</div>
+			<!--</div>-->
 		</section>
 		<footer>
 			<span class="mui-action-back">回退</span>
@@ -111,23 +111,12 @@
 		<script type="text/javascript" src="js/rem.min.js"></script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript">
-			var n, m, x, y,h;
+			var n, m, x, y,h,flag=false;
 			window.onload = function() {
 				changeSize();
 				window.onresize = function() {
 					changeSize();
 				}
-				$("input").focus(function(){
-					document.addEventListener("swipeup",function(){
-					     $('input').blur();
-						$("textarea").blur();
-					});
-					document.addEventListener("swipedown",function(){
-					     $('input').blur();
-						$("textarea").blur();
-						alert($(window).outerHeight());
-					});
-				})
 //				$("input").focus(function(){
 //					$("footer").css("position","absolute");
 //					$("footer").css("bottom",-$(window).scrollTop());
@@ -184,18 +173,78 @@
 				$(".second").css("left", m - 0 + 22 + "px");
 				$(".alineNext").css("left", y - 0 + 30 + "px");
 			};
-			
-			function funScroll(){
-				$(window).scroll(function(){
-					$('input').blur();
-					$("textarea").blur();
-//					if($(window).scrollTop()>0){
-//						console.log("scroll:"+$(window).scrollTop());
-//						console.log("h:"+$(window).outerHeight());
-//						$("footer").css("bottom",-$(window).scrollTop());		
-//					}
-				})
-			}
+
+$("input").focus(function(){
+	flag=true;
+}).blur(function(){
+	flag=false;
+})
+//判断手势方向
+var startx, starty;
+//获得角度
+    function getAngle(angx, angy) {
+        return Math.atan2(angy, angx) * 180 / Math.PI;
+    };
+ //根据起点终点返回方向 1向上 2向下 3向左 4向右 0未滑动
+    function getDirection(startx, starty, endx, endy) {
+        var angx = endx - startx;
+        var angy = endy - starty;
+        var result = 0;
+ 
+        //如果滑动距离太短
+        if (Math.abs(angx) < 2 && Math.abs(angy) < 2) {
+            return result;
+        }
+ 
+        var angle = getAngle(angx, angy);
+        if (angle >= -135 && angle <= -45) {
+            result = 1;
+        } else if (angle > 45 && angle < 135) {
+            result = 2;
+        } else if ((angle >= 135 && angle <= 180) || (angle >= -180 && angle < -135)) {
+            result = 3;
+        } else if (angle >= -45 && angle <= 45) {
+            result = 4;
+        }
+ 
+        return result;
+    }
+    //手指接触屏幕
+    document.addEventListener("touchstart", function(e) {
+        startx = e.touches[0].pageX;
+        starty = e.touches[0].pageY;
+    }, false);
+    //手指离开屏幕
+    document.addEventListener("touchend", function(e) {
+    	if(flag){
+        var endx, endy;
+        endx = e.changedTouches[0].pageX;
+        endy = e.changedTouches[0].pageY;
+        var direction = getDirection(startx, starty, endx, endy);
+        switch (direction) {
+            case 0:
+//              alert("未滑动！");
+                break;
+            case 1:
+                console.log("向上！");
+                $('input').blur();
+				$("textarea").blur();
+                break;
+            case 2:
+                console.log("向下！");
+                $('input').blur();
+				$("textarea").blur();
+                break;
+            case 3:
+//              alert("向左！")
+                break;
+            case 4:
+//              alert("向右！")
+                break;
+            default:
+        }
+       }
+    }, false);
 		</script>
 	</body>
 
