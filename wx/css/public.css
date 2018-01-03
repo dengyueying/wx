@@ -7,6 +7,12 @@ p,ul{
 	margin: 0;
 	padding: 0;
 }
+#style-2::-webkit-scrollbar-thumb{
+	background: transparent;
+}
+::-webkit-scrollbar{
+	background: transparent;
+}
 html,
 body,
 .content {
