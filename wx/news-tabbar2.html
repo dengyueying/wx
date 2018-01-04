@@ -64,7 +64,10 @@
 	<script src="js/mui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
 	<script>
-		//更换标题
+		document.addEventListener("backbutton", function(){
+			document.location.href="login.html";
+		}, false);
+		//切换页面
 		mui('.mui-bar-tab').on('tap', 'a', function(e) {
 			document.location.href=this.href;
 		});
