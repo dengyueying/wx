@@ -64,15 +64,12 @@
 	<script src="js/mui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
 	<script>
-		document.addEventListener("backbutton", function(){
+		//切换页面
+		mui('.mui-bar-tab').on('tap', 'a', function(e) {
 			window.opener = ''; 
 			window.open(this.href); 
 			window.open('', '_self'); 
-			window.close(); 
-		}, false);
-		//切换页面
-		mui('.mui-bar-tab').on('tap', 'a', function(e) {
-			document.location.href=this.href;
+			window.close();
 		});
 		window.onload=function(){
 			var title = document.getElementById("title");
