@@ -30,7 +30,7 @@
 				<span class="mui-badge" id="badge">9</span>
 				<span class="mui-tab-label" id="second">未读</span>
 			</a>
-			<a class="mui-tab-item mui-active">
+			<a class="mui-tab-item mui-active mactive">
 				<span class="mui-tab-label">已读</span>
 			</a>
 			<a class="mui-tab-item" href="news-tabbar4.html">
@@ -75,11 +75,12 @@
 	<script src="js/mui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
 	<script>
-		//更换标题
+		//切换页面
 		mui('.mui-bar-tab').on('tap', 'a', function(e) {
+			window.open(this.href);
+			window.close();
+			$(".mactive").addClass("mui-active").siblings().removeClass("mui-active");
 //			document.location.href=this.href;
-window.close();
-			window.open(this.href); 
 		});
 		window.onload=function(){
 			var title = document.getElementById("title");

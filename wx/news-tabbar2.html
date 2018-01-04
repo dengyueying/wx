@@ -26,7 +26,7 @@
 			<a class="mui-tab-item" href="news-tabbar.html">
 				<span class="mui-tab-label">已发布</span>
 			</a>
-			<a class="mui-tab-item mui-active">
+			<a class="mui-tab-item mui-active mactive">
 				<span class="mui-badge" id="badge">9</span>
 				<span class="mui-tab-label" id="second">未读</span>
 			</a>
@@ -66,8 +66,10 @@
 	<script>
 		//切换页面
 		mui('.mui-bar-tab').on('tap', 'a', function(e) {
+			window.open(this.href);
 			window.close();
-			window.open(this.href); 
+			$(".mactive").addClass("mui-active").siblings().removeClass("mui-active");
+//			document.location.href=this.href;
 		});
 		window.onload=function(){
 			var title = document.getElementById("title");

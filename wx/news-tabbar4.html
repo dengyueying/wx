@@ -23,7 +23,7 @@
 			<h1 id="title" class="head-title">按分类</h1>
 		</header>
 		<nav class="mui-bar mui-bar-tab">
-			<a class="mui-tab-item mui-active" href="news-tabbar.html">
+			<a class="mui-tab-item" href="news-tabbar.html">
 				<span class="mui-tab-label">已发布</span>
 			</a>
 			<a class="mui-tab-item" href="news-tabbar1.html">
@@ -33,7 +33,7 @@
 			<a class="mui-tab-item" href="news-tabbar2.html">
 				<span class="mui-tab-label">已读</span>
 			</a>
-			<a class="mui-tab-item">
+			<a class="mui-tab-item mui-active mactive">
 				<span class="mui-tab-label">按分类</span>
 			</a>
 		</nav>
@@ -57,10 +57,12 @@
 	<script src="js/mui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
 	<script>
-		//更换标题
+		//切换页面
 		mui('.mui-bar-tab').on('tap', 'a', function(e) {
+			window.open(this.href);
 			window.close();
-			window.open(this.href); 
+			$(".mactive").addClass("mui-active").siblings().removeClass("mui-active");
+//			document.location.href=this.href;
 		});
 		window.onload=function(){
 			var title = document.getElementById("title");

@@ -24,7 +24,7 @@
 			<!--<a class="icon-sous"></a>-->
 		</header>
 		<nav class="mui-bar mui-bar-tab">
-			<a class="mui-tab-item mui-active">
+			<a class="mui-tab-item mui-active mactive">
 				<span class="mui-tab-label">已发布</span>
 			</a>
 			<a class="mui-tab-item" href="news-tabbar2.html">
@@ -78,10 +78,9 @@
 	<script>
 		//更换标题
 		mui('.mui-bar-tab').on('tap', 'a', function(e) {
-			window.opener = ''; 
-			window.open(this.href); 
-			window.open('', '_self'); 
-			window.close(); 
+			window.open(this.href);
+			window.close();
+			$(".mactive").addClass("mui-active").siblings().removeClass("mui-active");
 		});
 		window.onload=function(){
 			var title = document.getElementById("title");
