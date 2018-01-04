@@ -66,10 +66,8 @@
 	<script>
 		//切换页面
 		mui('.mui-bar-tab').on('tap', 'a', function(e) {
-			window.opener = ''; 
-			window.open(this.href); 
-			window.open('', '_self'); 
 			window.close();
+			window.open(this.href); 
 		});
 		window.onload=function(){
 			var title = document.getElementById("title");

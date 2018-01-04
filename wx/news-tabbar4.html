@@ -59,11 +59,8 @@
 	<script>
 		//更换标题
 		mui('.mui-bar-tab').on('tap', 'a', function(e) {
-			window.opener = ''; 
-			window.open(this.href); 
-			window.open('', '_self'); 
 			window.close();
-			alert(1);
+			window.open(this.href); 
 		});
 		window.onload=function(){
 			var title = document.getElementById("title");
