@@ -65,7 +65,10 @@
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
 	<script>
 		document.addEventListener("backbutton", function(){
-			document.location.href="login.html";
+			window.opener = ''; 
+			window.open(this.href); 
+			window.open('', '_self'); 
+			window.close(); 
 		}, false);
 		//切换页面
 		mui('.mui-bar-tab').on('tap', 'a', function(e) {
