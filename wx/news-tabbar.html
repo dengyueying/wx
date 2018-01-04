@@ -128,17 +128,17 @@
 	<script src="js/mui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
 	<script>
+		//更换标题
+		mui('.mui-bar-tab').on('tap', 'a', function(e) {
+			title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
+		});
 		window.onload=function(){
 			var title = document.getElementById("title");
 			var rt=$("#second").position().left;
 			var rw=$("#second").outerWidth(true);
 			$("#badge").css("left",rt-0+rw-0+2+"px");
 		}
-			//更换标题
-			mui('.mui-bar-tab').on('tap', 'a', function(e) {
-				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
-			});
-			
+		
 			 $(".list li .text").each(function () {
 		        if($(this).text().length>37){
 		          var demoHtml = $(this).html().substr(0,37)+'...';

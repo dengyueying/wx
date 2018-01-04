@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>工作</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/head3.css" />
+		<link rel="stylesheet" href="css/head2.css" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/job-about.css" />
+		<link rel="stylesheet" href="css/job-chat.css" />
+		<link rel="stylesheet" href="css/job-work.css" />
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="" class="mui-action-back back"></a>
+			<span id="title" class="head-title">发起工作</span>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active">
+				<span class="mui-tab-label">发起工作</span>
+			</a>
+			<a class="mui-tab-item" href="job-tabbar2.html">
+				<span class="mui-badge" id="badge">6</span>
+				<span class="mui-tab-label" id="second">待办工作</span>
+			</a>
+			<a class="mui-tab-item" href="job-tabbar3.html">
+				<span class="mui-tab-label">工作流</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<div class="job-tabbar">
+				<ul class="list">
+					<div class="head bordersb pad">
+						<p class="title">按分类</p>
+						<img src="img/classify.png" class="classify"/>
+					</div>
+					
+					<li class="bordersb pad mui-table-view-cell">
+						<img src="img/case.png"/>
+						<p>人事<span class="job">共四个工作</span></p>
+					</li>
+					<li class="bordersb pad mui-table-view-cell">
+						<img src="img/case.png"/>
+						<p>财务<span class="job">共四个工作</span></p>
+					</li>
+					<li class="bordersb pad mui-table-view-cell">
+						<img src="img/case.png"/>
+						<p>销售<span class="job">共四个工作</span></p>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script>
+		window.onload=function(){
+			var title = document.getElementById("title");
+			var rt=$("#second").position().left;
+			var rw=$("#second").outerWidth(true);
+			$("#badge").css("left",rt-0+rw-0+2+"px");
+		}
+		      
+		      $(".job-tabbar .list li").click(function(){
+		      	mui.openWindow({
+							url: 'work.html',
+							id: 'work',
+						});
+		      });
+		      //切换页面
+			mui('.mui-bar-tab').on('tap', 'a', function(e) {
+				document.location.href=this.href;
+			});
+	</script>
+</html>
