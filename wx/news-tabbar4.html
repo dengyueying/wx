@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>新闻</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/head3.css" />
+		<link rel="stylesheet" href="css/head2.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/news-tabbar4.css" />
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="fl_job.html" class="back"></a>
+			<h1 id="title" class="head-title">按分类</h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="news-tabbar.html">
+				<span class="mui-tab-label">已发布</span>
+			</a>
+			<a class="mui-tab-item" href="news-tabbar1.html">
+				<span class="mui-badge" id="badge">9</span>
+				<span class="mui-tab-label" id="second">未读</span>
+			</a>
+			<a class="mui-tab-item" href="news-tabbar2.html">
+				<span class="mui-tab-label">已读</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-tab-label">按分类</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<div class="news-map">
+				<ul class="mui-table-view list classify">
+					<li class="mui-table-view-cell">
+						<a>
+							这是分类1
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a>
+							这是分类2
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script>
+		//更换标题
+		mui('.mui-bar-tab').on('tap', 'a', function(e) {
+			document.location.href=this.href;
+		});
+		window.onload=function(){
+			var title = document.getElementById("title");
+			var rt=$("#second").position().left;
+			var rw=$("#second").outerWidth(true);
+			$("#badge").css("left",rt-0+rw-0+2+"px");
+		}
+		    $(".news-map .list li").click(function(){
+		      	mui.openWindow({
+					url: 'classify.html',
+					id: 'classify',
+				});
+		    });
+	</script>
+</html>

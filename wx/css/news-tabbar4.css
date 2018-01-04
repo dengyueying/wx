@@ -9,6 +9,7 @@
 			}
 			.mui-table-view-cell:after{
 				left: 0;
+				display: block;
 			}
 			.classify li{
 				padding: 0;

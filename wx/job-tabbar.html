@@ -14,31 +14,29 @@
 		<link rel="stylesheet" href="css/head2.css" />
 		<link rel="stylesheet" href="css/public.css" />
 		<link rel="stylesheet" href="css/main.css" />
-		<link rel="stylesheet" href="css/job-about.css" />
-		<link rel="stylesheet" href="css/job-chat.css" />
-		<link rel="stylesheet" href="css/job-work.css" />
+		<link rel="stylesheet" href="css/job-tabbar.css" />
 		<script type="text/javascript" src="js/rem.min.js" ></script>
 	</head>
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
-			<a href="" class="mui-action-back back"></a>
-			<span id="title" class="head-title">已发布</span>
+			<a href="ft_job.html" class="back"></a>
+			<span id="title" class="head-title">发起工作</span>
 		</header>
 		<nav class="mui-bar mui-bar-tab">
-			<a class="mui-tab-item mui-active" href="#tabbar">
+			<a class="mui-tab-item mui-active">
 				<span class="mui-tab-label">发起工作</span>
 			</a>
-			<a class="mui-tab-item" href="#tabbar-with-chat">
+			<a class="mui-tab-item" href="job-tabbar2.html">
 				<span class="mui-badge" id="badge">6</span>
 				<span class="mui-tab-label" id="second">待办工作</span>
 			</a>
-			<a class="mui-tab-item" href="#tabbar-with-contact">
+			<a class="mui-tab-item" href="job-tabbar3.html">
 				<span class="mui-tab-label">工作流</span>
 			</a>
 		</nav>
 		<div class="mui-content">
-			<div id="tabbar" class="mui-control-content mui-active job-tabbar">
+			<div class="job-tabbar">
 				<ul class="list">
 					<div class="head bordersb pad">
 						<p class="title">按分类</p>
@@ -59,57 +57,7 @@
 					</li>
 				</ul>
 			</div>
-			<div id="tabbar-with-chat" class="mui-control-content job-chat">
-				<ul class="list">
-					<li class="bordersb pad mui-table-view-cell">
-						<p class="classify"><span>请假申请</span><span class="time">2017-10-10  10:10:10</span></p>
-						<p class="detail">
-							<span class="step">1</span>
-							<span class="handle">(主办)</span>
-							<span class="depart">部门审批</span>
-							<span class="time2">2017-10-12</span>
-						</p>
-					</li>
-					<li class="bordersb pad mui-table-view-cell">
-						<p class="classify"><span>请假申请</span><span class="time">2017-10-10  10:10:10</span></p>
-						<p class="detail">
-							<span class="step">1</span>
-							<span class="handle">(主办)</span>
-							<span class="depart">部门审批</span>
-							<span class="time2">2017-10-12</span>
-						</p>
-					</li>
-					<li class="bordersb pad mui-table-view-cell">
-						<p class="classify"><span>请假申请</span><span class="time">2017-10-10  10:10:10</span></p>
-						<p class="detail">
-							<span class="step">12</span>
-							<span class="handle">(主办)</span>
-							<span class="depart">部门审批</span>
-							<span class="time2">2017-10-12</span>
-						</p>
-					</li>
-				</ul>	
-			</div>
-			<div id="tabbar-with-contact" class="mui-control-content job-work">
-				<div class="head pad">
-					<p class="title">工作流内容</p>
-					<img src="img/classify.png" class="classify"/>
-				</div>
-				<ul class="list pad">
-					<li class="mui-table-view-cell">
-						<img src="img/work2.png"/>
-						<p>已完成</p>
-					</li>
-					<li class="mui-table-view-cell">
-						<img src="img/work3.png"/>
-						<p>已办结</p>
-					</li>
-					<li class="mui-table-view-cell">
-						<img src="img/work4.png"/>
-						<p>草稿箱</p>
-					</li>
-				</ul>
-			</div>
+			
 		</div>
 	</body>
 	<script src="js/mui.min.js"></script>
@@ -121,28 +69,16 @@
 			var rw=$("#second").outerWidth(true);
 			$("#badge").css("left",rt-0+rw-0+2+"px");
 		}
-			//更换标题
-			mui('.mui-bar-tab').on('tap', 'a', function(e) {
-				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
-			});
-			
+		      
 		      $(".job-tabbar .list li").click(function(){
 		      	mui.openWindow({
 							url: 'work.html',
 							id: 'work',
 						});
 		      });
-		       $(".job-chat .list li").click(function(){
-		      	mui.openWindow({
-							url: 'waitWorkDetails.html',
-							id: 'waitWorkDetails',
-						});
-		      });
-		      $(".job-work").click(function(){
-				mui.openWindow({
-					url: 'workflow.html',
-					id: 'workflow',
-				});
+		      //切换页面
+			mui('.mui-bar-tab').on('tap', 'a', function(e) {
+				document.location.href=this.href;
 			});
 	</script>
 </html>
