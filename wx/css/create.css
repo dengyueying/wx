@@ -226,10 +226,11 @@ select{
 	color: #1A1A1A;
 	font-size: 0.32rem;
 	padding: 0;
-	margin-left: 0.39rem;
-	line-height:1.26rem;
-    height:1.26rem;
-    width: auto;
+    direction: rtl;
+    padding-right: 0.36rem;
+}
+select option{
+	direction: ltr;
 }
 .tcor{
 	color: 0.38rem;

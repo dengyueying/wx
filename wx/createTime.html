@@ -22,7 +22,7 @@
 				<div class="box nbtbox">
 					<div class="cont border">
 						<span class="text">请假类型</span>
-						<select class="fl-right">
+						<select>
 							<option value="">年假</option>
 							<option value="">事假</option>
 							<option value="">病假</option>
@@ -125,23 +125,12 @@
 
 				//打开选择人员
 				$(".add").click(function() {
-//					mui.openWindow({
-//						url: 'contacts.html',
-//						id: 'contacts',
-//					});
-if (navigator.getUserMedia) { // 标准的API
-    navigator.getUserMedia({ "video": true }, function (stream) {
-        video.src = stream;
-        video.play();
-    }, errocb);
-} else if (navigator.webkitGetUserMedia) { // WebKit 核心的API
-    navigator.webkitGetUserMedia({ "video": true }, function (stream) {
-        video.src = window.webkitURL.createObjectURL(stream);
-        video.play();
-    }, errocb);
- }
+					mui.openWindow({
+						url: 'contacts.html',
+						id: 'contacts',
+					});
 				});
-			}
+			};
 		</script>
 	</body>
 
