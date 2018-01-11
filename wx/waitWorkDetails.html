@@ -158,37 +158,26 @@
 		timer=setInterval(function(){
 			$("header").css("position","absolute");
 	    	$("header").css("top",$(window).scrollTop());
-	    	console.log(1);
-	    	$("input").val($(window).scrollTop());
-	    },100);
-//		$("footer").css("position","absolute");
-//		$("footer").css("bottom",-$(window).scrollTop());
+	    },50);
+	    $("input").val($("html").height());
+	    $("textarea").val($("body").height());
 	}).blur(function(){
 		flag=false;
 		clearInterval(timer);
 		$("header").css("position","fixed");
 		$("header").css("top","0");
-//		$("footer").css("position","fixed");
-//		$("footer").css("bottom",0);
 	});
 	$("textarea").focus(function(){
 		flag=true;
 		timer=setInterval(function(){
 			$("header").css("position","absolute");
 	    	$("header").css("top",$(window).scrollTop());
-	    	console.log(1);
-	    	$("input").val($(window).scrollTop());
-	    },100);
-		$("textarea").val($(window).scrollTop());
-//		$("footer").css("position","absolute");
-//		$("footer").css("bottom",-$(window).scrollTop());
+	    },50);
 	}).blur(function(){
 		flag=false;
 		clearInterval(timer);
 		$("header").css("position","fixed");
 		$("header").css("top","0");
-//		$("footer").css("position","fixed");
-//		$("footer").css("bottom",0);
 	});
     //手指接触屏幕
     document.addEventListener("touchstart", function(e) {
