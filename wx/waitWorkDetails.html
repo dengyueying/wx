@@ -161,6 +161,8 @@
 	}).blur(function(){
 		flag=false;
 		clearInterval(timer);
+		$("header").css("position","fixed");
+		$("header").css("top","0");
 //		$("footer").css("position","fixed");
 //		$("footer").css("bottom",0);
 	});
@@ -173,6 +175,8 @@
 	}).blur(function(){
 		flag=false;
 		clearInterval(timer);
+		$("header").css("position","fixed");
+		$("header").css("top","0");
 //		$("footer").css("position","fixed");
 //		$("footer").css("bottom",0);
 	});
@@ -185,6 +189,7 @@
     }, false);
     timer=setInterval(function(){
     	$("header").css("top",$(window).scrollTop());
+    	$("input").val($(window).scrollTop());
     },100);
 		</script>
 	</body>
