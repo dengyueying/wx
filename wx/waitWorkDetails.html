@@ -109,7 +109,7 @@
 		<script type="text/javascript" src="js/rem.min.js"></script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript">
-			var n, m, x, y,h,flag=false,timer;
+			var n, m, x, y,h,flag=false,timer=null;
 			window.onload = function() {
 				changeSize();
 				window.onresize = function() {
@@ -155,7 +155,12 @@
 
 	$("input").focus(function(){
 		flag=true;
-		timer();
+		timer=setInterval(function(){
+			$("header").css("position","absolute");
+	    	$("header").css("top",$(window).scrollTop());
+	    	console.log(1);
+	    	$("input").val($(window).scrollTop());
+	    },100);
 //		$("footer").css("position","absolute");
 //		$("footer").css("bottom",-$(window).scrollTop());
 	}).blur(function(){
@@ -168,8 +173,13 @@
 	});
 	$("textarea").focus(function(){
 		flag=true;
-		timer();
-		$("textarea").val($("body").height());
+		timer=setInterval(function(){
+			$("header").css("position","absolute");
+	    	$("header").css("top",$(window).scrollTop());
+	    	console.log(1);
+	    	$("input").val($(window).scrollTop());
+	    },100);
+		$("textarea").val($(window).scrollTop());
 //		$("footer").css("position","absolute");
 //		$("footer").css("bottom",-$(window).scrollTop());
 	}).blur(function(){
@@ -187,10 +197,6 @@
         	$("textarea").blur();
 		}
     }, false);
-    timer=setInterval(function(){
-    	$("header").css("top",$(window).scrollTop());
-    	$("input").val($(window).scrollTop());
-    },100);
 		</script>
 	</body>
 
