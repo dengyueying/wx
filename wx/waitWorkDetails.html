@@ -155,7 +155,10 @@
 
 	$("input").focus(function(){
 		flag=true;
-		$("header").animate({"top":$(window).scrollTop()},500);
+		$("header").css("top",$(window).scrollTop());
+		setTimeout(function(){
+			$("header").css("top",$(window).scrollTop());
+		},1000);
 		console.log($(window).scrollTop());
 //		$("footer").css("position","absolute");
 //		$("footer").css("bottom",-$(window).scrollTop());
@@ -166,7 +169,10 @@
 	});
 	$("textarea").focus(function(){
 		flag=true;
-		$("header").animate({"top":$(window).scrollTop()},500);
+		$("header").css("top",$(window).scrollTop());
+		setTimeout(function(){
+			$("header").css("top",$(window).scrollTop());
+		},500);
 		$("textarea").val($("body").height());
 //		$("footer").css("position","absolute");
 //		$("footer").css("bottom",-$(window).scrollTop());
