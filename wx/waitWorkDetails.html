@@ -155,6 +155,8 @@
 
 	$("input").focus(function(){
 		flag=true;
+		$("header").css("top",$(window).scrollTop());
+		console.log($(window).scrollTop());
 //		$("footer").css("position","absolute");
 //		$("footer").css("bottom",-$(window).scrollTop());
 	}).blur(function(){
@@ -164,6 +166,7 @@
 	});
 	$("textarea").focus(function(){
 		flag=true;
+		$("header").css("top",$(window).scrollTop());
 		$("textarea").val($("body").height());
 //		$("footer").css("position","absolute");
 //		$("footer").css("bottom",-$(window).scrollTop());
