@@ -12,6 +12,7 @@ section{
     align-items: center;
     box-shadow: none;
     position:fixed !important;
+    top:0;
 }
 .mui-bar .back {
     width: 0.36rem;
