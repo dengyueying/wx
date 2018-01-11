@@ -159,8 +159,6 @@
 			$("header").css("position","absolute");
 	    	$("header").css("top",$(window).scrollTop());
 	    },50);
-	    $("input").val($("html").height());
-	    $("textarea").val($("body").height());
 	}).blur(function(){
 		flag=false;
 		clearInterval(timer);
@@ -169,8 +167,6 @@
 	});
 	$("textarea").focus(function(){
 		flag=true;
-		$("input").val($(window).height());
-	    $("textarea").val($("body").height());
 		timer=setInterval(function(){
 			$("header").css("position","absolute");
 	    	$("header").css("top",$(window).scrollTop());
