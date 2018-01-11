@@ -160,6 +160,7 @@
 //		$("footer").css("bottom",-$(window).scrollTop());
 	}).blur(function(){
 		flag=false;
+		clearInterval(timer);
 //		$("footer").css("position","fixed");
 //		$("footer").css("bottom",0);
 	});
@@ -171,6 +172,7 @@
 //		$("footer").css("bottom",-$(window).scrollTop());
 	}).blur(function(){
 		flag=false;
+		clearInterval(timer);
 //		$("footer").css("position","fixed");
 //		$("footer").css("bottom",0);
 	});
