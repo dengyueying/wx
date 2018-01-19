@@ -32,26 +32,20 @@
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script>
-			//账号
+			//工号
 			$("#number").on("input",function(){
 				$(this).val($(this).val().trim());
 				if(isNaN($(this).val())){
 					$(this).val($(this).val().replace(/[^0-9-]+/,''));
 				}
 			});
-			//密码
-			$("#password").on("input",function(){
-				$(this).val($(this).val().trim());
-				if(isNaN($(this).val())){
-					$(this).val($(this).val().replace(/[^0-9-]+/,''));
-				}
-			});
+//			//密码
+//			$("#password").on("input",function(){
+//				$(this).val($(this).val().trim());
+//			});
 			//验证密码
 			$("#again").on("input",function(){
 				$(this).val($(this).val().trim());
-				if(isNaN($(this).val())){
-					$(this).val($(this).val().replace(/[^0-9-]+/,''));
-				}
 			});
 			$("#btn").click(function() {
 				mui.openWindow({
