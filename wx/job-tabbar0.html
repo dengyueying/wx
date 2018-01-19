@@ -115,7 +115,17 @@
 	<script src="js/mui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
 	<script>
-		$(".mui-active").trigger("click");
+		mui.ajax("http://192.168.1.115:8080/BS56/news/list?status=0&id=12", {
+			type: "get",
+			dataType: 'json',
+			success: function(data) {
+				console.log(JSON.stringify(data));
+			},
+			error: function(res) {
+				console.log(JSON.stringify(res))
+			}
+
+		});
 		window.onload=function(){
 			var title = document.getElementById("title");
 			var rt=$("#second").position().left;

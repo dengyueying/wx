@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/search.css" />
+
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/rem.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back"></a>
+			<h1 class="mui-title">搜索</h1>
+		</header>-->
+		<div class="head borderbot">
+			<div class="searchbox">
+				<i class="icon-search"></i>
+				<input id="search" type="search" class="mui-input-clear" placeholder="搜索商品">
+			</div>
+			<span class="cancel" id="cancel">取消</span>
+		</div>
+		<div class="content">
+			<div class="ctair">
+				<div class="pack">
+					<div class="title pad">
+						<p>历史记录</p>
+						<i class="delete"></i>
+					</div>
+					<ul class="list">
+						<li class="mui-table-view-cell">全部都是</li>
+						<li class="mui-table-view-cell">全部</li>
+						<li class="mui-table-view-cell">全部</li>
+						<li class="mui-table-view-cell">全部</li>
+						<li class="mui-table-view-cell">全部</li>
+						<li class="mui-table-view-cell">全部</li>
+						<li class="mui-table-view-cell">全部</li>
+					</ul>
+				</div>
+				<div class="pack">
+					<div class="title pad">
+						<p>热门搜索</p>
+					</div>
+					<ul class="list">
+						<li class="active mui-table-view-cell">全部都是</li>
+						<li class="mui-table-view-cell">全部</li>
+						<li class="mui-table-view-cell">全部</li>
+						<li class="mui-table-view-cell">全部</li>
+						<li class="mui-table-view-cell">全部</li>
+						<li class="mui-table-view-cell">全部</li>
+						<li class="mui-table-view-cell">全部</li>
+					</ul>
+				</div>
+			</div>
+			<div class="commodity mui-hidden">
+				<div class="mb mui-hidden">
+					<div class="classify mui-hidden">
+						<ul class="list classify-list">
+							<li class="mui-table-view-cell active">全部</li>
+							<li class="mui-table-view-cell">全部</li>
+							<li class="mui-table-view-cell">全部</li>
+							<li class="mui-table-view-cell">全部</li>
+							<li class="mui-table-view-cell">全部</li>
+							<li class="mui-table-view-cell">全部</li>
+							<li class="mui-table-view-cell">全部</li>
+						</ul>
+					</div>
+					<div class="priceAll mui-hidden">
+						<div class="filter pad">
+							<span class="text">筛选</span>
+							<input type="number" id="low" placeholder="最低价" oninput="if(value.length>11)value=value.slice(0,11)" />
+							<i></i>
+							<input type="number" id="heigh" class="firstp" placeholder="最高价" oninput="if(value.length>11)value=value.slice(0,11)" />
+						</div>
+						<div class="sort pad">
+							<span class="text">排序</span>
+							<span class="sortbtn active" id="ltoh">价格从低到高</span>
+							<span class="sortbtn sortbtn2" id="htol">价格从高到低</span>
+						</div>
+						<div class="subfoot">
+							<span class="empty" id="empty">清空</span>
+							<span class="sure" id="sure">确定</span>
+						</div>
+					</div>
+				</div>
+				<ul class="sub-list borderbot">
+					<li class="active" id="together">综合</li>
+					<li id="price">价格<i class="icon-edit"></i></li>
+					<li id="classify">分类</li>
+				</ul>
+				<ul class="cod-list pad">
+					<li>
+						<a href="#">
+							<div class="pic">
+								<img class="mui-media-object" src="img/pic1.png">
+								<figcaption class="mui-ellipsis">幸福就是可以一起睡觉幸福就是可以一起睡觉</figcaption>
+							</div>
+							<div class="info">
+								<p class="mui-ellipsis text">幸福就是可以一起睡觉幸福就是可以一起睡觉</p>
+								<span class="money">￥66</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="pic">
+								<img class="mui-media-object" src="img/pic1.png">
+								<figcaption class="mui-ellipsis">幸福就是可以一起睡觉幸福就是可以一起睡觉</figcaption>
+							</div>
+							<div class="info">
+								<p class="mui-ellipsis text">幸福就是可以一起睡觉幸福就是可以一起睡觉</p>
+								<span class="money">￥66</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="pic">
+								<img class="mui-media-object" src="img/pic1.png">
+								<figcaption class="mui-ellipsis">幸福就是可以一起睡觉幸福就是可以一起睡觉</figcaption>
+							</div>
+							<div class="info">
+								<p class="mui-ellipsis text">幸福就是可以一起睡觉幸福就是可以一起睡觉</p>
+								<span class="money">￥66</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="pic">
+								<img class="mui-media-object" src="img/pic1.png">
+								<figcaption class="mui-ellipsis">幸福就是可以一起睡觉幸福就是可以一起睡觉</figcaption>
+							</div>
+							<div class="info">
+								<p class="mui-ellipsis text">幸福就是可以一起睡觉幸福就是可以一起睡觉</p>
+								<span class="money">￥66</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="namet mui-hidden">
+				<ul class="tlist">
+					<li class="mui-table-view-cell pad">红酒</li>
+					<li class="mui-table-view-cell pad">红酒</li>
+					<li class="mui-table-view-cell pad">红酒</li>
+					<li class="mui-table-view-cell pad">红酒</li>
+					<li class="mui-table-view-cell pad">红酒</li>
+					<li class="mui-table-view-cell pad">红酒</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var str,flag=false,low=heigh=-1,ltoh=false,htol=false;
+			mui.init();
+			
+			//点击取消
+			$("#cancel").on("click",function(){
+				if(flag){
+					$(".commodity").removeClass("mui-hidden").siblings().addClass("mui-hidden");
+				}
+				else{
+					mui.back();
+				}
+			});
+			//点击综合
+			$("#together").on("click",function(){
+				$("html").removeClass("noscroll");
+				//判断有没又点击排序
+				$(this).addClass("active");
+				if($(".sortbtn").hasClass("active")){
+					ltoh=htol=false;
+					$(".icon-edit").removeClass("icon-edit2").removeClass("icon-edit3");
+					console.log(heigh);
+					if(low==-1&&heigh==-1){
+						$("#price").removeClass("active");
+					}
+				}
+				//判断分类是否是选的第一个
+				if($(".classify .list .active").index()==0){
+					$("#classify").removeClass("active");
+				}
+				
+				$(".mb").addClass("mui-hidden");
+				$(".priceAll").addClass("mui-hidden");
+				$(".classify").addClass("mui-hidden");
+			})
+			//点击分类
+			$("#classify").on("click",function(){
+				if($(".classify").hasClass("mui-hidden")){
+					$(this).addClass("active");
+					$(".mb").removeClass("mui-hidden");
+					$(".classify").removeClass("mui-hidden");
+					$(".priceAll").addClass("mui-hidden");
+					$("html").addClass("noscroll"); 
+				}else{
+					$(".mb").addClass("mui-hidden");
+					$(".classify").addClass("mui-hidden");
+					$("html").removeClass("noscroll");
+					//判断分类是否是选的第一个
+					if($(".classify .list .active").index()==0){
+						$("#classify").removeClass("active");
+					}
+				}
+			});
+			//点击价格
+			$("#price").on("click",function(){
+				console.log(ltoh);
+				//判断价格是否已经打开
+				if($(".priceAll").hasClass("mui-hidden")){
+					$("html").addClass("noscroll");
+					$(this).addClass("active")
+					$(".mb").removeClass("mui-hidden");
+					$(".priceAll").removeClass("mui-hidden");
+					$(".classify").addClass("mui-hidden");
+					//判断分类是否是选的第一个
+					if($(".classify .list .active").index()==0){
+						$("#classify").removeClass("active");
+					}	
+				}
+				else{
+					$(".mb").addClass("mui-hidden");
+					$(".priceAll").addClass("mui-hidden");
+				}
+				if(ltoh){ //价格从低到高
+					$("#ltoh").addClass("active").siblings().removeClass("active");
+				}
+				if(htol){
+					$("#htol").addClass("active").siblings().removeClass("active");
+				}
+				if(!htol&&!ltoh){
+					$("#htol").removeClass("active").siblings().removeClass("active");
+				}
+			});
+			//价格选择只能输数字
+			$("#low").on("input",function(){
+				$(this).val($(this).val().trim());
+				if(isNaN($(this).val())){
+					$(this).val($(this).val().replace(/[^0-9-]+/,''));
+				}
+			});
+			$("#heigh").on("input",function(){
+				$(this).val($(this).val().trim());
+				if(isNaN($(this).val())){
+					$(this).val($(this).val().replace(/[^0-9-]+/,''));
+				}
+			});
+			//选择价格高低排序
+			$(".sortbtn").on("click",function(){
+				$(this).siblings().removeClass("active");
+				if($(this).hasClass("active")){
+					$(this).removeClass("active");
+				}
+				else{
+					$(this).addClass("active");
+				}
+			});
+			//清空价格选中
+			$("#empty").on("click",function(){
+				$(".priceAll input").val("");
+				$(".sortbtn").removeClass("active");
+			});
+			//价格确认
+			$("#sure").on("click",function(){
+				$("html").removeClass("noscroll");
+				if($("#ltoh").hasClass("active")){
+					ltoh=true;
+					htol=false;
+					$(".icon-edit").addClass("icon-edit2").removeClass("icon-edit3");
+					$("#together").removeClass("active");
+				}
+				else if($("#htol").hasClass("active")){
+					ltoh=true;
+					htol=false;
+					$(".icon-edit").addClass("icon-edit3").removeClass("icon-edit2");
+					$("#together").removeClass("active");
+				}
+				else{
+					ltoh=false;
+					htol=false;
+					$(".icon-edit").removeClass("icon-edit3").removeClass("icon-edit2");
+					
+					if($("#low").val()==""&&$("#heigh").val()==""){
+						$("#price").removeClass("active");
+						low=heigh=-1;
+					}else{
+						if(isNaN($("#low").val())||isNaN($("#heigh").val())){
+							$("#price").removeClass("active");
+							low=heigh=-1;
+						}	
+					}
+					
+				}
+				if($("#low").val()==""){
+					low=-1;
+				}
+				else{
+					low=$("#low").val();
+				}
+				if($("#heigh").val()==""){
+					heigh=-1;
+				}
+				else{
+					heigh=$("#heigh").val();
+				}
+				$(".mb").addClass("mui-hidden");
+				$(".priceAll").addClass("mui-hidden");
+			});
+			//点击分类列表
+			$(".classify .list li").on("click",function(){
+				$("html").removeClass("noscroll");
+				$(".mb").addClass("mui-hidden");
+				$(".classify").addClass("mui-hidden");
+				$(this).addClass("active").siblings().removeClass("active");
+				if($(this).index()==0){
+					$("#classify").removeClass("active");
+				}
+			});
+			
+			//点击历史记录或热门搜索
+			$(".pack .list li").on("click",function(){
+				$(".commodity").removeClass("mui-hidden").siblings().addClass("mui-hidden");
+				$(".cancel").addClass("mui-hidden");
+				$("#search").val($(this).html());
+				flag=true;
+			});
+			//输入框内容改变
+			$("#search").on("input",function(){
+				$(this).val($(this).val().trim());//输入框不允许输入空号
+				if($("#search").val()!=""){
+					if($(".clear").length==0){
+						str='<i class="icon-clear clear"></i>';
+						$(".searchbox").append(str);
+						$(".namet").removeClass("mui-hidden").siblings().addClass("mui-hidden");	
+					}
+				}
+				else{
+					$(".clear").remove();
+					$(".ctair").removeClass("mui-hidden").siblings().addClass("mui-hidden");
+				}
+			});
+			//input聚焦
+			$("#search").focus(function(){
+				$("html").addClass("noscroll");
+				if($("#search").val()!=""){
+					$(".namet").removeClass("mui-hidden").siblings().addClass("mui-hidden");
+					$(".cancel").removeClass("mui-hidden");
+					if($(".clear").length==0){
+						str='<i class="icon-clear clear"></i>';
+						$(".searchbox").append(str);
+					}
+				}
+				else{
+					$(".ctair").removeClass("mui-hidden").siblings().addClass("mui-hidden");
+					$(".cancel").removeClass("mui-hidden");
+				}
+				$(".mb").addClass("mui-hidden");
+				$(".priceAll").addClass("mui-hidden");
+				$(".classify").addClass("mui-hidden");
+			})
+			//清空输入框内容
+			$(".searchbox").on("click",".clear",function(e){
+				e.stopPropagation();
+				$("#search").val("");
+				$(".clear").remove();
+				$(".ctair").removeClass("mui-hidden").siblings().addClass("mui-hidden");
+			});
+			//点击搜索列表
+			$(".tlist li").on("click",function(){
+				$("#search").val($(this).html());
+				$(".commodity").removeClass("mui-hidden").siblings().addClass("mui-hidden");
+				$(".cancel").addClass("mui-hidden");
+				$(".clear").remove();
+				flag=true;
+			});
+			
+			
+			//删除历史记录
+			$(".delete").on("click", function() {
+				$(this).parent().parent().remove();
+			});
+			
+		</script>
+	</body>
+
+</html>

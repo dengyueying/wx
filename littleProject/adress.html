@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>选择收货地址</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/adress.css" />
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+	</head>
+
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back"></a>
+			<h1 class="mui-title">选择收货地址</h1>
+		</header>-->
+		<div class="content contentBottom">
+			<ul class="adr-list">
+				<li class="borderbot pad mui-table-view-cell">
+					<p class="number"><span class="default">默认</span><span class="name">王先森</span><span class="ipone">15111272727</span></p>
+					<p class="adress mui-ellipsis">长沙市芙蓉区美联天骄城1623室</p>
+					<div class="icon">
+						<i class="icon-adrs"></i>
+					</div>
+				</li>
+				<li class="borderbot pad mui-table-view-cell">
+					<p class="number"><span class="name">王先森</span><span class="ipone">15111272727</span></p>
+					<p class="adress mui-ellipsis">长沙市芙蓉区美联天骄城1623室</p>
+					<div class="icon">
+						<i class="icon-adrs"></i>
+					</div>
+				</li>
+				<li class="borderbot pad mui-table-view-cell">
+					<p class="number"><span class="name">王先森</span><span class="ipone">15111272727</span></p>
+					<p class="adress mui-ellipsis">长沙市芙蓉区美联天骄城1623室</p>
+					<div class="icon">
+						<i class="icon-adrs"></i>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<footer>
+			新增收货地址
+		</footer>
+		<script type="text/javascript">
+			//进入编辑地址页面
+			$(".adr-list li").on("click",".icon",function(e){
+				e.stopPropagation();
+				mui.openWindow({
+					url: 'editadress.html',
+					id: 'editadress',
+				});
+			});
+			//选中地址
+			$(".adr-list li").on("click",function(e){
+				 mui.back();
+			});
+			
+			//新增地址
+			$("footer").on("click",function(){
+				mui.openWindow({
+					url: 'addadress.html',
+					id: 'addadress',
+				});
+			})
+		</script>
+	</body>
+
+</html>

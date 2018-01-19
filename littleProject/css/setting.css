@@ -1,0 +1,29 @@
+*{
+	background: inherit;
+}
+.list li{
+	height: 1.26rem;
+	display: flex;
+	align-items:center;
+	position: relative;
+}
+.list li p{
+	color: #1A1A1A;
+	font-size: 0.28rem;
+}
+.list li img{
+	width: 0.96rem;
+	height: 0.96rem;
+	border-radius: 50%;
+	position: absolute;
+	right: 0;
+	top:50%;
+	transform: translateY(-50%);
+}
+footer{
+	background: #E41E3E;
+	color: #fff;
+	font-size: 0.32rem;
+	line-height: 0.9rem;
+	text-align: center;
+}

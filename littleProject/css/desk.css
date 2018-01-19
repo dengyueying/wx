@@ -1,0 +1,37 @@
+.list li{
+	height: 1.24rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.list li .check{
+	width: 0.32rem;
+	height: 0.32rem;
+	background: url(../img/check2.png) no-repeat;
+	background-size: 100%  100%;
+}
+.list .active .check{
+	background: url(../img/checked2.png) no-repeat;
+	background-size: 100%  100%;
+}
+.list li img{
+	width: 0.52rem;
+	height: 0.52rem;
+	border-radius: 0.06rem;
+}
+.ileft{
+	display: flex;
+	align-items: center;
+}
+.ileft .text{
+	color: #333333;
+	font-size: 0.28rem;
+	margin-left: 0.18rem;
+}
+footer{
+	background: #E41E3E;
+	color: #fff;
+	font-size: 0.32rem;
+	line-height: 0.9rem;
+	text-align: center;
+}

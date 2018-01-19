@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>商品详情</title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/details.css" />
+		<script type="text/javascript" src="js/rem.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back"></a>
+			<h1 class="mui-title">商品详情</h1>
+		</header>-->
+		<div class="head">
+			<div class="title">
+				<span class="thsp active">商品</span>
+				<span class="thsp2">详情</span>
+			</div>
+			<div class="backHome">
+				<i></i>
+				<span class="home">首页</span>
+			</div>
+		</div>
+		<div class="content contentBottom">
+			<div class="frist">
+				<div class="mui-slider">
+					<div class="mui-slider-group mui-slider-loop">
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一个图文表格) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<ul class="mui-table-view mui-grid-view">
+								<li class="mui-table-view-cell mui-media mui-col-xs-6"><img class="mui-media-object" src="img/pic1.png">
+							</ul>
+						</div>
+						<div class="mui-slider-item">
+							<ul class="mui-table-view mui-grid-view">
+								<li class="mui-table-view-cell mui-media mui-col-xs-6"><img class="mui-media-object" src="img/pic1.png">
+							</ul>
+						</div>
+						<div class="mui-slider-item">
+							<ul class="mui-table-view mui-grid-view">
+								<li class="mui-table-view-cell mui-media mui-col-xs-6"><img class="mui-media-object" src="img/pic1.png">
+							</ul>
+						</div>
+						<div class="mui-slider-item">
+							<ul class="mui-table-view mui-grid-view">
+								<li class="mui-table-view-cell mui-media mui-col-xs-6"><img class="mui-media-object" src="img/pic1.png">
+							</ul>
+						</div>
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一个图文表格) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<ul class="mui-table-view mui-grid-view">
+								<li class="mui-table-view-cell mui-media mui-col-xs-6"><img class="mui-media-object" src="img/pic1.png">
+							</ul>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-number">
+							<span>1</span>/3
+						</div>
+					</div>
+				</div>
+				<div class="activity pad">
+					<div class="text">
+						<span>限时购</span>
+						<span class="going mleft">抢购中</span>
+					</div>
+					<div class="time going">
+						<span class="">离结束还剩</span>
+						<span class="mleft">12:12:12</span>
+						<i class="icon-right icon-rightf"></i>
+					</div>
+				</div>
+				<ul class="picDetails pad">
+					<li>
+						<img src="img/little1.png" />
+						<div class="smallText">
+							<p>经典流苏</p>
+							<p>时尚百搭</p>
+						</div>
+					</li>
+					<li>
+						<img src="img/little2.png" />
+						<div class="smallText">
+							<p>优质羊绒</p>
+							<p>柔软舒适</p>
+						</div>
+					</li>
+					<li>
+						<img src="img/little3.png" />
+						<div class="smallText">
+							<p>文格设计</p>
+							<p>简单大牌</p>
+						</div>
+					</li>
+				</ul>
+				<div class="info pad box">
+					<div class="describe">
+						<p class="title">经典100%羊绒格纹围巾</p>
+						<p class="zhiz">chonkk制造商，呼和浩特羊绒</p>
+						<p class="price"><span class="new">￥188</span><span class="old">￥288</span></p>
+					</div>
+					<div class="comment">
+						<p class="num">999+</p>
+						<p class="text">用户评价</p>
+						<span class="look">查看</span>
+					</div>
+				</div>
+				<div class="box">
+					<ul class="con">
+						<li class="pad">
+							<span class="text">规格数量选择</span>
+							<i class="icon-right"></i>
+						</li>
+						<li class="pad">
+							<span class="text">购物福袋</span>
+						</li>
+						<li class="pad">
+							<span class="text">购物积分:</span>
+							<span class="context">hhhh</span>
+							<i class="icon-right"></i>
+						</li>
+						<div class="fuwu">
+							<span class="text">服务:</span>
+							<ul class="fwlist">
+								<li>30天无忧退换货</li>
+								<li>48小时快速退款</li>
+								<li>满88元包邮费</li>
+								<li>商城自营品牌</li>
+								<li>国内部分地区不配送</li>
+							</ul>
+							<i class="icon-right"></i>
+						</div>
+					</ul>
+				</div>
+				<div class="box">
+					<div class="comhead borderbot pad">
+						用户评价(999+)
+						<i class="icon-right"></i>
+					</div>
+					<div class="cont">
+						<div class="portrait pad">
+							<img src="img/portrait.png" />
+							<span class="name">王****森</span>
+							<div class="star">
+								<img src="img/star.png" />
+								<img src="img/star.png" />
+								<img src="img/star.png" />
+								<img src="img/star.png" />
+								<img src="img/star.png" />
+							</div>
+						</div>
+						<div class="time pad">
+							<span class="date">2017.2.23  22:26</span>
+							<span class="yans">米白</span>
+						</div>
+						<p class="comText pad mui-ellipsis-2">带了一些天才评论，围巾十分的柔软，贴着皮肤舒适,带了一些天才评论，围巾十分的柔软，贴着皮肤舒适,带了一些天才评论，围巾十分的柔软，贴着皮肤舒适</p>
+						<ul class="com-list pad">
+							<li>
+								<img src="img/pic1.png" />
+							</li>
+							<li>
+								<img src="img/pic1.png" />
+							</li>
+							<li>
+								<img src="img/pic1.png" />
+							</li>
+							<li>
+								<img src="img/pic1.png" />
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="pichead pad borderbot">
+					<div id="segmentedControl" class="mui-segmented-control">
+						<a class="mui-control-item mui-active" href="#item1">大家都在看</a>
+						<a class="mui-control-item" href="#item2">24小时促销</a>
+					</div>
+				</div>
+				<div>
+					<div id="item1" class="mui-control-content mui-active">
+						<ul class="smallpic-list pad">
+							<li>
+								<img src="img/smallpic1.png" />
+								<div class="infot">
+									<span class="sale">7折</span>
+									<p class="text mui-ellipsis">雅芝羊毛混纺</p>
+									<p class="prix">￥222</p>
+								</div>
+							</li>
+							<li>
+								<img src="img/smallpic2.png" />
+								<div class="infot">
+									<span class="sale">5折</span>
+									<p class="text mui-ellipsis">雅芝羊毛混纺</p>
+									<p class="prix">￥222</p>
+								</div>
+							</li>
+							<li>
+								<img src="img/smallpic1.png" />
+								<div class="infot">
+									<span class="sale">7折</span>
+									<p class="text mui-ellipsis">雅芝羊毛混纺</p>
+									<p class="prix">￥222</p>
+								</div>
+							</li>
+							<li>
+								<img src="img/smallpic2.png" />
+								<div class="infot">
+									<span class="sale">5折</span>
+									<p class="text mui-ellipsis">雅芝羊毛混纺</p>
+									<p class="prix">￥222</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="item2" class="mui-control-content">
+						<ul class="smallpic-list pad">
+							<li>
+								<img src="img/smallpic2.png" />
+								<div class="infot">
+									<span class="sale">5折</span>
+									<p class="text mui-ellipsis">雅芝羊毛混纺</p>
+									<p class="prix">￥222</p>
+								</div>
+							</li>
+							<li>
+								<img src="img/smallpic1.png" />
+								<div class="infot">
+									<span class="sale">7折</span>
+									<p class="text mui-ellipsis">雅芝羊毛混纺</p>
+									<p class="prix">￥222</p>
+								</div>
+							</li>
+							<li>
+								<img src="img/smallpic2.png" />
+								<div class="infot">
+									<span class="sale">5折</span>
+									<p class="text mui-ellipsis">雅芝羊毛混纺</p>
+									<p class="prix">￥222</p>
+								</div>
+							</li>
+							<li>
+								<img src="img/smallpic1.png" />
+								<div class="infot">
+									<span class="sale">7折</span>
+									<p class="text mui-ellipsis">雅芝羊毛混纺</p>
+									<p class="prix">￥222</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="animate">
+				<div class="anit">
+					<p>下拉查看更多详情</p>
+					<img src="img/icon-shangla.png" />
+				</div>
+			</div>
+			<div class="second mui-hidden">
+				<ul class="spdetails pad">
+					<li>
+						<span class="text">适用季节</span>
+						<span class="context">春季</span>
+					</li>
+					<li>
+						<span class="text">适用性别</span>
+						<span class="context">男士</span>
+					</li>
+					<li>
+						<span class="text">面料成分</span>
+						<span class="context">羊毛混纺</span>
+					</li>
+					<li>
+						<span class="text">规格</span>
+						<span class="context">170cm*30cm</span>
+					</li>
+					<li>
+						<span class="text">安全类别</span>
+						<span class="context">GB0023 B类</span>
+					</li>
+					<li>
+						<span class="text">颜色</span>
+						<span class="context">米白、深灰、格子</span>
+					</li>
+					<div class="tishi borderbot">
+						<span class="text">温馨提示</span>
+						<ol class="tslist">
+							<li>1.建议干洗 </li>
+							<li>2.冬季羊毛绒佩戴时间越长，可能会出现浮毛，不过不要担心</li>
+							<li>3.请佩戴时请勿使用锐器刮伤</li>
+							<li>4.洗后自然晾干</li>
+						</ol>
+					</div>
+				</ul>
+				<ul class="bigpic-list">
+					<li>
+						<img src="img/bigpic1.png"/>
+					</li>
+					<li>
+						<img src="img/bigpic2.png"/>
+					</li>
+					<li>
+						<img src="img/bigpic3.png"/>
+					</li>
+					<li>
+						<img src="img/bigpic4.png"/>
+					</li>
+					<li>
+						<img src="img/bigpic5.png"/>
+					</li>
+					<li>
+						<img src="img/bigpic6.png"/>
+					</li>
+					<li>
+						<img src="img/bigpic7.png"/>
+					</li>
+				</ul>
+				<div class="problem">
+					<div class="phead"><span>常见问题</span></div>
+					<ul class="pro-list">
+						<li>
+							<p class="title">30天无忧退换货</p>
+							<p class="text">单笔金额满88元免费给您邮过去，不满的话就不给你邮了，因为老板吩咐了，说你们这些没满88元的不让给你们包邮，于是我想了了个办法</p>
+						</li>
+						<li>
+							<p class="title">30天无忧退换货</p>
+							<p class="text">单笔金额满88元免费给您邮过去，不满的话就不给你邮了，因为老板吩咐了，说你们这些没满88元的不让给你们包邮，于是我想了了个办法</p>
+						</li>
+						<li>
+							<p class="title">30天无忧退换货</p>
+							<p class="text">单笔金额满88元免费给您邮过去，不满的话就不给你邮了，因为老板吩咐了，说你们这些没满88元的不让给你们包邮，于是我想了了个办法</p>
+						</li>
+					</ul>
+				</div>
+				<div class="top">
+					<i class="icon-top"></i>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="cart">
+				<i class="icon-cart"></i>
+				<span class="num" id="num">1</span>
+			</div>
+			<div class="collect active" id="collect">
+				<i class="icon-collect"></i>
+			</div>
+			<div class="buy" id="buy">
+				立即购买
+			</div>
+			<div class="join" id="join">
+				加入购物车
+			</div>
+		</footer>
+		<div class="mui-backdrop backactive">
+			<div class="contan"></div>
+			<div class="drop">
+				<i class="fail" id="fail"/></i>
+				<div class="bhead">
+					<img src="img/bigpic7.png"/>
+					<div class="subinfo">
+						<p class="cash">价格：￥99</p>
+						<p class="ts">请选择规格属性</p>
+					</div>
+				</div>
+				<div class="detail">
+					<p class="dtext">规格</p>
+					<span class="classify">60%羊绒雅致混纺 米白</span>
+					<span class="classify">60%羊绒雅致混纺 灰白</span>
+				</div>
+				<div class="detail">
+					<p class="dtext">数量</p>
+					<div class="mui-numbox" data-numbox-min='1' data-numbox-max='50'>
+						<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+						<input id="test" class="mui-input-numbox" type="number" value="1" />
+						<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			//上拉查看商品详情
+			var y,ym,ah,bh,_touch,p,s,s0,str,timer=null,r=0,flag=false;
+			$(window).on('touchstart',function(e) {
+				r=0;
+				timer=setInterval(function(){
+					r=r+0.1;
+				},100);
+				s0=$(window).scrollTop();
+				if(s0==0){
+					flag=true;
+				}
+			    _touch = e.originalEvent.targetTouches[0]; 
+			    y= _touch.pageY;
+				$(".animate").remove();
+				if($(".frist").hasClass("mui-hidden")){
+					str='<div class="animate">';
+						str+='<div class="anit">';
+							str+='<img src="img/icon-xiala.png" />';
+							str+='<p>下拉返回顶部/p>';
+						str+='</div>';
+					str+='</div>';
+					$(".second").before(str);
+					$(".anit").children("p").css("padding-top",0);
+				}
+				else{
+					str='<div class="animate">';
+						str+='<div class="anit">';
+							str+='<p>上拉查看更多详情</p>';
+							str+='<img src="img/icon-shangla.png" />';
+						str+='</div>';
+					str+='</div>';
+					$(".frist").after(str);
+					$(".anit").children("p").css("padding-top","0.9rem");
+				}	
+			});
+			
+			$(window).on('touchmove',function(e) {
+			    _touch = e.originalEvent.targetTouches[0]; 
+			    ym= _touch.pageY;
+			    ah=parseInt(y-ym);
+			    bh=$(".anit").outerHeight(true);
+			    p=$(document).height() - $(window).height();
+			    s=$(window).scrollTop();
+//			    console.log("p:"+p);
+//			    console.log("s:"+$(window).scrollTop());
+//			    console.log("ah:"+ah);
+//			    console.log("bh:"+bh);
+			    if($(".second").hasClass("mui-hidden")){//商品到详情
+			    	$(".animate").css("height",ah+"px");
+			    	$(".animate").css("align-items","flex-start");
+			    	$(".anit").children("p").html("上拉查看更多详情");
+			    	$(".anit").children("img").attr("src","img/icon-shangla.png");
+			    	if(p-s<ah-bh-18){
+			    		$(".anit").children("p").html("释放查看更多详情");
+			    		$(".anit").children("img").attr("src","img/icon-xiala.png");
+			    	}	
+			    }
+			    else{                     //详情到商品
+			    	if(flag){
+				    	$(".animate").css("height",-ah/2+"px");
+				    	$(".animate").css("align-items","flex-end");
+				    	$(".anit").children("p").html("上拉返回顶部");
+					    $(".anit").children("img").attr("src","img/icon-xiala.png");
+				    	if(-ah/2-s>bh+18){
+				    		$(".anit").children("p").html("释放返回顶部");
+					    	$(".anit").children("img").attr("src","img/icon-shangla.png");
+				    	}	
+			    	}
+			    	
+			    }
+			});
+			
+			$(window).on('touchend',function(e) {
+				clearInterval(timer);
+			    $(".animate").css("height",0); 
+			    if($(".second").hasClass("mui-hidden")){ //商品到详情
+			    	if(r>=0.1&&p-s<ah-bh-18){
+			    		$(".frist").addClass("mui-hidden");
+			    		$(".second").removeClass("mui-hidden");
+			    		$(".thsp").removeClass("active").siblings().addClass("active");
+			    		$(window).scrollTop(0);
+			    	}
+			    }
+			    else{                          //详情到商品
+			    	if(flag&&r>=0.1){
+				    	if(-ah/2-s>bh+18){
+				    		$(".second").addClass("mui-hidden");
+				    		$(".frist").removeClass("mui-hidden");
+				    		$(".thsp2").removeClass("active").siblings().addClass("active");
+				    		$("body,html").animate({ scrollTop: 10000 },300);
+				    		console.log($(window).scrollTop());
+				    	}
+				    	else{
+				    		if(ah<0){
+				    			$("body,html").animate({ scrollTop: 0 },300);
+				    		}
+				    	}	
+			    	}
+			    }
+			    flag=false;
+			});
+			//点击按钮回到顶部
+			$(".top").on("click",function(){
+				$(".frist").removeClass("mui-hidden");
+				$(".second").addClass("mui-hidden");
+				$("body,html").animate({ scrollTop: 0 },300);
+			})
+			//文字对齐
+			window.onload = function() {
+				changeSize();
+			}
+			
+			//选择商品数量
+			$("#test").on("input",function(){
+				$("#test").val($("#test").val().replace(/[^0-9-]+/,'').replace(/\b(0+)/gi,''));
+				if($(this).val()>50){
+					mui.toast("超出单品上限");
+					$(this).val(50);
+				}
+			});	
+			//收藏
+			$("#collect").on("click",function(){
+				if($(this).hasClass("active")){
+					$(this).removeClass("active")
+				}
+				else{
+					$(this).addClass("active")
+				}
+			});
+			//立即购买
+			$("#buy").on("click",function(){
+				if($(".classify").hasClass("active")){
+					mui.openWindow({
+						url: 'inorder.html',
+						id: 'inorder',
+					});
+				}
+				else{
+					if($(".mui-backdrop").hasClass("backactive")){
+						$(".mui-backdrop").removeClass("backactive");
+						$(".drop").animate({bottom:"0.9rem"});
+						$("html").addClass('noscroll');
+					}
+				}
+				
+			});
+			//加入购物车
+			$("#join").on("click",function(){
+				if($(".classify").hasClass("active")){
+					mui.toast("添加成功");
+					$("#num").html($("#num").html()-0+1);
+				}
+				else{
+					if($(".mui-backdrop").hasClass("backactive")){
+						$(".mui-backdrop").removeClass("backactive");
+						$(".drop").animate({bottom:"0.9rem"});
+						$("html").addClass('noscroll');
+					}
+				}
+				
+			});
+			//去掉选择商品规格
+			$("#fail").on("click",function(){
+				$(".drop").animate({bottom:"-9rem"},function(){
+					$(".mui-backdrop").addClass("backactive");
+					$("html").removeClass('noscroll');
+				});
+			});
+			$(".contan").on("touchstart",function(e){
+				$(".drop").animate({bottom:"-9rem"},function(){
+					$(".mui-backdrop").addClass("backactive");
+				});
+			});
+			
+			//选择商品规格
+			$(".classify").on("click",function(){
+				$(this).addClass("active").siblings(".classify").removeClass("active");
+			})
+			
+			function changeSize() {
+				n = 0, m = 0;
+				$(".spdetails .text").each(function() {
+					n = $(this).outerWidth(true);
+					if(n > m) {
+						m = n;
+					}
+				});
+				$(".spdetails .text").css("width", m - 0 + 30 + "px");
+			};
+		</script>
+	</body>
+
+</html>

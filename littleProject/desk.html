@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>选择付款方式</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/desk.css" />
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+	</head>
+
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back"></a>
+			<h1 class="mui-title">选择付款方式</h1>
+		</header>-->
+		<div class="content contentBottom">
+			<ul class="list pad">
+				<li class="borderbot active">
+					<div class="ileft">
+						<img src="img/apipay.png"/>
+						<span class="text">支付宝</span>
+					</div>
+					<i class="check"></i>
+				</li>
+				<li class="borderbot">
+					<div class="ileft">
+						<img src="img/wxpay.png"/>
+						<span class="text">微信</span>
+					</div>
+					<i class="check"></i>
+				</li>
+			</ul>
+		</div>
+		<footer>
+			确定
+		</footer>
+		<script type="text/javascript">
+			mui.init();
+			//选择付款方式
+			$(".list li").on("click",function(){
+				$(this).addClass("active").siblings().removeClass("active");
+			});
+			$("footer").on("click",function(){
+				mui.openWindow({
+					url: 'myorder.html',
+					id: 'myorder',
+				});
+			});
+			
+		</script>
+	</body>
+
+</html>

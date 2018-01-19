@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>设置</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/setting.css" />
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+	</head>
+
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back"></a>
+			<h1 class="mui-title">设置</h1>
+		</header>-->
+		<div class="content contentBottom">
+			<ul class="list pad">
+				<li class="borderbot">
+					<p>头像</p>
+					<img class="tx" src="img/bigpic7.png"/>
+				</li>
+				<li class="borderbot">
+					<p>暮夜</p>
+				</li>
+				<li class="borderbot">
+					<p>微信登录</p>
+				</li>
+				<li class="borderbot mui-table-view-cell phone">
+					<p>15111367144</p>
+				</li>
+			</ul>
+		</div>
+		<footer>
+			退出登录
+		</footer>
+		<script type="text/javascript">
+			$(".adr-list li").on("click",function(){
+				mui.openWindow({
+					url: 'addadress.html',
+					id: 'addadress',
+				});
+			});
+			$(".phone").on('click', function(e) {
+				var btnArray = ['取消', '确定'];
+				mui.prompt('请输入您要绑定的电话号码：', $(".phone").children().html() , 'Hello', btnArray, function(e) {
+					if (e.index == 1) {
+						if(!(/^1[34578]\d{9}$/.test(e.value))) {
+							if(e.value!==""){
+								mui.toast('请您输入的手机号码格式不正确，请重试');
+							}
+						}
+						else{
+							$(".phone").children().html(e.value);
+						}
+					}
+				})
+			});
+		</script>
+	</body>
+
+</html>

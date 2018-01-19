@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的订单</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/myorder.css" />
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+	</head>
+
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back"></a>
+			<h1 class="mui-title">我的订单</h1>
+		</header>-->
+		<div class="content">
+			<div class="head  borderbot">
+					<div id="segmentedControl" class="mui-segmented-control">
+						<a class="mui-control-item mui-active" href="#item1">全部</a>
+						<a class="mui-control-item" href="#item2">待付款</a>
+						<a class="mui-control-item" href="#item3">待发货</a>
+						<a class="mui-control-item" href="#item4">已发货</a>
+						<a class="mui-control-item" href="#item5">待评价</a>
+					</div>
+				</div>
+				<div>
+					<div id="item1" class="mui-control-content mui-active">
+						<ul class="pic-list">
+							<li class="pad">
+								<div class="order borderbot">
+									<span>订单号:</span><span class="number">123455</span>
+									<i class="delete"></i>
+								</div>
+								<div class="pic">
+									<img src="img/smallpic1.png" />
+									<img src="img/smallpic2.png" />
+									<img src="img/smallpic1.png" />
+									<img src="img/smallpic2.png" />
+								</div>
+								<div class="info borderbot">
+									<p>共<span>4</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
+								</div>
+								<div class="bottom">
+									<span class="active">已取消</span>
+									<span>再次购买</span>
+								</div>
+							</li>
+							<li class="pad">
+								<div class="order borderbot">
+									<span>订单号:</span><span class="number">123455</span>
+									<i class="delete"></i>
+								</div>
+								<div class="pic">
+									<img src="img/smallpic1.png" />
+									<img src="img/smallpic2.png" />
+								</div>
+								<div class="info borderbot">
+									<p>共<span>2</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
+								</div>
+								<div class="bottom">
+									<span class="active">已取消</span>
+									<span>已付款</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="item2" class="mui-control-content">
+						<ul class="pic-list">
+							<li class="pad">
+								<div class="order borderbot">
+									<span>订单号:</span><span class="number">123455</span>
+									<i class="delete"></i>
+								</div>
+								<div class="pic">
+									<img src="img/smallpic1.png" />
+									<img src="img/smallpic2.png" />
+									<img src="img/smallpic2.png" />
+								</div>
+								<div class="info borderbot">
+									<p>共<span>3</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
+								</div>
+								<div class="bottom">
+									<span class="active">待付款</span>
+								</div>
+							</li>
+							<li class="pad">
+								<div class="order borderbot">
+									<span>订单号:</span><span class="number">123455</span>
+									<i class="delete"></i>
+								</div>
+								<div class="pic">
+									<img src="img/smallpic2.png" />
+								</div>
+								<div class="info borderbot">
+									<p>共<span>1</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
+								</div>
+								<div class="bottom">
+									<span class="active">待付款</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="item3" class="mui-control-content">
+						<ul class="pic-list">
+							<li class="pad">
+								<div class="order borderbot">
+									<span>订单号:</span><span class="number">123455</span>
+									<i class="delete"></i>
+								</div>
+								<div class="pic">
+									<img src="img/smallpic1.png" />
+								</div>
+								<div class="info borderbot">
+									<p>共<span>1</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
+								</div>
+								<div class="bottom">
+									<span class="active">待发货</span>
+								</div>
+							</li>
+							<li class="pad">
+								<div class="order borderbot">
+									<span>订单号:</span><span class="number">123455</span>
+									<i class="delete"></i>
+								</div>
+								<div class="pic">
+									<img src="img/smallpic1.png" />
+									<img src="img/smallpic2.png" />
+								</div>
+								<div class="info borderbot">
+									<p>共<span>2</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
+								</div>
+								<div class="bottom">
+									<span class="active">待发货</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="item4" class="mui-control-content">
+						<ul class="pic-list">
+							<li class="pad">
+								<div class="order borderbot">
+									<span>订单号:</span><span class="number">123455</span>
+									<i class="delete"></i>
+								</div>
+								<div class="pic">
+									<img src="img/smallpic1.png" />
+									<img src="img/smallpic2.png" />
+								</div>
+								<div class="info borderbot">
+									<p>共<span>2</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
+								</div>
+								<div class="bottom">
+									<span class="active">查看物流</span>
+									<span>再次购买</span>
+								</div>
+							</li>
+							<li class="pad">
+								<div class="order borderbot">
+									<span>订单号:</span><span class="number">123455</span>
+									<i class="delete"></i>
+								</div>
+								<div class="pic">
+									<img src="img/smallpic1.png" />
+									<img src="img/smallpic2.png" />
+								</div>
+								<div class="info borderbot">
+									<p>共<span>2</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
+								</div>
+								<div class="bottom">
+									<span class="active">查看物流</span>
+									<span>再次购买</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="item5" class="mui-control-content">
+						<ul class="pic-list">
+							<li class="pad">
+								<div class="order borderbot">
+									<span>订单号:</span><span class="number">123455</span>
+									<i class="delete"></i>
+								</div>
+								<div class="pic">
+									<img src="img/smallpic1.png" />
+									<img src="img/smallpic1.png" />
+									<img src="img/smallpic2.png" />
+								</div>
+								<div class="info borderbot">
+									<p>共<span>3</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
+								</div>
+								<div class="bottom">
+									<span class="active">评价</span>
+									<span>再次购买</span>
+								</div>
+							</li>
+							<li class="pad">
+								<div class="order borderbot">
+									<span>订单号:</span><span class="number">123455</span>
+									<i class="delete"></i>
+								</div>
+								<div class="pic">
+									<img src="img/smallpic1.png" />
+									<img src="img/smallpic2.png" />
+								</div>
+								<div class="info borderbot">
+									<p>共<span>2</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
+								</div>
+								<div class="bottom">
+									<span class="active">评价</span>
+									<span>再次购买</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			
+		</div>
+		<script type="text/javascript">
+			mui.init();
+			//删除订单
+			$(".delete").on("click",function(){
+				var that=$(this);
+				var btnArray = ['取消', '删除'];
+				mui.confirm(' ', '要删除该订单？', btnArray, function(e) {
+					if (e.index == 1) {
+						that.parent().parent().remove();
+					} 
+				}, 'div');
+			});
+		</script>
+	</body>
+
+</html>

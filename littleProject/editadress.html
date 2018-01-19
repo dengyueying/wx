@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>编辑地址</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/addadress.css" />
+		<link rel="stylesheet" href="css/mui.poppicker.css" />
+		<link rel="stylesheet" href="css/mui.picker.min.css" />
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/mui.picker.min.js" ></script>
+		<script type="text/javascript" src="js/mui.poppicker.js" ></script>
+		<script type="text/javascript" src="js/city.data-3.js" ></script>
+		<script type="text/javascript" src="js/adressedit.js" ></script>
+	</head>
+
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back"></a>
+			<h1 class="mui-title">编辑地址</h1>
+		</header>-->
+		<div class="content contentBottom">
+			<ul class="list pad">
+				<li class="borderbot" id="citybtn">
+					<input id="city" type="text" disabled="disabled" placeholder="省份、城市、区县" value="湖南省 长沙市 雨花区"/>
+				</li>
+				<li class="borderbot">
+					<input id="adress" maxlength="16" type="text" placeholder="详细地址，如街道、楼牌号等" value="美联天骄城122室"/>
+				</li>
+				<li class="borderbot">
+					<input id="name" type="text" maxlength="10" placeholder="姓名" value="王先森"/>
+				</li>
+				<li class="borderbot">
+					<input id="phone" type="number" oninput="if(value.length>11)value=value.slice(0,11)" value="15111362232" placeholder="手机号码"/>
+				</li>
+			</ul>
+			<p class="chk active" id="check">
+				<i class="check"></i>
+				设为默认地址
+			</p>
+		</div>
+		<footer class="foot">
+			保存
+		</footer>
+	</body>
+
+</html>

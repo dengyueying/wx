@@ -1,0 +1,203 @@
+{
+  "details.html": {
+    "resources": [
+      "img/icon-home.png",
+      "js/rem.min.js",
+      "img/little2.png",
+      "img/icon-back.png",
+      "css/public.css",
+      "img/smallpic1.png",
+      "img/little3.png",
+      "img/icon-go3.png",
+      "img/icon-gof.png",
+      "js/idangerous.swiper.min.js",
+      "img/pic1.png",
+      "img/little1.png",
+      "img/star.png",
+      "js/mui.min.js",
+      "css/details.css",
+      "img/icon-share.png",
+      "css/mui.min.css",
+      "img/portrait.png",
+      "img/smallpic2.png",
+      "js/jquery.min.js",
+      "img/icon-shangla.png",
+      "img/icon-xiala.png",
+      "img/icon-cart.png",
+      "img/star2.png",
+      "img/bigpic3.png",
+      "img/bigpic1.png",
+      "img/bigpic7.png",
+      "img/bigpic2.png",
+      "img/bigpic5.png",
+      "img/bigpic4.png",
+      "img/top.png",
+      "img/bigpic6.png",
+      "img/fail.png"
+    ],
+    "refer": [
+      "inorder.html"
+    ]
+  },
+  "addadress.html": {
+    "resources": [
+      "css/addadress.css",
+      "js/mui.picker.min.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "img/check.png",
+      "js/mui.poppicker.js",
+      "js/rem.min.js",
+      "css/mui.min.css",
+      "css/public.css",
+      "css/mui.picker.min.css",
+      "css/mui.poppicker.css",
+      "js/city.data-3.js",
+      "img/checked.png",
+      "js/adressedit.js"
+    ],
+    "refer": []
+  },
+  "inorder.html": {
+    "resources": [
+      "css/inorder.css",
+      "css/mui.min.css",
+      "css/public.css",
+      "css/adress.css",
+      "img/icon-go3.png",
+      "img/pic1.png",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/rem.min.js"
+    ],
+    "refer": [
+      "adress.html",
+      "desk.html",
+      "adress0.html"
+    ]
+  },
+  "adress.html": {
+    "resources": [
+      "css/mui.min.css",
+      "img/adrs.png",
+      "css/public.css",
+      "css/adress.css",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/rem.min.js"
+    ],
+    "refer": [
+      "addadress.html",
+      "editadress.html"
+    ]
+  },
+  "desk.html": {
+    "resources": [
+      "css/desk.css",
+      "img/checked2.png",
+      "img/apipay.png",
+      "css/mui.min.css",
+      "img/wxpay.png",
+      "css/public.css",
+      "img/check2.png",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/rem.min.js"
+    ],
+    "refer": [
+      "myorder.html"
+    ]
+  },
+  "editadress.html": {
+    "resources": [
+      "css/addadress.css",
+      "img/checked.png",
+      "js/mui.picker.min.js",
+      "js/adressedit.js",
+      "js/mui.poppicker.js",
+      "css/mui.picker.min.css",
+      "css/mui.poppicker.css",
+      "js/city.data-3.js",
+      "img/check.png",
+      "css/mui.min.css",
+      "css/public.css",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/rem.min.js"
+    ],
+    "refer": []
+  },
+  "adress0.html": {
+    "resources": [
+      "img/delete.png",
+      "js/jquery.min.js",
+      "js/rem.min.js",
+      "css/mui.min.css",
+      "css/public.css",
+      "img/adrs.png",
+      "css/adress.css",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "addadress.html"
+    ]
+  },
+  "myoreder.html": {
+    "resources": [
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/rem.min.js",
+      "css/mui.min.css",
+      "img/delete.png",
+      "css/public.css",
+      "img/smallpic2.png",
+      "img/smallpic1.png",
+      "css/myorder.css"
+    ],
+    "refer": []
+  },
+  "myorder.html": {
+    "resources": [
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/rem.min.js",
+      "css/mui.min.css",
+      "img/delete.png",
+      "css/public.css",
+      "img/smallpic2.png",
+      "img/smallpic1.png",
+      "css/myorder.css"
+    ],
+    "refer": []
+  },
+  "foot.html": {
+    "resources": [
+      "img/pic1.png",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/rem.min.js",
+      "css/mui.min.css",
+      "css/foot.css",
+      "css/public.css"
+    ],
+    "refer": []
+  },
+  "search.html": {
+    "resources": [
+      "img/icon-search.png",
+      "img/pic1.png",
+      "css/search.css",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/rem.min.js",
+      "css/mui.min.css",
+      "css/public.css",
+      "img/icon-clear.png",
+      "img/delete.png",
+      "img/edit1.png",
+      "img/edit2.png",
+      "img/edit3.png"
+    ],
+    "refer": []
+  }
+}

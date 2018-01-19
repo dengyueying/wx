@@ -1,0 +1,75 @@
+*{
+	background: inherit;
+}
+.adr-list li{
+	height: 1.7rem;
+	position: relative;
+}
+.icon{
+	position: absolute;
+	right: 0.26rem;
+	top: 0.66rem;
+	z-index: 2;
+	display:flex;
+	background: inherit;
+}
+.icon-adrs{
+	width: 0.38rem;
+	height: 0.38rem;
+	background: url(../img/adrs.png) no-repeat;
+	background-size: 100% 100%;
+}
+.icon-delete{
+	background: url(../img/delete.png) no-repeat;
+	background-size: 100% 100%;
+	margin-left: 0.7rem;
+}
+.adr-list li .number{
+	padding-top: 0.4rem;
+}
+.adr-list li .number span{
+	color: #1A1A1A;
+	font-size: 0.3rem;
+}
+.adr-list li .number .default{
+	color: #E41E3E;
+	font-size: 0.24rem;
+	border-radius: 0.04rem;
+	border:1px solid #E41E3E;
+	padding: 0 0.08rem;
+	margin-right: 0.22rem;
+}
+.adr-list li .number .ipone{
+	font-size: 0.28rem;
+	margin-left: 0.22rem;
+}
+.adr-list li .adress{
+	margin-top: 0.24rem;
+	color: #666;
+	font-size: 0.26rem;
+	padding-right: 0.4rem;
+}
+footer{
+	background: #E41E3E;
+	color: #fff;
+	font-size: 0.32rem;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+.foot{
+	background: inherit;
+}
+footer span{
+	flex: 1;
+	text-align: center;
+	height: 100%;
+	line-height: 0.9rem;
+}
+footer .add{
+	background:#F4F4F4;
+	color: #1A1A1A;
+}
+footer .manage{
+	background: #E41E3E;
+}

@@ -1,0 +1,109 @@
+.head{
+	width: 100%;
+	height: 1rem;
+	line-height: 1rem;
+	text-align: right;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 22;
+}
+.head span{
+	color: #1A1A1A;
+	font: 0.28rem/0.28rem;
+}
+.content{
+	padding-top: 1rem;
+}
+.list{
+	background: #F4F4F4;
+	padding-bottom: 0.2rem;
+}
+.list>li{
+	margin-top: 0.2rem;
+}
+.list>li:first-child{
+	margin-top: 0;
+}
+.list .time{
+	height: 0.7rem;
+	color: #333333;
+	font-size: 0.28rem;
+	display: flex;
+	align-items: center;
+}
+.sublist li{
+	height: 1.86rem;
+	display: flex;
+	align-items: center;
+}
+.sublist li img{
+	width: 1.44rem;
+	height: 1.44rem;
+	border-radius: 0.08rem;
+	margin-right: 0.24rem;
+	display: block;
+}
+.sublist li:last-child{
+	border-bottom: none;
+}
+.info{
+	height: 1.44rem;
+	padding-top: 0.08rem;
+}
+.info .title{
+	font-size: 0.28rem;
+	line-height: 0.28rem;
+	color: #1A1A1A;
+}
+.info .text{
+	font-size: 0.24rem;
+	line-height: 0.24rem;
+	color: #b0b0b0;
+	margin-top: 0.18rem;
+}
+.info .money{
+	font-size: 0.26rem;
+	line-height: 0.26rem;
+	color: #1A1A1A;
+	margin-top: 0.4rem;
+}
+.check{
+	width: 0.34rem;
+	height: 0.34rem;
+	background: url(../img/check.png) no-repeat;
+	background-size: 100% 100%;
+	margin-right: 0.15rem;
+	margin-left: 0.25rem;
+}
+.active .check,.checked{
+	background: url(../img/checked.png) no-repeat;
+	background-size: 100% 100%;
+}
+footer{
+	background: #F4F4F4;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+footer .all,footer span{
+	background: #F4F4F4;
+	color: #666;
+	font-size: 0.28rem;
+}
+footer .all{
+	display: flex;
+	align-items: center;
+}
+footer .delete{
+	width: 2.04rem;
+	height: 100%;
+	text-align: center;
+	line-height: 0.9rem;
+	background:#c0bebf;
+	font-size: 0.32rem;
+	color: #fff;
+}
+footer .btn{
+	background: #E41E3E;
+}

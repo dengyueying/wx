@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>填写订单</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/adress.css" />
+		<link rel="stylesheet" href="css/inorder.css" />
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+	</head>
+
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back"></a>
+			<h1 class="mui-title">填写订单</h1>
+		</header>-->
+		<div class="content contentBottom">
+			<ul class="adr-list">
+				<li class="pad mui-table-view-cell" id="adress">
+					<p class="number"><span class="name">王先森</span><span class="ipone">15111272727</span></p>
+					<p class="adress mui-ellipsis">长沙市芙蓉区美联天骄城1623室</p>
+					<i class="icon-right bigright"></i>
+				</li>
+			</ul>
+			<ul class="slist">
+				<li class="pad borderbot">
+					<img src="img/pic1.png"/>
+					<div class="info">
+						<p class="title mui-ellipsis">雅致羊毛混纺围巾</p>
+						<p class="yans">米白</p>
+						<p class="cash"><span class="new">￥33</span>
+							<span class="old">￥55</span>
+						</p>
+					</div>
+					<span class="num">× 2</span>
+				</li>
+				<li class="pad borderbot">
+					<img src="img/pic1.png"/>
+					<div class="info">
+						<p class="title mui-ellipsis">雅致羊毛混纺围巾</p>
+						<p class="yans">米白</p>
+						<p class="cash"><span class="new">￥33</span>
+							<span class="old">￥55</span>
+						</p>
+					</div>
+					<span class="num">× 2</span>
+				</li>
+			</ul>
+			<ul class="tlist">
+				<li class="borderbot pad">
+					<div class="tleft">
+						<span>优惠券:</span>
+						<span>暂无可用</span>
+					</div>
+					<div class="tright">
+						<span>0张</span>
+						<i class="icon-right ticonr"></i>
+					</div>
+				</li>
+				<li class="borderbot pad">
+					<div class="tleft">
+						运费
+					</div>
+					<div class="tright">
+						￥3
+					</div>
+				</li>
+				<li class="borderbot pad">
+					<div class="tleft">
+						商品合计
+					</div>
+					<div class="tright">
+						￥333
+					</div>
+				</li>
+			</ul>
+		</div>
+		<footer>
+			<div class="result">
+				<span class="text">付款:</span>
+				<span class="money">
+					￥222.00
+				</span>
+			</div>
+			<div class="btn" id="btn">
+				去结算
+			</div>
+		</footer>
+		<script type="text/javascript">
+			$("#btn").on("click",function(){
+				mui.openWindow({
+					url: 'desk.html',
+					id: 'desk',
+				});
+			});
+			$("#adress").on("click",function(){
+				mui.openWindow({
+					url: 'adress0.html',
+					id: 'adress0',
+				});
+			})
+		</script>
+	</body>
+
+</html>

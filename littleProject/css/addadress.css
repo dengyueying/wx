@@ -1,0 +1,46 @@
+*{
+	background: none;
+}
+.list li{
+	height: 0.94rem;
+	line-height: 0.94rem;
+}
+.list li input{
+	color: #333333;
+	font-size: 0.28rem;
+}
+.chk .check{
+	width: 0.34rem;
+	height: 0.34rem;
+	background: url(../img/check.png) no-repeat;
+	background-size: 100%  100%;
+	margin-right: 0.1rem;
+}
+.active .check{
+	background: url(../img/checked.png) no-repeat;
+	background-size: 100%  100%;
+}
+.chk{
+	color: #1A1A1A;
+	font-size: 0.28rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0.3rem 0;
+}
+footer{
+	background: #e8e8e8;
+	color: #fff;
+	font-size: 0.32rem;
+	line-height: 0.9rem;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.foot{
+	background: #E41E3E;
+}
+.mui-btn-blue{
+	background: #E41E3E;
+	border-color: #E41E3E;
+}

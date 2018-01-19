@@ -1,0 +1,94 @@
+body,.content,.pic-list{
+	background: #F4F4F4;
+}
+.mui-segmented-control .mui-control-item.mui-active,.mui-segmented-control .mui-control-item{
+	background: #fff;
+	font-size: 0.28rem;
+	line-height:initial;
+}
+.mui-segmented-control .mui-control-item{
+	border: none;
+	color: #666;
+}
+.mui-segmented-control .mui-control-item.mui-active{
+	color: #E41E3E;
+	position: relative;
+}
+.mui-segmented-control .mui-control-item.mui-active::after{
+	width: 0.88rem;
+	height: 2px;
+	background: #E41E3E;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	content: "";
+}
+.mui-segmented-control{
+	border: none;
+	height: 0.74rem;
+	line-height: inherit;
+	padding-top: 0.22rem;
+}
+.pic-list li{
+	margin-bottom: 0.2rem;
+}
+.order{
+	height: 0.82rem;
+	line-height: 0.82rem;
+	position: relative;
+}
+.order .delete{
+	width: 0.34rem;
+	height: 0.38rem;
+	background: url(../img/delete.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	right: 0;
+	top: 0.22rem;
+}
+.order span{
+	color: #333;
+	font-size: 0.28rem;
+}
+.order .number{
+	margin-left: 0.18rem;
+}
+.pic{
+	padding-top:0.06rem;
+	font-size: 0;
+}
+.pic img{
+	width: 1.32rem;
+	height: 1.32rem;
+	border-radius: 0.04rem;
+	margin-left: 0.18rem;
+	vertical-align:middle;
+	margin-top: 0.18rem;
+}
+.pic img:nth-child(4n+1){
+	margin-left: 0;
+}
+.info p{
+	height: 0.74rem;
+	line-height: 0.74rem;
+	color: #666;
+	font-size: 0.24rem;
+}
+.info .money{
+	font-size: 0.28rem;
+}
+.bottom{
+	height: 0.82rem;
+	display: flex;
+	align-items: center;
+	justify-content:flex-end;
+}
+.bottom span{
+	margin-left: 0.56rem;
+	color: #666;
+	font-size: 0.28rem;
+}
+.bottom .active{
+	color: #E41E3E;
+}
