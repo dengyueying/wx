@@ -95,7 +95,7 @@ $(function() {
 
 	//已发布的新闻	
 	function published() {
-		mui.ajax("http://.boxs/BS56/news/list?status=0&page=" + p0, {
+		mui.ajax("http://192.168.1.116:8080/BS56/news/list?status=0&page=" + p0, {
 			type: "post",
 			dataType: 'json',
 			success: function(data) {
@@ -111,7 +111,7 @@ $(function() {
 					newsload($("#tabbar .list"), data, i);
 
 					if(y0 == 1) {
-						loading($("#tabbar"));
+						$("#tabbar .mui-pull-bottom-pocket").removeClass('mui-hidden');
 					}
 				}
 
@@ -152,7 +152,7 @@ $(function() {
 					newsload($("#tabbar-with-chat .list"), data, i);
 
 					if(y1 == 1) {
-						loading($("#tabbar-with-chat"));
+						$("#tabbar-with-chat .mui-pull-bottom-pocket").removeClass('mui-hidden');
 					}
 				}
 
@@ -184,7 +184,7 @@ $(function() {
 					newsload($("#tabbar-with-contact .list"), data, i);
 
 					if(y2 == 1) {
-						loading($("#tabbar-with-contact"));
+						$("#tabbar-with-contact .mui-pull-bottom-pocket").removeClass('mui-hidden');
 					}
 				}
 			},
