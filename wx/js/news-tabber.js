@@ -100,7 +100,7 @@ $(function() {
 			dataType: 'json',
 			success: function(data) {
 				console.log(JSON.stringify(data));
-				alert(JSON.stringify(data));
+				alert("s:"+JSON.stringify(data));
 				if(data.total == 0) {
 					str = '<p class="tswz">您还没有发布新闻</p>';
 				} else {
@@ -119,6 +119,7 @@ $(function() {
 			},
 			error: function(res) {
 				console.log(JSON.stringify(res));
+				alert("f:"+JSON.stringify(res));
 			}
 
 		});
