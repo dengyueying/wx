@@ -21,13 +21,15 @@
     left: 80%;
     color: #fff;
     background: rgb(250,64,27);
-   border-radius:50%;
-   padding: 0.04rem 0.1rem;
+   border-radius:0.28rem;
+   padding: 0.04rem 0.08rem;
+   z-index: 22;
 }
 
 .mui-bar-tab .mui-tab-item{
 	color: #1a1a1a;
 	height: 0.98rem;
+	overflow: inherit;
 }
 .mui-bar-tab .mui-tab-item.mui-active{
 	color: rgb(0,166,228);
@@ -41,4 +43,16 @@
   .mui-tab-item .mui-badge{
 	padding: 2px 5px;
 	}
+}
+.tswz{
+	height: 100px;
+	line-height: 100px;
+	color: #666666;
+	font-size: 0.3rem;
+	text-align: center;
+}
+.mui-pull-caption{
+	color: #666666;
+	font-size: 0.3rem;
+	font-weight: normal;
 }

@@ -56,23 +56,83 @@
 	<script src="js/mui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
 	<script>
-			 $(".list li .text").each(function () {
-		        if($(this).text().length>37){
-		          var demoHtml = $(this).html().substr(0,37)+'...';
-		          $(this).html(demoHtml);
-		        }
-		    });
-		    $(".list li").click(function(){
-		      	mui.openWindow({
-					url: 'details.html',
-					id: 'details',
-				});
-		    });
-		    $(".news-map .list li").click(function(){
-		      	mui.openWindow({
-					url: 'classify.html',
-					id: 'classify',
-				});
-		    });
+		var storage = window.sessionStorage;
+		//分类的新闻		
+		mui.ajax("http://192.168.1.116:8080/BS56/news/list?status=0&type="+storage.id, {
+			type: "post",
+			dataType: 'json',
+			success: function(data) {
+				console.log(JSON.stringify(data));
+				for (let j=0;j<data.rows.length-1;j++) {
+					createTime=data.rows[j].createTime;
+					console.log(createTime);
+					whtime(createTime);
+					str+='<li id='+data.rows[j].id+'>';
+						str+='<p class="title bordersb mui-ellipsis">'+data.rows[j].title+'</p>';
+						str+='<p class="text">'+data.rows[j].content+'</p>';
+						str+='<p class="look"><a>查看详情</a></p>';
+					str+='</li>';
+					$("#tabbar .list").append(str);
+				}
+			},
+			error: function(res) {
+				console.log(JSON.stringify(res));
+			}
+
+		});
+		//多余字数。。。
+		$(".list li .text").each(function () {
+	        if($(this).text().length>37){
+	          var demoHtml = $(this).html().substr(0,37)+'...';
+	          $(this).html(demoHtml);
+	        }
+	    });
+	    //查看新闻详情
+	    $(".list li").click(function(){
+	      	mui.openWindow({
+				url: 'details.html',
+				id: 'details',
+			});
+	    });
+		    
+		 function whtime(that){
+	    	str="";
+			date1=new Date(that) //要对比的时间
+			date2=new Date();  	//一天的毫秒数
+			cha=date2.getTime()-date1.getTime(); //两个时间的毫秒差
+			console.log("cha:"+cha);
+			console.log("num:"+num);		//获取当前时间对象
+			num=24*60*60*1000;
+			n1=that.replace("-","/").substr(0,that.length-3);
+			that=that.split(" ");
+			n2=that[1].substr(0,that.length-3);
+			if(cha>0){
+				str='<div class="release-time">';
+				if(cha>num){
+					if(date1.getDate()+1==date2.getDate()){
+//						alert("昨天");
+						str+='<span>昨天&nbsp;'+n2+'</span>';
+					}
+					else{
+//						alert("昨天之前的过去时间");
+						str+='<span>'+n1+'</span>';
+					}
+				}else if(date1.getDate()!=date2.getDate()){
+					if(date1.getDate()+1==date2.getDate()){
+//						alert("昨天");
+						str+='<span>昨天&nbsp;'+n2+'</span>';
+					}
+					else{
+//						alert("昨天之前的过去时间");
+						str+='<span>'+n1+'</span>';
+					}
+				}
+				else{
+//					alert("是今天里的过去时间");
+					str+='<span>'+n2+'</span>';
+				}
+				str+='</div>';
+			}
+		}
 	</script>
 </html>
