@@ -100,6 +100,7 @@ $(function() {
 			dataType: 'json',
 			success: function(data) {
 				console.log(JSON.stringify(data));
+				alert(JSON.stringify(data));
 				if(data.total == 0) {
 					str = '<p class="tswz">您还没有发布新闻</p>';
 				} else {
