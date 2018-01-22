@@ -95,7 +95,7 @@ $(function() {
 
 	//已发布的新闻	
 	function published() {
-		mui.ajax("http://192.168.1.115:8080/BS56/news/list?status=0&page=" + p0, {
+		mui.ajax("http://.boxs/BS56/news/list?status=0&page=" + p0, {
 			type: "post",
 			dataType: 'json',
 			success: function(data) {
@@ -125,7 +125,7 @@ $(function() {
 
 	//未读的新闻	
 	function unread() {
-		mui.ajax("http://192.168.1.115:8080/BS56/news/userSeeStatus?status=1&page=" + p1, {
+		mui.ajax("http://192.168.1.116:8080/BS56/news/userSeeStatus?status=1&page=" + p1, {
 			type: "post",
 			dataType: 'json',
 			success: function(data) {
@@ -166,7 +166,7 @@ $(function() {
 
 	//已读的新闻
 	function readed() {
-		mui.ajax("http://192.168.1.115:8080/BS56/news/userSeeStatus?status=0&userId=7016&page=" + p2, {
+		mui.ajax("http://192.168.1.116:8080/BS56/news/userSeeStatus?status=0&userId=7016&page=" + p2, {
 			type: "post",
 			dataType: 'json',
 			success: function(data) {
@@ -196,7 +196,7 @@ $(function() {
 
 	//分类
 	function classify() {
-		mui.ajax("http://192.168.1.115:8080/BS56/news/newsShorList&page=" + p3, {
+		mui.ajax("http://192.168.1.116:8080/BS56/news/newsShorList&page=" + p3, {
 			type: "post",
 			dataType: 'json',
 			success: function(data) {
