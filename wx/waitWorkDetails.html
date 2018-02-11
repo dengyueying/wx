@@ -41,14 +41,14 @@
 					</div>
 				</div>
 				<p class="release pad mysp">我的审批</p>
-				<div class="box box3 nbtbox">
+				<div class="box3 nbtbox">
 					<div class="cont sheight border">
 						<span class="text aline">部门经理</span>
 						<input class="alineNext" type="text" name="" id="" value="" placeholder="请输入人名" oninput="if(value.length>8)value=value.slice(0,8)" />
 					</div>
 					<div class="cont sheight border">
 						<span class="text aline">部门审批时间</span>
-						<span class="alineNext">2017-10-10 10:10</span>
+						<span class="rightNext fl-right">2017-10-10 10:10</span>
 					</div>
 					<div class="cont sheight border">
 						<span class="text">部门意见</span>
@@ -65,7 +65,7 @@
 					</div>
 					<textarea name="" rows="" cols="" placeholder="填写会签内容,请填写少于50字" oninput="if(value.length>50)value=value.slice(0,50)" class="csign border"></textarea>
 				</div>
-				<div class="box nbtbox">
+				<div class="nbtbox boxsp">
 					<div class="boxspeed" id="boxspeed">
 						<p class="speed pad">审批进度</p>
 						<span class="create-right"></span>
@@ -116,6 +116,7 @@
 					changeSize();
 				}
 			}
+			
 			//	进入下一步
 			$("#next").click(function() {
 				mui.openWindow({

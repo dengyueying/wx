@@ -1,0 +1,33 @@
+body,html{
+	background: #fff;
+}
+section{
+	padding-top: 0.98rem;
+}
+.box{
+	padding: 2.6rem 1.14rem 0;
+}
+input{
+	border: none !important;
+	border-bottom:1px solid rgb(236,237,238) !important;
+	color: #333;
+	font-size: 0.32rem;
+	height: 0.72rem !important;
+	margin-top: 0.48rem !important;
+}
+input::-webkit-input-placeholder{
+	color: rgb(195,193,193);
+	font-size: 0.32rem;
+}
+.mui-btn-block{
+	font-size: 0.34rem;
+	padding: 0.24rem 0;
+	margin-top: 0.8rem;
+	border-radius: 0.1rem;
+	border: none;
+	background: rgb(0, 166, 228);
+	color: #fff;
+}
+.mui-btn a,.head-title a{
+	color: #fff;
+}

@@ -127,41 +127,5 @@
 	</body>
 	<script src="js/mui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
-	<script>
-		//更换标题
-		mui('.mui-bar-tab').on('tap', 'a', function(e) {
-			title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
-			var i=$(this).index();
-			var that=this.href;
-			var n=that.indexOf("tabbar");
-			that=that.substr(0,n);
-			that=that+"tabbar"+i+".html";
-			window.history.replaceState(null, null, that);
-		});
-		window.onload=function(){
-			var title = document.getElementById("title");
-			var rt=$("#second").position().left;
-			var rw=$("#second").outerWidth(true);
-			$("#badge").css("left",rt-0+rw-0+2+"px");
-		}
-		
-			 $(".list li .text").each(function () {
-		        if($(this).text().length>37){
-		          var demoHtml = $(this).html().substr(0,37)+'...';
-		          $(this).html(demoHtml);
-		        }
-		    });
-		    $(".list li").click(function(){
-		      	mui.openWindow({
-					url: 'details.html',
-					id: 'details',
-				});
-		    });
-		    $(".news-map .list li").click(function(){
-		      	mui.openWindow({
-					url: 'classify.html',
-					id: 'classify',
-				});
-		    });
-	</script>
+	<script type="text/javascript" src="js/news-tabber.js" ></script>
 </html>

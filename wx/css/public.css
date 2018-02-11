@@ -10,9 +10,9 @@ p,ul{
 html,
 body,
 .content {
-	background-color: rgb(237, 236, 236);
 	height: 100%;
 	width: 100%;
+	/*background-color: #F4F4F4;*/
 }
 .mui-table-view-cell{
 	padding: 0;
@@ -25,7 +25,7 @@ body,
 .mui-content{
 	padding-top: 0.98rem !important;
 	padding-bottom: 0.98rem !important;
-	background: #fff;
+	background:transparent !important;
 }
 section,.mui-content{
 	width: 100%;

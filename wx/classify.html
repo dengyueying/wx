@@ -56,7 +56,7 @@
 	<script src="js/mui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
 	<script>
-		var storage = window.sessionStorage;
+		var storage = window.localStorage;
 		//分类的新闻		
 		mui.ajax("http://192.168.1.116:8080/BS56/news/list?status=0&type="+storage.id, {
 			type: "post",

@@ -10,7 +10,7 @@
 	"icons": {
 		"72": "icon.png"
 	},
-	"launch_path": "search.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"launch_path": "comment.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
 		"name": "",/*开发者名称*/
 		"email": "",/*开发者邮箱地址*/
@@ -226,7 +226,8 @@
 					"img/bigpic4.png",
 					"img/top.png",
 					"img/bigpic6.png",
-					"img/fail.png"
+					"img/fail.png",
+					"js/login.js"
 				],
 				"refer": [
 					"inorder.html"
@@ -248,7 +249,11 @@
 					"css/mui.poppicker.css",
 					"js/city.data-3.js",
 					"img/checked.png",
-					"js/adressedit.js"
+					"js/adressedit.js",
+					"js/addadress.js",
+					"adress.html",
+					"js/login.js",
+					"adress0.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -280,10 +285,13 @@
 					"css/adress.css",
 					"js/jquery.min.js",
 					"js/mui.min.js",
-					"js/rem.min.js"
+					"js/rem.min.js",
+					"js/login.js",
+					"js/adress.js",
+					"addadress.html",
+					"adressedit.html"
 				],
 				"refer": [
-					"addadress.html",
 					"editadress.html"
 				],
 				"priority": 0
@@ -335,11 +343,13 @@
 					"css/public.css",
 					"img/adrs.png",
 					"css/adress.css",
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"js/adress0.js",
+					"js/login.js",
+					"addadress.html",
+					"adressedit.html"
 				],
-				"refer": [
-					"addadress.html"
-				],
+				"refer": [],
 				"priority": 0
 			},
 			"myoreder.html": {
@@ -367,7 +377,9 @@
 					"css/public.css",
 					"img/smallpic2.png",
 					"img/smallpic1.png",
-					"css/myorder.css"
+					"css/myorder.css",
+					"js/myorder.js",
+					"js/login.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -380,9 +392,15 @@
 					"js/rem.min.js",
 					"css/mui.min.css",
 					"css/foot.css",
-					"css/public.css"
+					"css/public.css",
+					"js/foot.js",
+					"js/login.js",
+					"img/check.png",
+					"img/checked.png"
 				],
-				"refer": [],
+				"refer": [
+					"details.html"
+				],
 				"priority": 0
 			},
 			"search.html": {
@@ -399,7 +417,67 @@
 					"img/delete.png",
 					"img/edit1.png",
 					"img/edit2.png",
-					"img/edit3.png"
+					"img/edit3.png",
+					"js/search.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"adressedit.html": {
+				"resources": [
+					"css/addadress.css",
+					"img/checked.png",
+					"js/mui.picker.min.js",
+					"js/mui.poppicker.js",
+					"js/addadress.js",
+					"css/mui.picker.min.css",
+					"css/mui.poppicker.css",
+					"js/city.data-3.js",
+					"css/mui.min.css",
+					"img/check.png",
+					"adress0.html",
+					"css/public.css",
+					"js/jquery.min.js",
+					"js/rem.min.js",
+					"js/mui.min.js",
+					"adress.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"comment.html": {
+				"resources": [
+					"img/star4.png",
+					"css/comment.css",
+					"js/jquery.min.js",
+					"js/mui.min.js",
+					"js/rem.min.js",
+					"css/mui.min.css",
+					"css/public.css",
+					"img/cbottom.png",
+					"img/ctop.png",
+					"img/pic1.png",
+					"img/portrait.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"publishComment.html": {
+				"resources": [
+					"img/pic.png",
+					"img/star4.png",
+					"js/jquery.min.js",
+					"js/cslCamera.js",
+					"js/rem.min.js",
+					"css/public.css",
+					"css/publishComment.css",
+					"img/star3.png",
+					"img/delete2.png",
+					"js/mui.min.js",
+					"img/check.png",
+					"css/mui.min.css",
+					"img/bigpic7.png",
+					"img/checked.png"
 				],
 				"refer": [],
 				"priority": 0

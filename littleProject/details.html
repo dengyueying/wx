@@ -17,10 +17,6 @@
 	</head>
 
 	<body>
-		<!--<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back"></a>
-			<h1 class="mui-title">商品详情</h1>
-		</header>-->
 		<div class="head">
 			<div class="title">
 				<span class="thsp active">商品</span>
@@ -389,7 +385,30 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="js/login.js" ></script>
 		<script>
+			mui.init();
+	var storage = window.localStorage;
+	$.ajax({
+			url:'http://192.168.1.156:9090/api/goods/detail',
+			type: "post",
+			dataType: 'json',
+			data:{
+				'id':1005002,
+				'referrer':1005002,
+			},
+			headers: {
+				'X-Nideshop-Token': storage.token
+			},
+			success: function(data) {
+				console.log(JSON.stringify(data));
+				storage.token=data.token;
+			},
+			error: function(res) {
+				console.log(JSON.stringify(res))
+			}
+		});
+
 			//上拉查看商品详情
 			var y,ym,ah,bh,_touch,p,s,s0,str,timer=null,r=0,flag=false;
 			$(window).on('touchstart',function(e) {
@@ -504,6 +523,7 @@
 			
 			//选择商品数量
 			$("#test").on("input",function(){
+				$(this).val($(this).val().trim());
 				$("#test").val($("#test").val().replace(/[^0-9-]+/,'').replace(/\b(0+)/gi,''));
 				if($(this).val()>50){
 					mui.toast("超出单品上限");
@@ -539,8 +559,31 @@
 			//加入购物车
 			$("#join").on("click",function(){
 				if($(".classify").hasClass("active")){
-					mui.toast("添加成功");
-					$("#num").html($("#num").html()-0+1);
+					mui.ajax('http://192.168.1.156:9090/api/cart/add', {
+						type: "post",
+						dataType: 'json',
+						data:{
+							goodsId:1,
+							productId:1,
+							number:$("#test").val()
+						},
+						headers: {
+							'X-Nideshop-Token': storage.token
+						},
+						success: function(data) {
+							console.log(JSON.stringify(data));
+							if(data.errno==0){
+								mui.toast("添加成功");
+								$("#num").html($("#num").html()-0+1);
+							}
+							else{
+								mui.toast(data.msg);
+							}
+						},
+						error: function(res) {	
+							console.log(JSON.stringify(res))
+						}
+					});
 				}
 				else{
 					if($(".mui-backdrop").hasClass("backactive")){

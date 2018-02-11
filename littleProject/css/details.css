@@ -219,6 +219,7 @@
 	text-align: center;
 	margin: 0.3rem 0 0.14rem;
 	border-left: 0.04rem dashed #f1f1f1;
+	box-sizing: content-box;
 }
 .comment .num{
 	color: #e41e3e;
@@ -689,4 +690,11 @@ footer .join{
 	font-size: 0.26rem;
 	width: 0.96rem !important;
 	height: 0.64rem;
+}
+@media (max-width:375px) { 
+  footer .cart .num{
+  	 width: 13px;
+  	 height: 13px;
+  	 border-radius: 50%;
+  }
 }

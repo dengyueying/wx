@@ -15,12 +15,14 @@
 	<body>
 			<header class="mui-navbar-inner mui-bar mui-bar-nav">
 				<a class="back mui-action-back"></a>
-				<h1 class="head-title">请假</h1>
+				<h1 class="head-title" id="head-title">请假</h1>
 			</header>
 			<section>
 				<p class="release pad"><span class="create-left"></span>发起工作</p>
-				<div class="box nbtbox">
+				<!--<div class="box nbtbox">
 					<div class="cont border">
+						<span class="text">报销明细(元)</span>	
+						<input class="money fl-right fl-input" type="number" oninput="if(value.length>8)value=value.slice(0,8)" placeholder="请输入报销金额(元)"/>
 						<span class="text">请假类型</span>
 						<select>
 							<option value="">年假</option>
@@ -30,7 +32,7 @@
 							<option value="">产假</option>
 							<option value="">婚假</option>
 						</select>
-						<span class="create-right"></span>
+						<span class="create-right">
 					</div>
 					<div class="cont btn border" type="date">
 						<span class="text">开始时间</span>
@@ -70,13 +72,12 @@
 							<img src="img/add.png" class="add" />
 						</div>
 					</div>
-				</div>
-	
+				</div>-->
 			</section>	
 			<footer>
 				<span class="mui-action-back">回退</span>
-				<span>保存</span>
-				<span>转交下一步</span>
+				<!--<span>保存</span>-->
+				<span id="next">转交下一步</span>
 			</footer>
 		
 		<script src="js/mui.min.js"></script>
@@ -84,53 +85,128 @@
 		<script type="text/javascript" src="js/rem.min.js"></script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript">
-			window.onload = function() {
-				(function($) {
-					$.init();
-					var btns = $('.btn');
-					var start, end, lg;
-					btns.each(function(i, btn) {
-						btn.setAttribute('data-options', '{"beginYear":' + new Date().getFullYear() + '}');
-						btn.addEventListener('tap', function() {
-							var optionsJson = this.getAttribute('data-options') || '{}';
-							var options = JSON.parse(optionsJson);
-							var id = this.getAttribute('id');
-							var picker = new $.DtPicker(options);
-							picker.show(function(rs) {
-								btn.getElementsByTagName("span")[1].innerHTML = rs.text;
-								picker.dispose();
-								start = document.getElementById("startTime").innerHTML;
-								start=start.replace(" ","T");
-								end = document.getElementById("endTime").innerHTML;
-								end=end.replace(" ","T");
-								lg = document.getElementById("timeLong");
-
-								if(end != "" && start != "") {
-									var date1 = new Date(start);
-									var date2 = new Date(end);
-
-									var s1 = date1.getTime(),
-										s2 = date2.getTime();
-									var total = (s2 - s1) / 1000;
-									var day = parseInt(total / (24 * 60 * 60)); //计算整数天数
-									var afterDay = total - day * 24 * 60 * 60; //取得算出天数后剩余的秒数
-									var hour = parseFloat(afterDay / (60 * 60)).toFixed(1); //计算整数小时数
-									lg.innerHTML = day * 24 - 0 + parseFloat(hour);
+			var storage = window.localStorage;
+			var str='';
+			var userName=new Array();
+			console.log(storage.id);
+			$("#head-title").html(storage.title);
+			mui.post('http://192.168.1.120:8082/BS56/appform/'+storage.id+'.form',{},
+//			mui.post('http://192.168.1.119:8082/BS56/appform/145.form',{},
+				function(data){
+					console.log(JSON.stringify(data));
+					for (let i=0;i<data.length;i++) {
+						console.log(data[i].formNameDesc);
+						if(data[i].formNameDesc!=""){
+							if(data[i].dataType!=5){
+								if(data[i].dataType==12){
+									str+='<div class="box box2 nbtbox">';
+									str+='<div class="cont explain">';
+									str+='<p class="text pad">'+data[i].formNameDesc+'</p>';
+									str+='<textarea class="textp" title='+data[i].name+' placeholder="请输入'+data[i].formNameDesc+',请填写少于50字" oninput="if(value.length>50)value=value.slice(0,50)"></textarea>';
+									str+='</div>';
+									str+='</div>';
+								}else{
+									str='<div class="cont border">';
+										str+='<span class="text">'+data[i].formNameDesc+'</span>';
+										str+='<input title='+data[i].name+' class="textp money fl-right fl-input" type="text" oninput="if(value.length>10)value=value.slice(0,10)" placeholder="请输入'+data[i].formNameDesc+'"/>';
+									str+='</div>';		
 								}
-							});
-						}, false);
-					});
-				})(mui);
-
-
-				//打开选择人员
-				$(".add").click(function() {
-					mui.openWindow({
-						url: 'contacts.html',
-						id: 'contacts',
-					});
+								
+							}
+							else{
+								str='<div class="cont btn border">';
+								str+='<span class="text">'+data[i].formNameDesc+'</span>';
+								str+='<span class="text fl-right userName" title='+data[i].name+'></span>';
+								str+='<span class="create-right"></span>';
+								str+='</div>';
+							}
+							$("section").append(str);
+						}
+					}
+					(function($) {
+						$.init();
+						var btns = $('section .btn');
+//						var start, end, lg;
+						btns.each(function(i, btn) {
+							btn.setAttribute('data-options', '{"beginYear":' + new Date().getFullYear() + '}');
+							btn.addEventListener('tap', function() {
+								console.log(i);
+								var optionsJson = this.getAttribute('data-options') || '{}';
+								var options = JSON.parse(optionsJson);
+								var id = this.getAttribute('id');
+								var picker = new $.DtPicker(options);
+								picker.show(function(rs) {
+									btn.getElementsByTagName("span")[1].innerHTML = rs.text;
+									picker.dispose();
+//									start = document.getElementById("startTime").innerHTML;
+//									start=start.replace(" ","T");
+//									end = document.getElementById("endTime").innerHTML;
+//									end=end.replace(" ","T");
+//									lg = document.getElementById("timeLong");
+//	
+//									if(end != "" && start != "") {
+//										var date1 = new Date(start);
+//										var date2 = new Date(end);
+//	
+//										var s1 = date1.getTime(),
+//											s2 = date2.getTime();
+//										var total = (s2 - s1) / 1000;
+//										var day = parseInt(total / (24 * 60 * 60)); //计算整数天数
+//										var afterDay = total - day * 24 * 60 * 60; //取得算出天数后剩余的秒数
+//										var hour = parseFloat(afterDay / (60 * 60)).toFixed(1); //计算整数小时数
+//										lg.innerHTML = day * 24 - 0 + parseFloat(hour);
+//									}
+						        })
+							}, false);
+						});
+					})(mui);
+				},'json'
+			);
+			//打开选择人员
+			$(".add").click(function() {
+				mui.openWindow({
+					url: 'contacts.html',
+					id: 'contacts',
 				});
-			};
+			});
+			
+			//转交下一步
+			$("#next").on("click",function(){
+				userName=[];
+				$(".userName").each(function(){
+					if($(this).html()==""){
+						return false;
+					}
+					else{
+						var html=$(this).siblings(".text").html();
+						mui.toast(html);
+						userName.push($(this).attr("title")+":"+$(this).html());
+					}
+				});
+				$(".textp").each(function(){
+					if($(this).val()==""){
+						return false;
+					}
+					else{
+						var html=$(this).siblings(".text").html();
+						mui.toast(html);
+						userName.push($(this).attr("title")+":"+$(this).val());
+					}
+				});
+				console.log(JSON.stringify(userName));
+				mui.ajax('http://192.168.1.120:8082/BS56/appform/apply/'+storage.id+'.form', {
+					type: "post",
+					dataType: 'json',
+					data:JSON.stringify(userName),
+					success: function(data) {
+						console.log(JSON.stringify(data));
+					},
+					error: function(res) {
+						console.log(res)
+					}
+		
+				});
+			});
 		</script>
 	</body>
 

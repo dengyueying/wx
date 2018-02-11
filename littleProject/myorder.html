@@ -12,13 +12,10 @@
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript" src="js/rem.min.js" ></script>
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<!--<script type="text/javascript" src="js/login.js" ></script>-->
 	</head>
 
 	<body>
-		<!--<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back"></a>
-			<h1 class="mui-title">我的订单</h1>
-		</header>-->
 		<div class="content">
 			<div class="head  borderbot">
 					<div id="segmentedControl" class="mui-segmented-control">
@@ -31,80 +28,20 @@
 				</div>
 				<div>
 					<div id="item1" class="mui-control-content mui-active">
-						<ul class="pic-list">
-							<li class="pad">
-								<div class="order borderbot">
-									<span>订单号:</span><span class="number">123455</span>
-									<i class="delete"></i>
-								</div>
-								<div class="pic">
-									<img src="img/smallpic1.png" />
-									<img src="img/smallpic2.png" />
-									<img src="img/smallpic1.png" />
-									<img src="img/smallpic2.png" />
-								</div>
-								<div class="info borderbot">
-									<p>共<span>4</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
-								</div>
-								<div class="bottom">
-									<span class="active">已取消</span>
-									<span>再次购买</span>
-								</div>
-							</li>
-							<li class="pad">
-								<div class="order borderbot">
-									<span>订单号:</span><span class="number">123455</span>
-									<i class="delete"></i>
-								</div>
-								<div class="pic">
-									<img src="img/smallpic1.png" />
-									<img src="img/smallpic2.png" />
-								</div>
-								<div class="info borderbot">
-									<p>共<span>2</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
-								</div>
-								<div class="bottom">
-									<span class="active">已取消</span>
-									<span>已付款</span>
-								</div>
-							</li>
-						</ul>
+						<ul class="pic-list"></ul>
+						<div class="mui-pull-bottom-pocket mui-block mui-visibility mui-hidden">
+							<div class="mui-pull">
+								<div class="mui-pull-caption mui-pull-caption-refresh">没有更多订单了</div>
+							</div>
+						</div>
 					</div>
 					<div id="item2" class="mui-control-content">
-						<ul class="pic-list">
-							<li class="pad">
-								<div class="order borderbot">
-									<span>订单号:</span><span class="number">123455</span>
-									<i class="delete"></i>
-								</div>
-								<div class="pic">
-									<img src="img/smallpic1.png" />
-									<img src="img/smallpic2.png" />
-									<img src="img/smallpic2.png" />
-								</div>
-								<div class="info borderbot">
-									<p>共<span>3</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
-								</div>
-								<div class="bottom">
-									<span class="active">待付款</span>
-								</div>
-							</li>
-							<li class="pad">
-								<div class="order borderbot">
-									<span>订单号:</span><span class="number">123455</span>
-									<i class="delete"></i>
-								</div>
-								<div class="pic">
-									<img src="img/smallpic2.png" />
-								</div>
-								<div class="info borderbot">
-									<p>共<span>1</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
-								</div>
-								<div class="bottom">
-									<span class="active">待付款</span>
-								</div>
-							</li>
-						</ul>
+						<ul class="pic-list"></ul>
+						<div class="mui-pull-bottom-pocket mui-block mui-visibility mui-hidden">
+							<div class="mui-pull">
+								<div class="mui-pull-caption mui-pull-caption-refresh">没有更多订单了</div>
+							</div>
+						</div>
 					</div>
 					<div id="item3" class="mui-control-content">
 						<ul class="pic-list">
@@ -131,6 +68,7 @@
 								<div class="pic">
 									<img src="img/smallpic1.png" />
 									<img src="img/smallpic2.png" />
+									<img src="img/smallpic1.png" />
 								</div>
 								<div class="info borderbot">
 									<p>共<span>2</span>件商品&nbsp;&nbsp;合计<span class="money">￥55</span><span>&nbsp;&nbsp;(含运费)</span></p>
@@ -140,6 +78,11 @@
 								</div>
 							</li>
 						</ul>
+						<div class="mui-pull-bottom-pocket mui-block mui-visibility mui-hidden">
+							<div class="mui-pull">
+								<div class="mui-pull-caption mui-pull-caption-refresh">没有更多订单了</div>
+							</div>
+						</div>
 					</div>
 					<div id="item4" class="mui-control-content">
 						<ul class="pic-list">
@@ -178,6 +121,11 @@
 								</div>
 							</li>
 						</ul>
+						<div class="mui-pull-bottom-pocket mui-block mui-visibility mui-hidden">
+							<div class="mui-pull">
+								<div class="mui-pull-caption mui-pull-caption-refresh">没有更多订单了</div>
+							</div>
+						</div>
 					</div>
 					<div id="item5" class="mui-control-content">
 						<ul class="pic-list">
@@ -217,23 +165,15 @@
 								</div>
 							</li>
 						</ul>
+						<div class="mui-pull-bottom-pocket mui-block mui-visibility mui-hidden">
+							<div class="mui-pull">
+								<div class="mui-pull-caption mui-pull-caption-refresh">没有更多订单了</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			
 		</div>
-		<script type="text/javascript">
-			mui.init();
-			//删除订单
-			$(".delete").on("click",function(){
-				var that=$(this);
-				var btnArray = ['取消', '删除'];
-				mui.confirm(' ', '要删除该订单？', btnArray, function(e) {
-					if (e.index == 1) {
-						that.parent().parent().remove();
-					} 
-				}, 'div');
-			});
-		</script>
+		<script type="text/javascript" src="js/myorder.js" ></script>
 	</body>
 
 </html>

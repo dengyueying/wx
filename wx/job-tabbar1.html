@@ -114,42 +114,5 @@
 	</body>
 	<script src="js/mui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
-	<script>
-		$(".mui-active").trigger("click");
-		window.onload=function(){
-			var title = document.getElementById("title");
-			var rt=$("#second").position().left;
-			var rw=$("#second").outerWidth(true);
-			$("#badge").css("left",rt-0+rw-0+2+"px");
-		}
-			//更换标题
-			mui('.mui-bar-tab').on('tap', 'a', function(e) {
-				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
-				var i=$(this).index();
-				var that=this.href;
-				var n=that.indexOf("tabbar");
-				that=that.substr(0,n);
-				that=that+"tabbar"+i+".html";
-				window.history.replaceState(null, null, that);
-			});
-			
-		      $(".job-tabbar .list li").click(function(){
-		      	mui.openWindow({
-							url: 'work.html',
-							id: 'work',
-						});
-		      });
-		       $(".job-chat .list li").click(function(){
-		      	mui.openWindow({
-							url: 'waitWorkDetails.html',
-							id: 'waitWorkDetails',
-						});
-		      });
-		      $(".job-work").click(function(){
-				mui.openWindow({
-					url: 'workflow.html',
-					id: 'workflow',
-				});
-			});
-	</script>
+	<script type="text/javascript" src="js/job-tabbar.js" ></script>
 </html>

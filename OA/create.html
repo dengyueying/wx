@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>创建报销事件</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/head3.css" />
+		<link rel="stylesheet" href="css/create.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="" class="mui-action-back back"></a>
+			<h1 class="head-title">报销</h1>
+		</header>
+		<section>
+			<div class="cont btn border">
+						<span class="text">时间</span>
+						<span class="text fl-right userName"></span>
+						<span class="create-right"></span>
+				</div>
+			<p class="release pad"><span class="create-left"></span>发起工作</p>
+			<div class="box nbtbox">
+				<div class="cont border">
+					<span class="text">报销金额</span>		
+					<input class="money fl-right fl-input" type="number" oninput="if(value.length>8)value=value.slice(0,8)" placeholder="请输入报销金额(元)"/>
+				</div>
+				<div class="cont border">
+					<span class="text">所在部门</span>		
+					<input class="money fl-right fl-input" type="text" name="" id="" oninput="if(value.length>8)value=value.slice(0,8)" value="" placeholder="请输入所在部门"/>
+				</div>	
+			</div>
+			<div class="box box2 nbtbox">
+				<div id="pjbox">
+					<div class="cont readd">
+						<span class="text">报销明细(元)</span>		
+						<img src="img/add.png" id="addProject"/>
+					</div>
+					<div class="pjbox">
+						<div class="cont">
+							<span class="text info">项目名称</span>
+							<input type="text" class="project money" name="" id="" value="" oninput="if(value.length>8)value=value.slice(0,8)" placeholder="请输入项目名称"/>
+							<img src="img/delete.png" class="delete"/>
+						</div>
+						<ul class="price border">
+							<li>
+								<p class="info">单价</p>
+								<input class="tcor" type="number" oninput="if(value.length>6)value=value.slice(0,6)" name="" id="" value="" placeholder="请输入单价"/>
+							</li>
+							<li>
+								<p class="info">数量</p>
+								<input class="tcor" type="number" oninput="if(value.length>6)value=value.slice(0,6)" name="" id="" value="" placeholder="请输入数量"/>
+							</li>
+							<li>
+								<p class="info">总计</p>
+								<input class="tcor" type="number" name="" oninput="if(value.length>8)value=value.slice(0,8)" id="" value="" placeholder="请输入总价"/>
+							</li>
+						</ul>		
+					</div>
+				</div>
+				<div class="cont explain">
+					<p class="text pad">报销说明</p>
+					<textarea name="" rows="" cols="" oninput="if(value.length>50)value=value.slice(0,50)" placeholder="请输入费用明细描述,请填写少于50字"></textarea>
+				</div>
+			</div>
+			<div class="box box3 nbtbox">
+				<div class="cont sheight border">
+					<span class="text">附件</span>		
+					<span class="create-right"></span>
+				</div>
+				<div class="cont sheight border">
+					<span class="text">添加图片</span>		
+					<!--<a href="#picture"><img id="picture" src="img/add.png" /></a>-->
+					<img src="img/add.png" />
+				</div>
+				<div class="picbox">
+					<ul class="pic-list">
+						<li id="picture">
+							<img src="img/icon-pic.png"/>
+						</li>
+					</ul>
+				</div>
+				<div class="cont sheight border">
+					<span class="text">会签</span>		
+				</div>
+				<textarea class="csign border" name="" rows="" cols="" oninput="if(value.length>50)value=value.slice(0,50)" placeholder="填写会签内容,请填写少于50字"></textarea>
+				<div class="last bordersb">
+					<div class="cont tic">
+							<span class="text vertical">「主办」</span>
+							<span class="text">王先森</span>
+							<img src="img/add.png" class="add"/>
+					</div>
+					<div class="cont tic">
+							<span class="text vertical">「经办」</span>
+							<span class="text">王先森</span>
+							<img src="img/add.png" class="add"/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<span class="mui-action-back">回退</span>
+			<span>保存</span>
+			<span>转交下一步</span>
+		</footer>
+		<!--<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<input class="camera" type="file" capture="camera" accept="image/*" value="拍照"/>
+					<a href="#">拍照</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<input class="camera" type="file" capture="camera" accept="image/png,image/gif" value="相册"/>
+					<a href="#">从手机相册选择</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>-->
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/mui.picker.min.js"></script>
+		<script type="text/javascript" src="js/rem.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/cslCamera.js" ></script>
+		<script type="text/javascript">
+			//添加图片
+			var img;
+			var btns = $('.btn');
+				btns.each(function(i, btn) {
+					btn.setAttribute('data-options', '{"beginYear":' + new Date().getFullYear() + '}');
+					btn.addEventListener('tap', function() {
+						console.log(i);
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							btn.getElementsByTagName("span")[1].innerHTML = rs.text;
+							picker.dispose();
+						})
+					}, false);
+				});
+			var callBack=function(album){
+				//alert(album);
+				var h=album[0].data;
+				console.log(h);
+				mui.ajax("http://192.168.1.116:8080/BS56/image/saveImage", {
+					type: "post",
+					dataType: 'json',
+					data:{
+						imageContent:h,
+						userId:1
+					},
+					success: function(data) {
+						console.log(JSON.stringify(data));
+					},
+					error: function(res) {
+						console.log(JSON.stringify(res));
+					}
+		
+				});
+				console.log(JSON.stringify(album[0].data));
+				album.forEach(function(val,idx){
+					var picx=$("<i class='icon-picx'></i>");
+					var li=$("<li></li>");
+					var img=$("<img/>");
+					img.attr("src",val.data);
+					li.append(img);
+					li.append(picx);
+					$("#picture").before(li);
+				});
+			}
+			var carera=new $.Pgater($("#picture"),callBack);
+			$(".pic-list").on("tap","li i",function(){
+				setTimeout($.proxy(function(){
+					$(this).parent().remove();
+				},this),350)
+			})
+			var str;
+			//打开选择人员
+			$(".add").click(function() {
+				mui.openWindow({
+					url: 'contacts.html',
+					id: 'contacts',
+				});
+			});
+			//删除项目明细
+			$("#pjbox").on("tap",".delete",function() {
+				$(this).parent().parent().remove();
+			});
+			//增加项目明细
+			$("#addProject").click(function() {
+				str="";
+				str+='<div class="pjbox">';
+					str+='<div class="cont">';
+						str+='<span class="text info">项目名称</span>';
+						str+='<input type="text" class="project money" oninput="if(value.length>8)value=value.slice(0,8)" placeholder="请输入项目名称"/>';
+						str+='<img src="img/delete.png" class="delete"/>';
+					str+='</div>';
+					str+='<ul class="price border">';
+						str+='<li>';
+							str+='<p class="info">单价</p>';
+							str+='<input type="number" oninput="if(value.length>6)value=value.slice(0,6)" name="" id="" value="" placeholder="请输入单价"/>';
+						str+='</li>';
+						str+='<li>';
+							str+='<p class="info">数量</p>';
+							str+='<input type="number" oninput="if(value.length>6)value=value.slice(0,6)" name="" id="" value="" placeholder="请输入数量"/>';
+						str+='</li>';
+						str+='<li>';
+							str+='<p class="info">总计</p>';
+							str+='<input type="number" name="" oninput="if(value.length>8)value=value.slice(0,8)" id="" value="" placeholder="请输入总价"/>';
+						str+='</li>';
+					str+='</ul>'	;
+				str+='</div>';
+				$("#pjbox").append(str)
+			});
+//			//添加图片
+//			mui('body').on('tap', '.mui-popover-action li>input', function() {
+//				var a = this,
+//					parent;
+//				//根据点击按钮，反推当前是哪个actionsheet
+//				for (parent = a.parentNode; parent != document.body; parent = parent.parentNode) {
+//					if (parent.classList.contains('mui-popover-action')) {
+//						break;
+//					}
+//				}
+//				//关闭actionsheet
+//				mui('#' + parent.id).popover('toggle');
+//				mui.toast("你刚点击了\"" + a.innerHTML + "\"按钮");
+//			});
+		</script>
+	</body>
+
+</html>

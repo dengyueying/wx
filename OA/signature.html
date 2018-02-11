@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>签章</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+   
+<!--<script src="libs/modernizr.js"></script>-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="libs/flashcanvas.js"></script>
+<![endif]-->
+<style>
+	html,body{
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+	.content{
+		position: relative;
+	}
+	.content,.signatureparent,.signature{
+		height:100%;
+		overflow: hidden;
+	}
+	.text{
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 0.4rem 0 0 0.4rem;
+	}
+	canvas{
+		height: 90% !important;
+	}
+	input{
+		left: inherit !important;
+		right: .4em;
+		z-index: 99;
+	}
+	.btn{
+		height: 10%;
+		width: 100%;
+		position:fixed;
+		left: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		z-index: 88;
+	}
+	.btn .inp{
+		flex: 1;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+<div id="content" class="content">
+	<span class="text">签名:</span>
+	<div id="signatureparent" class="signatureparent">
+		<div id="signature" class="signature"></div></div>
+	</div>
+	<div class="btn">
+		<div class="inp">
+			<input type="button" id="reset" value="重写" />
+		</div>
+		<div class="inp">
+			<input type="button" id="sure" value="保存" />
+		</div>
+	</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jSignature.min.js"></script>
+<script>
+(function($){
+
+$(document).ready(function() {
+	var $sigdiv = $("#signature").jSignature({'UndoButton':true})
+	
+	$("#reset").on('click', function(e){
+		$sigdiv.jSignature('reset')
+	});
+	$("#sure").on('click', function(e){
+		//将画布内容转换为图片
+        var datapair = $sigdiv.jSignature("getData", "image");
+        console.log("data:" + datapair);
+//      var array = datapair.splice(",");
+	});
+})
+
+})(jQuery)
+</script>
+</body>
+</html>

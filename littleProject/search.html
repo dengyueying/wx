@@ -15,10 +15,6 @@
 	</head>
 
 	<body>
-		<!--<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back"></a>
-			<h1 class="mui-title">搜索</h1>
-		</header>-->
 		<div class="head borderbot">
 			<div class="searchbox">
 				<i class="icon-search"></i>
@@ -156,6 +152,7 @@
 				</ul>
 			</div>
 		</div>
+		<script type="text/javascript" src="js/search.js" ></script>
 		<script type="text/javascript">
 			var str,flag=false,low=heigh=-1,ltoh=false,htol=false;
 			mui.init();
@@ -380,12 +377,39 @@
 				flag=true;
 			});
 			
-			
 			//删除历史记录
 			$(".delete").on("click", function() {
-				$(this).parent().parent().remove();
+				mui.ajax('http://xx.com/api/search/clearhistory', {
+					type: "post",
+					dataType: 'json',
+					success: function(data) {
+						console.log(JSON.stringify(data));
+						if(data.errno==0){
+							$(this).parent().parent().remove();
+						}
+						else{
+							mui.toast(data.errmsg)
+						}
+					},
+					error: function(res) {
+						console.log(JSON.stringify(res))
+					}
+				});
 			});
 			
+			//搜索页面数据
+			function pagetion() {
+				mui.ajax('http://xx.com/api/search/clearhistory', {
+					type: "post",
+					dataType: 'json',
+					success: function(data) {
+						console.log(JSON.stringify(data));
+					},
+					error: function(res) {
+						console.log(JSON.stringify(res))
+					}
+				});
+			};
 		</script>
 	</body>
 

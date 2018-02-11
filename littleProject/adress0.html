@@ -15,81 +15,39 @@
 	</head>
 
 	<body>
-		<!--<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back"></a>
-			<h1 class="mui-title">我的地址</h1>
-		</header>-->
 		<div class="content contentBottom">
-			<ul class="adr-list">
-				<li class="borderbot pad">
-					<p class="number"><span class="default">默认</span><span class="name">王先森</span><span class="ipone">15111272727</span></p>
-					<p class="adress mui-ellipsis">长沙市芙蓉区美联天骄城1623室</p>
+			<ul class="adr-list" id="list">
+				<!--<li class="borderbot pad">
+					<a href="adressedit.html">
+						<p class="number"><span class="default">默认</span><span class="name">王先森</span><span class="ipone">15111272727</span></p>
+						<p class="adress mui-ellipsis">长沙市芙蓉区美联天骄城1623室</p>
+						<div class="icon">
+							<i class="icon-adrs icon-delete"></i>
+						</div>	
+					</a>
+					
 				</li>
 				<li class="borderbot pad">
 					<p class="number"><span class="name">王先森</span><span class="ipone">15111272727</span></p>
 					<p class="adress mui-ellipsis">长沙市芙蓉区美联天骄城1623室</p>
+					<div class="icon">
+						<i class="icon-adrs icon-delete"></i>
+					</div>
 				</li>
 				<li class="borderbot pad">
 					<p class="number"><span class="name">王先森</span><span class="ipone">15111272727</span></p>
 					<p class="adress mui-ellipsis">长沙市芙蓉区美联天骄城1623室</p>
-				</li>
+					<div class="icon">
+						<i class="icon-adrs icon-delete"></i>
+					</div>
+				</li>-->
 			</ul>
 		</div>
-		<footer class="foot">
-			<span class="add">新增地址</span>
-			<span class="manage" id="manage">管理地址</span>
+		<footer>
+			<a href="addadress.html">新增收货地址</a>
 		</footer>
-		<script type="text/javascript">
-			var str;
-			//进入编辑地址
-			$(".adr-list li").on("click",".edit",function(){
-				mui.openWindow({
-					url: 'addadress.html',
-					id: 'addadress',
-				});
-			});
-			//进入新增地址
-			$("footer").on("click",".add",function(e){
-				e.stopPropagation();
-				mui.openWindow({
-					url: 'addadress.html',
-					id: 'addadress',
-				});
-			});			
-			//删除地址
-			$(".adr-list li").on("click",".icon-delete",function(){
-				var that=$(this);
-				var btnArray = ['取消', '删除'];
-				mui.confirm(' ', '确认删除该地址？', btnArray, function(e) {
-					if (e.index == 1) {
-						that.parent().parent().remove();
-					} 
-				}, 'div');
-			});
-			//管理地址
-			$("footer").on("click",".manage",function(e){
-				e.stopPropagation();
-				str='<div class="icon">';
-						str+='<i class="icon-adrs edit"></i>';
-						str+='<i class="icon-adrs icon-delete"></i>';
-					str+='</div>';
-				$(".adr-list").children("li").append(str);
-				$(this).parent().removeClass("foot");
-				$("footer").html("确认");
-			});
-			//删除地址之后确认
-			$("footer").on("click",function(){
-				if($(this).hasClass("foot")){
-					$("footer").addClass("foot");
-				}else{
-					$(".icon").remove();
-					$(this).addClass("foot");
-					str='<span class="add">新增地址</span>';
-					str+='<span class="manage" id="manage">管理地址</span>';
-					$(this).html(str);
-				}
-			});
-		</script>
+		<script type="text/javascript" src="js/adress0.js" ></script>
+		<!--<script type="text/javascript" src="js/login.js" ></script>-->
 	</body>
 
 </html>

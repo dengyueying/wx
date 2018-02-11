@@ -1,0 +1,66 @@
+body{
+	background-color:#F4F4F4;
+}
+section{
+	padding-top: 0.98rem;
+}
+.mui-bar-nav {
+    background: #00abe6;
+    height: 0.98rem;
+    padding: 0 0.34rem;
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+}
+.mui-bar .back {
+    width: 0.36rem;
+    height: 0.34rem;
+    background: url(../img/fail.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 0.5rem;
+    position: relative;
+}
+.mui-bar .back:after {
+    content: "";
+    width: 0.02rem;
+    height: 0.48rem;
+    background: #029ed3;
+    position: absolute;
+    right: -0.24rem;
+    top: -0.08rem;
+    display: block;
+}
+.mui-bar .head-title {
+    color: rgb(243,243,243);
+    font-size: 0.38rem;
+    height: 0.98rem;
+    line-height: 0.98rem;
+    font-weight: normal;
+}
+.icon-share{
+	width: 0.08rem;
+	height: 0.44rem;
+	position: absolute;
+	right: 0.34rem;
+	top:50%;
+	transform: translateY(-50%);
+	display: block;
+	background: url(../img/share.png) no-repeat;
+	background-size: 100% 100%;
+}
+.icon-sous {
+	width: 0.38rem;
+	height: 0.38rem;
+	background: url(../img/sousuo.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	right: 0.34rem;
+}
+header i::before{
+	position: absolute;
+	content: "";
+	width: 1rem;
+	height: 0.98rem;
+	right: -0.34rem;
+	top: -0.2rem;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>个人资料</title>
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/information.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+	</head>
+	<body>
+		<header class="header wrap_pad">
+			<div class="fl_lt">
+				<a href="javascript:window.history.back();"><img src="img/close.png" /></a>
+				个人资料  
+			</div>
+		</header>
+		<div class="content">  
+			<ul class="firstblock firstblockArrow">
+				<li class="cliName">
+					<span>姓名<var class="fl_rt fw_it">齐齐</var></span>
+				</li>
+				<li>
+					<span>手机号<var class="fl_rt fw_it">18512341234</var></span>
+				</li>
+				<li>
+					<span>部门<var class="fl_rt fw_it">技术部</var></span>
+				</li>
+				<li>
+					<span>单位<var class="fl_rt fw_it">工程师</var></span>
+				</li>
+			</ul>
+		</div> 
+		
+		<!--修改昵称-->
+		<div class="fn_flex">
+			<div class="nickbox">
+				<p>修改昵称</p>
+				<div class="ipt"><input type="text" /></div>
+				<div class="fl_rt">
+					<div class="fx_no">取消</div>
+					<div class="fx_yes">确认</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script>
+			$('.fn_flex').hide();
+			$('.cliName').click(function(){
+				$('.fn_flex').show();
+			})
+			$('.fx_no').click(function(){
+				$('.fn_flex').hide();
+				$('.ipt input').val('');
+			})
+			$('.fx_yes').click(function(){
+				$('.fn_flex').hide();
+				$('.ipt input').val('');
+			})
+		</script>
+	</body>
+</html>

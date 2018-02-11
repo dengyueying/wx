@@ -4,6 +4,9 @@
 	box-sizing: border-box;
 	background: #fff;
 }
+a{
+	-webkit-tap-highlight-color:rgba(255,255,255,0);
+}
 i{
 	display: inline-block;
 }
@@ -21,6 +24,7 @@ textarea,input{
 	border: none !important;
 	margin: 0 !important;
 	padding: 0 !important;
+	outline: none;
 }
 html,
 body {
@@ -61,6 +65,7 @@ margin-bottom: 0.2rem;
 }
 .borderbot{
 	border-bottom: 1px solid #e8e8e8;
+	overflow: hidden;
 }
 .icon-right{
 	background: url(../img/icon-go3.png) no-repeat;

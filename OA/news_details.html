@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>消息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/head3.css" />
+		<link rel="stylesheet" href="css/news-tabbar0.css" />
+		<link rel="stylesheet" href="css/workflow.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="" class="mui-action-back back"></a>
+			<h1 class="head-title">消息</h1>
+		</header>
+		<section>
+			<ul class="list">
+				<div class="release-time">
+					<span>
+						10:00
+					</span>
+				</div>
+				<li>
+					<p class="title bordersb mui-ellipsis">我北京计划日聚划算</p>
+					<div class="text">
+						jdasdfhjshfjdhsjkfhjksdahfjkhsad jfhjds hfjdhsj sdhsajhh
+					</div>
+					<span class="look wait">待审批</span>
+				</li>
+				<li>
+					<p class="title bordersb">更新</p>
+					<div class="text">
+						姜思达画法几何盛大金凤凰从北京市大红包放假那段时间发货计划
+					</div>
+					<span class="look">已同意</span>
+				</li>
+			</ul>	
+		</section>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript">
+			mui.init();
+			$(".list li").click(function(){
+				mui.openWindow({
+					url: 'waitWorkDetails.html',
+					id: 'waitWorkDetails',
+				});
+			});
+		</script>
+	</body>
+
+</html>

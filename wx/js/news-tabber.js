@@ -1,7 +1,7 @@
 $(function() {
 	var i, date1, date2, that, n, num, cha, str, createTime, n1, n2, dt, id, p0 = p1 = p2 = p3 = 1,
 		y0, y1, y2, y3;
-	var storage = window.sessionStorage;
+	var storage = window.localStorage;
 	i = $(".mui-bar").children(".mui-active").index();
 	console.log(i);
 	published(); //已发布
@@ -76,7 +76,7 @@ $(function() {
 		}
 	});
 	//查看新闻详情
-	$(".news .list li").click(function() {
+	$(".news .list").on("click","li",function() {
 		storage.index = i; //判断是否是未读新闻
 		storage.newsId = $(this).attr("id"); //哪一条新闻 根据id获取新闻详情
 		mui.openWindow({
@@ -100,7 +100,6 @@ $(function() {
 			dataType: 'json',
 			success: function(data) {
 				console.log(JSON.stringify(data));
-				alert("s:"+JSON.stringify(data));
 				if(data.total == 0) {
 					str = '<p class="tswz">您还没有发布新闻</p>';
 				} else {
@@ -119,7 +118,6 @@ $(function() {
 			},
 			error: function(res) {
 				console.log(JSON.stringify(res));
-				alert("f:"+JSON.stringify(res));
 			}
 
 		});

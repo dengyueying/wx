@@ -49,13 +49,20 @@
 	font-size: 0.26rem;
 	padding-right: 0.4rem;
 }
-footer{
+footer,footer a{
 	background: #E41E3E;
 	color: #fff;
 	font-size: 0.32rem;
 	align-items: center;
 	justify-content: center;
 	display: flex;
+	width: 100%;
+}
+footer>a{
+	height: 100%;
+}
+footer a:active{
+	color: #fff;
 }
 .foot{
 	background: inherit;

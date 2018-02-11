@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>发表评论</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/publishComment.css" />
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+	</head>
+
+	<body>
+		<div class="content">
+			<div class="box">
+				<div class="info pad">
+					<img src="img/bigpic7.png"/>
+					<div class="textrRight">
+						<p class="title">来自于HKJ的制造 御寒神器 行走的火炉 就这么长了啊</p>
+						<p><span class="color">颜色:白色</span><span class="size">尺码:38码</span></p>
+					</div>	
+				</div>
+				<ul class="list-star">
+					<li>
+						<p class="title">描述相符</p>
+						<div class="star">
+							<img src="img/star4.png"/>
+							<img src="img/star3.png"/>
+							<img src="img/star3.png"/>
+							<img src="img/star3.png"/>
+							<img src="img/star3.png"/>
+						</div>
+						<p class="grade">非常差</p>
+					</li>
+					<li>
+						<p class="title">物流服务</p>
+						<div class="star">
+							<img src="img/star4.png"/>
+							<img src="img/star4.png"/>
+							<img src="img/star4.png"/>
+							<img src="img/star3.png"/>
+							<img src="img/star3.png"/>
+						</div>
+						<p class="grade">一般</p>
+					</li>
+					<li>
+						<p class="title">服务添堵</p>
+						<div class="star">
+							<img src="img/star4.png"/>
+							<img src="img/star4.png"/>
+							<img src="img/star4.png"/>
+							<img src="img/star4.png"/>
+							<img src="img/star4.png"/>
+						</div>
+						<p class="grade">非常好</p>
+					</li>
+				</ul>
+			</div>	
+			<div class="second pad">
+				<div class="box2">
+					<textarea placeholder="分享你的购物心得，与大家一起交流吧!(不超过50字)" oninput="if(value.length>50)value=value.slice(0,50)"></textarea>
+					<ul class="pic-list">
+						<li>
+							<img src="img/bigpic7.png"/>
+							<i class="delete"></i>
+						</li>
+						<li class="desh" id="desh">
+							<img src="img/pic.png"/>
+							<p class="text">添加图片</p>
+						</li>
+					</ul>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+			<div class="last pad">
+				<div class="nm">
+					<i class="check"></i><span>匿名</span>
+				</div>
+				<p class="wz">您写的评价会以匿名的形式展示</p>
+			</div>
+			<p class="btnp pad"><span class="btn">提交发布</span></p>
+			<!--<img src="img/commentOk.png"/>-->
+		</div>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/cslCamera.js" ></script>
+		<script type="text/javascript">
+			//添加图片
+			var img;
+			var callBack=function(album){
+				//alert(album);
+				var h=album[0].data;
+				console.log(JSON.stringify(h));
+				album.forEach(function(val,idx){
+					var picx=$("<i class='delete'></i>");
+					var li=$("<li></li>");
+					var img=$("<img/>");
+					img.attr("src",val.data);
+					li.append(img);
+					li.append(picx);
+					$("#desh").before(li);
+				});
+			}
+			var carera=new $.Pgater($("#desh"),callBack);
+			$(".pic-list").on("tap","li i",function(){
+				setTimeout($.proxy(function(){
+					$(this).parent().remove();
+				},this),350)
+			});
+			
+			//是否匿名
+			$(".last .check").on("click",function(){
+				if($(this).hasClass("checked")){
+					$(this).removeClass("checked");
+				}
+				else{
+					$(this).addClass("checked");
+				}
+			})
+		</script>
+	</body>
+
+</html>

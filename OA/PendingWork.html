@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>待办工作</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/head3.css" />
+		<link rel="stylesheet" href="css/head2.css" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/job-about.css" />
+		<link rel="stylesheet" href="css/job-chat.css" />
+		<link rel="stylesheet" href="css/job-work.css" />
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="" class="mui-action-back back"></a>
+			<span id="title" class="head-title">待办工作</span>
+		</header>
+		<div class="mui-content">
+			<div id="tabbar-with-chat" class="mui-active mui-control-content job-chat">
+				<ul class="list">
+					<li class="bordersb pad">
+						<p class="classify"><span>请假申请</span><span class="time">2017-10-10  10:10:10</span></p>
+						<p class="detail">
+							<span class="step">1</span>
+							<span class="handle">(主办)</span>
+							<span class="depart">部门审批</span>
+							<span class="time2">2017-10-12</span>
+						</p>
+					</li>
+					<li class="bordersb pad">
+						<p class="classify"><span>请假申请</span><span class="time">2017-10-10  10:10:10</span></p>
+						<p class="detail">
+							<span class="step">2</span>
+							<span class="handle">(主办)</span>
+							<span class="depart">部门审批</span>
+							<span class="time2">2017-10-12</span>
+						</p>
+					</li>
+					<li class="bordersb pad">
+						<p class="classify"><span>请假申请</span><span class="time">2017-10-10  10:10:10</span></p>
+						<p class="detail">
+							<span class="step">3</span>
+							<span class="handle">(主办)</span>
+							<span class="depart">部门审批</span>
+							<span class="time2">2017-10-12</span>
+						</p>
+					</li>
+				</ul>	
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script>
+		window.onload=function(){
+		       $(".job-chat .list li").click(function(){
+		      	mui.openWindow({
+							url: 'waitWorkDetails.html',
+							id: 'waitWorkDetails',
+						});
+		      });
+		}
+	</script>
+</html>

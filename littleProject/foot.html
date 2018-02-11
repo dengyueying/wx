@@ -8,10 +8,11 @@
 		<link href="css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="css/public.css" />
 		<link rel="stylesheet" href="css/foot.css" />
-		
+
 		<script src="js/mui.min.js"></script>
-		<script type="text/javascript" src="js/rem.min.js" ></script>
-		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/rem.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/foot.js"></script>
 	</head>
 
 	<body>
@@ -30,7 +31,7 @@
 					</div>
 					<ol class="pad sublist">
 						<li class="borderbot">
-							<img src="img/pic1.png"/>
+							<img src="img/pic1.png" />
 							<div class="info">
 								<p class="title">冬季加厚保暖男士围巾</p>
 								<p class="text">冬季加厚保暖男士围巾</p>
@@ -38,7 +39,7 @@
 							</div>
 						</li>
 						<li class="borderbot">
-							<img src="img/pic1.png"/>
+							<img src="img/pic1.png" />
 							<div class="info">
 								<p class="title">冬季加厚保暖男士围巾</p>
 								<p class="text">冬季加厚保暖男士围巾</p>
@@ -53,15 +54,7 @@
 					</div>
 					<ol class="pad sublist">
 						<li class="borderbot">
-							<img src="img/pic1.png"/>
-							<div class="info">
-								<p class="title">冬季加厚保暖男士围巾</p>
-								<p class="text">冬季加厚保暖男士围巾</p>
-								<p class="money">￥55</p>
-							</div>
-						</li>
-						<li class="borderbot">
-							<img src="img/pic1.png"/>
+							<img src="img/pic1.png" />
 							<div class="info">
 								<p class="title">冬季加厚保暖男士围巾</p>
 								<p class="text">冬季加厚保暖男士围巾</p>
@@ -74,124 +67,12 @@
 		</div>
 		<footer class="mui-hidden">
 			<div class="all">
-				<i class="check footchk"></i>
+				<i class="check"></i>
 				<span>全部足迹</span>
 			</div>
 			<span class="delete">删除</span>
 		</footer>
-		<script type="text/javascript">
-			var n,obj,flag=true,str="";
-			//编辑
-			$(".edit").on("click",function(e){
-				if($(this).hasClass("ok")){
-					$(this).html("编辑足迹");
-					$(this).removeClass("ok");
-					$(".check").remove();
-					$("footer").addClass("mui-hidden");
-				}
-				else{
-					str='<i class="check"></i>';
-					$(this).html("完成");
-					$(this).addClass("ok");
-					$("footer").removeClass("mui-hidden");
-					$(".time").prepend(str);
-					$(".sublist li").prepend(str);	
-					$("footer .all").prepend(str);	
-					$(".active").removeClass("active");
-					$(".btn").removeClass("btn");
-				}
-				
-			});
-			//点击时间选择
-			$(".time").on("click",function(e){
-				if($(this).hasClass("active")){
-					$(this).removeClass("active");
-					$(".all").removeClass("active");
-					$(this).siblings().children().removeClass("active");
-				}
-				else{
-					$(this).addClass("active");
-					$(this).siblings().children().addClass("active");
-					checkAll();
-				}
-				yncheck();
-			});
-			//点击商品选择
-			$(".list").on("click",".sublist li",function(e){
-				flag=true;
-				if($(this).hasClass("active")){
-					$(this).removeClass("active");
-					$(".all").removeClass("active");
-					$(this).parent().siblings().removeClass("active");
-				}
-				else{
-					$(this).addClass("active");
-					var obj=$(this).parent().children();
-					var n=obj.length;
-					obj.each(function(){
-						if(!$(this).hasClass("active")){
-							flag=false;
-							return false;
-						}
-					});
-					if(flag){
-						$(this).parent().siblings().addClass("active");
-						checkAll();
-					}
-				}
-				yncheck();
-			});
-			//全选反选
-			$("footer").on("click",".all",function(e){
-				 if($(this).hasClass("active")){
-				 	$(this).removeClass("checked");
-				 	$(".active").removeClass("active");
-				 }
-				 else{
-				 	$(this).addClass("active");
-				 	$(".list .time").addClass("active");
-				 	$(".sublist li").addClass("active");
-				 }
-				 yncheck();
-			});
-			
-			//删除足迹
-			$("footer").on("click",".btn",function(){
-				$(".list .time").each(function(){
-					if($(this).hasClass("active")){
-						$(this).parent().remove();
-					}
-					else{
-						$(".sublist li").each(function(){
-							if($(this).hasClass("active")){
-								$(this).remove();
-							}
-						});
-					}
-				});
-			});
-			
-			function checkAll(){
-				flag=true;
-				$(".list .time").each(function(){
-					if(!$(this).hasClass("active")){
-						flag=false;
-						return false;
-					}
-				});
-				if(flag){
-					$(".all").addClass("active");
-				}
-			};
-			function yncheck(){
-				if($(".active").length!=0){
-					$(".delete").addClass("btn");
-				}
-				else{
-					$(".delete").removeClass("btn");
-				}
-			}
-		</script>
+		<script type="text/javascript" src="js/login.js" ></script>
 	</body>
 
 </html>

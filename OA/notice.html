@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>公司公告</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/head3.css" />
+		<link rel="stylesheet" href="css/head2.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/news-tabbar0.css" />
+		<link rel="stylesheet" href="css/news-tabbar3.css" />
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+		<style>
+			.release-time span{width: inherit;}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="javascript:window.history.back();" class="mui-action-back back"></a>
+			<h1 id="title" class="head-title">公告</h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="#tabbar-with-chat">
+				<span class="mui-badge" id="badge"></span>
+				<span class="mui-tab-label" id="second">未读</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-contact">
+				<span class="mui-tab-label">已读</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<div id="tabbar-with-chat" class="mui-control-content mui-active">
+				<div class="content pad">
+					<ul class="list">
+						<!--<div class="release-time">
+							<span>
+								10:00
+							</span>
+						</div>
+						<li>
+							<p class="title bordersb mui-ellipsis">放假通知</p>
+							<p class="text">春节将至，国际法定假为1月28日至2月2日。回家注意安全。</p>
+							<span class="look">
+								查看详情
+							</span>
+						</li>
+						<li>
+							<p class="title bordersb mui-ellipsis">放假通知</p>
+							<p class="text">春节将至，国际法定假为1月28日至2月2日。回家注意安全。</p>
+							<span class="look">
+								查看详情
+							</span>
+						</li>-->
+					</ul>	
+					<div class="mui-pull-bottom-pocket mui-block mui-visibility">
+						<div class="mui-pull">
+							<div class="mui-pull-loading mui-icon mui-spinner mui-visibility"></div>
+							<div class="mui-pull-caption mui-pull-caption-refresh">加载中......</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tabbar-with-contact" class="mui-control-content">
+				<div class="content pad">
+					<ul class="list">
+						<!--<li>
+							<p class="title bordersb mui-ellipsis">放假通知</p>
+							<p class="text">春节将至，国际法定假为1月28日至2月2日。回家注意安全。</p>
+							<span class="look">
+								查看详情
+							</span>
+						</li>-->
+					</ul>	
+					<div class="mui-pull-bottom-pocket mui-block mui-visibility">
+						<div class="mui-pull">
+							<div class="mui-pull-loading mui-icon mui-spinner mui-visibility"></div>
+							<div class="mui-pull-caption mui-pull-caption-refresh">加载中......</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript" src="js/time.js" ></script>
+	<script type="text/javascript" src="js/notice.js" ></script>
+	<script>
+		window.onload=function(){
+			var rt=$("#second").position().left;
+			var rw=$("#second").outerWidth(true);
+			$("#badge").css("left",rt-0+rw-0+4+"px");
+			
+			 $(".list li .text").each(function () {
+		        if($(this).text().length>37){
+		          var demoHtml = $(this).html().substr(0,37)+'...';
+		          $(this).html(demoHtml);
+		        }
+		    });
+		    $(".news-map .list li").click(function(){
+		      	mui.openWindow({
+					url: 'classify.html',
+					id: 'classify',
+				});
+		    });
+		}
+	</script>
+</html>

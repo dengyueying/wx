@@ -1,3 +1,10 @@
+*{
+	background: inherit;
+}
+section{
+	background: #fff;
+	padding-bottom: 0.98rem;
+}
 .ic-list{
 	background: #fff;
 }
@@ -73,6 +80,7 @@ section>.ic-list{
 	right: 0;
 	z-index: 2;
 	color: #fff !important;
+	background: transparent;
 }
 .result span.point{
 	color:rgb(10,180,230);
@@ -129,11 +137,16 @@ section>.ic-list{
 	color: rgb(157,155,155);
 	font-size: 0.3rem;
 }
+.boxsp{
+	padding-bottom: 0.2rem;
+	background: #f4f4f4;
+}
 .boxspeed{
 	position: relative;
 	display: flex;
 	align-items: center;
 	border-bottom:1px solid #ecedee;
+	background: #fff;
 }
 .speed{
 	height: 0.94rem;
@@ -196,4 +209,7 @@ section>.ic-list{
 .ic-list li:after{
 	left: 6px;
 }
+.cont .rightNext{
+	right: 0.34rem;
 }
+	

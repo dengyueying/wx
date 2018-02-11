@@ -1,0 +1,67 @@
+input{border: none;}
+.st_sr{
+	background: #EEEEEE;
+	padding-top: 0.16rem;
+}
+.mui-search input.mui-input-clear{
+	height: 0.72rem;
+	background: white;
+	margin-bottom: 0.16rem!important;
+}
+.mui-search .mui-placeholder{
+	height: 0.72rem;
+	line-height: 0.72rem;
+}
+.mui-search:before{
+	margin-top: -0.28rem;
+}
+.mui-content>.mui-table-view:first-child {
+	margin-top: 0;
+}
+.mui-table-view-cell:after {
+	left: 0;
+}
+.mui-navigate-right:after,
+.mui-push-right:after,
+.mui-table-view:before {
+	display: none;
+}
+.mui-table-view-cell img {
+	width: 0.98rem;
+	height: 0.98rem;
+	border-radius: 0.04rem;
+	margin-right: 0.18rem;
+}
+.mui-table-view-cell .mui-navigate-right span {
+	font-size: 0.3rem;
+	color: #1A1A1A;
+	display: block;
+	padding: 0.25rem 0 0.05rem;    
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60%;
+}
+.mui-table-view-cell .mui-navigate-right p {
+	font-size: 0.26rem;
+	color: #999999;
+}
+.mui-table-view-cell .mui-navigate-right div {
+	position: absolute;
+	right: 0.3rem;
+	top: 0.32rem;
+	font-size: 0.3rem;
+	color: #999999;
+}
+.mui-table-view-cell .mui-table-cell{
+	padding: 0.25rem 0.34rem 0.2rem;
+	margin: 0;
+}
+.mui-table-view-cell{padding: 0;}
+.mui-table-view{background: none!important;}
+.mui-table-view-cell .mui-table-cell .badge2{
+	width: 0.2rem;
+	height: 0.2rem;
+	top: 0.2rem;
+    left: 1.2rem;
+}

@@ -21,7 +21,7 @@
 			<div class="box nbtbox">
 				<div class="cont border">
 					<span class="text">报销金额</span>		
-					<input class="money fl-right fl-input" type="number" oninput="if(value.length>8)value=value.slice(0,8)" name="" id="" value="" placeholder="请输入报销金额(元)"/>
+					<input class="money fl-right fl-input" type="number" oninput="if(value.length>8)value=value.slice(0,8)" placeholder="请输入报销金额(元)"/>
 				</div>
 				<div class="cont border">
 					<span class="text">所在部门</span>		
@@ -127,7 +127,24 @@
 			var img;
 			var callBack=function(album){
 				//alert(album);
-				console.log(album);
+				var h=album[0].data;
+				console.log(h);
+				mui.ajax("http://192.168.1.116:8080/BS56/image/saveImage", {
+					type: "post",
+					dataType: 'json',
+					data:{
+						imageContent:h,
+						userId:1
+					},
+					success: function(data) {
+						console.log(JSON.stringify(data));
+					},
+					error: function(res) {
+						console.log(JSON.stringify(res));
+					}
+		
+				});
+				console.log(JSON.stringify(album[0].data));
 				album.forEach(function(val,idx){
 					var picx=$("<i class='icon-picx'></i>");
 					var li=$("<li></li>");

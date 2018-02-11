@@ -107,3 +107,9 @@ footer .delete{
 footer .btn{
 	background: #E41E3E;
 }
+@media (max-width:375px) { 
+  .check{
+  	 width: 17px;
+  	 height: 17px;
+  }
+}

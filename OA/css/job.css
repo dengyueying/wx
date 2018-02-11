@@ -1,0 +1,40 @@
+.banner{display: block;}
+.notice{
+	height: 0.86rem;
+	line-height: 0.86rem;
+	color: #666666;
+}
+.notice img{
+	width: 0.32rem;
+}
+.notice .mqe{
+	width: 65%;
+	display: inline-flex;
+}
+.common_function{
+	padding-bottom: 1.6rem;
+}
+.common_function h3{
+	padding-top: 0.41rem;
+	padding-bottom: 0.26rem;
+	font-size: 0.28rem;
+	color: #1a1a1a;
+}
+.common_function table{
+	width: 100%;
+	text-align: center;
+}
+.common_function table td{
+	height: 1.7rem;
+}
+.common_function table td{
+	border: 1px solid #E5E4E4;
+}
+.common_function table td img{
+	width: 0.6rem;
+}
+.common_function table td p{
+	font-size: 0.24rem;
+	color: #666666;
+	padding-top: 0.1rem;
+}

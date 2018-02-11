@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>个人</title>
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/my.css" />
+		<link rel="stylesheet" href="css/information.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+	</head>
+	<body>
+		<header class="header wrap_pad">
+			<div class="fl_lt">个人<img src="img/hdlogo.png" /></div>
+		</header>
+		<!--<div class="content">-->
+			<!--<a class="mine wrap_pad br_bm" href="information.html">
+				<img src="" class="tx" />
+				<div class="me_infor">
+					<p>呵呵哒</p>
+					<span>18512341234</span>
+				</div>
+			</a>-->
+		<!--</div>-->
+		<div class="content">  
+			<ul class="firstblock firstblockArrow">
+				<li class="cliName">
+					<span>姓名<var class="fl_rt fw_it">齐齐</var></span>
+				</li>
+				<li>
+					<span>手机号<var class="fl_rt fw_it">18512341234</var></span>
+				</li>
+				<li>
+					<span>部门<var class="fl_rt fw_it">技术部</var></span>
+				</li>
+				<li>
+					<span>单位<var class="fl_rt fw_it">工程师</var></span>
+				</li>
+			</ul>
+		</div> 
+		
+		<!--修改昵称-->
+		<div class="fn_flex">
+			<div class="nickbox">
+				<p>修改昵称</p>
+				<div class="ipt"><input type="text" /></div>
+				<div class="fl_rt">
+					<div class="fx_no">取消</div>
+					<div class="fx_yes">确认</div>
+				</div>
+			</div>
+		</div>
+		<!--手机号-->
+		<div class="fn_flex">
+			<div class="nickbox">
+				<p>修改手机号</p>
+				<div class="ipt"><input type="number" /></div>
+				<div class="fl_rt">
+					<div class="fx_no">取消</div>
+					<div class="fx_yes">确认</div>
+				</div>
+			</div>
+		</div>
+		<div class="fn_flex">
+			<div class="nickbox">
+				<p>修改部门</p>
+				<div class="ipt"><input type="text" /></div>
+				<div class="fl_rt">
+					<div class="fx_no">取消</div>
+					<div class="fx_yes">确认</div>
+				</div>
+			</div>
+		</div>
+		<div class="fn_flex">
+			<div class="nickbox">
+				<p>修改单位</p>
+				<div class="ipt"><input type="text" /></div>
+				<div class="fl_rt">
+					<div class="fx_no">取消</div>
+					<div class="fx_yes">确认</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<nav class="footer">
+			<a href="ft_news.html" style="position: relative;">
+				<span class="badge" id="badge"></span>
+				<img class="mui-icon" src="img/icon1.png"></img>
+				<span class="mui-tab-label">消息</span>
+			</a>
+			<a href="ft_job.html">
+				<img class="mui-icon" src="img/icon2.png"></img>
+				<span class="mui-tab-label">工作</span>
+			</a>
+			<a class="mui-active">
+				<img class="mui-icon" src="img/icon3f.png"></img>
+				<span class="mui-tab-label">个人</span>
+			</a>
+		</nav>
+		
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/foot.js" ></script>
+		<script>
+			$('.fn_flex').hide();
+			$('.firstblock li').click(function(){
+				$('.fn_flex').eq($(this).index()).show();
+			})
+			$('.fx_no').click(function(){
+				$('.fn_flex').hide();
+				$('.ipt input').val('');
+			})
+			$('.fx_yes').click(function(){
+				$('.fn_flex').hide();
+				$('.ipt input').val('');
+			})
+		</script>
+	</body>
+</html>

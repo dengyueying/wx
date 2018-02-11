@@ -59,26 +59,11 @@
 					</li>-->
 				<!--</ul>-->
 				<div class="head pad">
-						<p class="title">按分类</p>
-						<img src="img/classify.png" class="classify"/>
-					</div>
+					<p class="title">按分类</p>
+					<img id="test" src="img/classify.png" class="classify"/>
+				</div>
 				<ul class="list pad">
-					<li id="leave">
-						<img src="img/work1.png"/>
-						<p>请假</p>
-					</li>
-					<li id="total">
-						<img src="img/work1.png"/>
-						<p>报销</p>
-					</li>
-					<li>
-						<img src="img/work1.png"/>
-						<p>加班</p>
-					</li>
-					<li>
-						<img src="img/work1.png"/>
-						<p>考勤</p>
-					</li>
+					
 				</ul>
 			</div>
 			<div id="tabbar-with-chat" class="mui-control-content job-chat">
@@ -132,53 +117,5 @@
 	</body>
 	<script src="js/mui.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js" ></script>
-	<script>
-		window.onload=function(){
-			var title = document.getElementById("title");
-			var rt=$("#second").position().left;
-			var rw=$("#second").outerWidth(true);
-			$("#badge").css("left",rt-0+rw-0+2+"px");
-		}
-			//更换标题
-			mui('.mui-bar-tab').on('tap', 'a', function(e) {
-				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
-				var i=$(this).index();
-				var that=this.href;
-				var n=that.indexOf("tabbar");
-				that=that.substr(0,n);
-				that=that+"tabbar"+i+".html";
-				window.history.replaceState(null, null, that);
-			});
-			  
-			  //点击发起工作列表
-			  //时间类
-		      $("#leave").click(function(){
-					mui.openWindow({
-						url: 'createTime.html',
-						id: 'createTime',
-					});
-				});
-				//资金类
-				$("#total").click(function(){
-					mui.openWindow({
-						url: 'create.html',
-						id: 'create',
-					});
-				});
-		      
-		      //待办工作详情
-		       $(".job-chat .list li").click(function(){
-		      	mui.openWindow({
-							url: 'waitWorkDetails.html',
-							id: 'waitWorkDetails',
-						});
-		      });
-		      //工作流
-		      $("#tabbar-with-contact .list li").click(function(){
-				mui.openWindow({
-					url: 'workflow.html',
-					id: 'workflow',
-				});
-			});
-	</script>
+	<script type="text/javascript" src="js/job-tabbar.js" ></script>
 </html>

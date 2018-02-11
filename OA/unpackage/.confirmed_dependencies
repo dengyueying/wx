@@ -1,0 +1,76 @@
+{
+	"footer.html": {
+		"resources": [
+			"img/icon2.png",
+			"css/footer.css",
+			"js/jquery.min.js",
+			"js/rem.min.js",
+			"js/foot.js",
+			"img/icon3f.png",
+			"img/icon1.png",
+			"img/icon2f.png",
+			"css/common.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"img/icon1f.png",
+			"img/icon3.png",
+			"news.html"
+		],
+		"refer": [
+			"my.html",
+			"job.html"
+		]
+	},
+	"news.html": {
+		"resources": [
+			"img/banner.png",
+			"css/news.css",
+			"fonts/mui.ttf",
+			"img/hdlogo.png",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"my.html": {
+		"resources": [
+			"css/my.css",
+			"img/rt.jpg"
+		],
+		"refer": []
+	},
+	"job.html": {
+		"resources": [
+			"img/tb2.png",
+			"img/tb1.png",
+			"img/notice.png",
+			"css/job.css",
+			"img/write.png",
+			"img/tb4.png",
+			"img/tb3.png"
+		],
+		"refer": []
+	},
+	"ft_job.html": {
+		"refer": [
+			"notice.html",
+			"job-tabbar0.html",
+			"news-tabbar0.html"
+		]
+	},
+	"job-tabbar0.html": {
+		"refer": [
+			"ft_job.html"
+		]
+	},
+	"notice.html": {
+		"refer": [
+			"ft_job.html"
+		]
+	},
+	"news-tabbar0.html": {
+		"refer": [
+			"details.html",
+			"ft_job.html"
+		]
+	}
+}

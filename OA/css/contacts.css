@@ -1,0 +1,92 @@
+body{
+	background: #fff;
+}
+.person{
+	width: 100%;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.person .head{
+	height: 1.04rem;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.head i{
+	background: url(../img/create-fail.png) no-repeat;
+	background-size: 100% 100%;
+	width: 0.36rem;
+	height: 0.36rem;
+	position: absolute;
+	left: 0.34rem;
+	top:50%;
+	transform: translateY(-50%);
+	z-index: 66;
+}
+.head p{
+	width: 100%;
+	text-align: center;
+	color: rgb(0,180,230);
+	font-size: 0.34rem;
+}
+.search{
+	background: #F3F3F3 !important;
+	padding: 0.17rem 0.34rem;
+	position: relative;
+}
+.search input{
+	width: 100%;
+	border-radius: 0.04rem;
+	background: #fff;
+	height: 0.72rem !important;
+	line-height: 0.72rem !important;
+	text-align: center !important;
+	font-size: 0.3rem !important;
+}
+.search label{
+	position: absolute;
+	width: 2rem;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #999999;
+	font-size: 0.3rem;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	left: 50%;
+}
+.search .icon-sous2{
+	width: 0.32rem;
+	height: 0.3rem;
+	background: url(../img/icon-sous2.png) no-repeat;
+	background-size: 100% 100%;
+	margin-right: 0.14rem;
+}
+.search-active label{
+	display: none;
+}
+.people{
+	padding-top: 2.1rem;
+}
+.people li{
+	height: 1.4rem;
+	display: flex;
+	align-items: center;
+	padding: 0.1rem 0.34rem 0;
+	border-bottom: 1px solid rgb(236,237,238);
+}
+.people li img{
+	width: 0.98rem;
+	height: 0.98rem;
+	border-radius: 0.1rem;
+	margin-right: 0.22rem;
+}
+.result{
+	line-height: 2rem;
+	text-align: center;
+	display: none;
+}

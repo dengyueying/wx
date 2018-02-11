@@ -1,0 +1,50 @@
+.list{
+	background: #F4F4F4;
+	padding-bottom: 0.2rem;
+}
+.list li{
+	background: #fff;
+	border-radius: 0.1rem;
+	margin-top: 0.23rem;
+	padding: 0 0.7rem 0.32rem;
+}
+.list li:first-child{
+	margin-top: 0.2rem;
+}
+.title{
+	font-size:0.32rem;
+	color: #1a1a1a;
+	padding-top: 0.46rem;
+	padding-bottom: 0.23rem;
+	line-height: 0.32rem;
+}
+.text{
+	color: #666;
+	font-size: 0.3rem;
+	line-height: 0.4rem;
+	padding: 0.17rem 0;
+}
+.look{
+	line-height: 0.32rem;
+	padding-top: 0.19rem;
+	color: #00abe6;
+}
+.look a{
+	color: rgb(0,166,228);
+	font-size: 0.32rem;
+}
+.release-time{
+	padding-top: 0.2rem;
+	display: flex;
+	justify-content: center;
+}
+.release-time span{
+	height: 0.44rem;
+	margin: 0 auto;
+	line-height: 0.44rem;
+	background: #c3c2c2;
+	border-radius: 0.08rem;
+	font-size: 0.24rem;
+	padding:0 0.1rem;
+	color: #fff;
+}

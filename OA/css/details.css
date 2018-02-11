@@ -1,0 +1,67 @@
+section
+.content{
+	background: #fff;
+	margin-top: 0.2rem;
+}
+.content .title{
+	font-size: 0.32rem;
+	line-height: 0.32rem;
+	color: rgb(0,166,228);
+	padding-top: 0.46rem;
+	padding-bottom: 0.23rem;
+	border-bottom: 1px solid rgb(236,237,238);
+}
+
+.content .text {
+    color: #666;
+    font-size: 0.3rem;
+    line-height: 0.4rem;
+     padding-top: 0.17rem; 
+     padding-bottom: 0.4rem;
+}
+.pic-list li,.chain-list li{
+	display: flex;
+	align-items: center;
+}
+.pic-list li{
+	padding: 0.15rem 0;
+	border-bottom: 1px solid rgb(236,237,238);
+}
+.pic-list li img{
+	width: 1rem;
+	height: 1rem;
+	margin-right: 0.31rem;
+	display: block;
+}
+.pic-list li .tet{
+	color: #666666;
+	font-size: 0.32rem;
+}
+.chain-list{
+	padding-top: 0.19rem;
+	padding-bottom: 0.46rem;
+}
+.chain-list li{
+	padding-bottom: 0.1rem;
+}
+.chain-list li img{
+	width: 0.5rem;
+	height: 0.5rem;
+	margin-right: 0.33rem;
+	display: block;
+}
+.chain-list .tet{
+	color: #999999;
+	font-size: 0.28rem;
+}
+.tost{
+	padding-bottom: 0.46rem;
+}
+.tost p{
+	color: #999999;
+	font-size: 0.28rem;
+	line-height: 0.28rem;
+}
+.release{
+	margin-top: 0.19rem;
+}

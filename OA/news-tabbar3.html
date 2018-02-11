@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>新闻</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/head3.css" />
+		<link rel="stylesheet" href="css/head2.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/news-tabbar0.css" />
+		<link rel="stylesheet" href="css/news-tabbar3.css" />
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="" class="mui-action-back back"></a>
+			<h1 id="title" class="head-title">已发布</h1>
+			<!--<a class="icon-sous"></a>-->
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item" href="#tabbar">
+				<span class="mui-tab-label">已发布</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-chat">
+				<span class="mui-badge mui-hidden" id="badge"></span>
+				<span class="mui-tab-label" id="second">未读</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-contact">
+				<span class="mui-tab-label">已读</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="#tabbar-with-map">
+				<span class="mui-tab-label">按分类</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<div id="tabbar" class="mui-control-content news">
+				<div class="content pad">
+					<ul class="list"></ul>
+					<div class="mui-pull-bottom-pocket mui-block mui-visibility mui-hidden">
+						<div class="mui-pull">
+							<div class="mui-pull-caption mui-pull-caption-refresh">没有更多新闻了</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tabbar-with-chat" class="mui-control-content news mui-active">
+				<div class="content pad">
+					<ul class="list"></ul>	
+					<div class="mui-pull-bottom-pocket mui-block mui-visibility mui-hidden">
+						<div class="mui-pull">
+							<div class="mui-pull-caption mui-pull-caption-refresh">没有更多新闻了</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tabbar-with-contact" class="mui-control-content news">
+				<div class="content pad">
+					<ul class="list"></ul>	
+					<div class="mui-pull-bottom-pocket mui-block mui-visibility mui-hidden">
+						<div class="mui-pull">
+							<div class="mui-pull-caption mui-pull-caption-refresh">没有更多新闻了</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tabbar-with-map mui-active" class="mui-control-content news-map">
+				<ul class="mui-table-view list classify"></ul>
+				<div class="mui-pull-bottom-pocket mui-block mui-visibility mui-hidden">
+					<div class="mui-pull">
+						<div class="mui-pull-loading mui-icon mui-spinner mui-visibility"></div>
+						<div class="mui-pull-caption mui-pull-caption-refresh">没有更多分类了</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript" src="js/news-tabber.js" ></script>
+</html>

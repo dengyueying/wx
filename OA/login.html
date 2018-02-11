@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>发布</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/head3.css" />
+		<link rel="stylesheet" href="css/head2.css" />
+		<link rel="stylesheet" href="css/login.css" />
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="" class="mui-action-back back"></a>
+			<h1 id="title" class="head-title">返回</h1>
+		</header>
+		<section>
+		<div class="box">
+			<input type="number" id="number" oninput="if(value.length>12)value=value.slice(0,12)" placeholder="绑定工号"/>
+			<input type="password" id="password" oninput="if(value.length>12)value=value.slice(0,12)" placeholder="设置密码"/>
+			<input type="password" id="again" oninput="if(value.length>12)value=value.slice(0,12)" placeholder="再次输入"/>
+			<button type="button" class="mui-btn mui-btn-block" id="btn"><a>确认</a></button>
+		</div>	
+		</section>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script>
+			//工号
+			$("#number").on("input",function(){
+				$(this).val($(this).val().trim());
+				if(isNaN($(this).val())){
+					$(this).val($(this).val().replace(/[^0-9-]+/,''));
+				}
+			});
+			$("#btn").click(function() {
+				mui.openWindow({
+					url: 'ft_job.html',
+					id: 'ft_job',
+				});
+			});
+			$("#title").click(function() {
+				mui.openWindow({
+					url: 'job-tabbar0.html',
+					id: 'job-tabbar0',
+				});
+			});
+		</script>
+	</body>
+
+</html>

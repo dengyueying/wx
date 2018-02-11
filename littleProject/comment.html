@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>评论</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/comment.css" />
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/rem.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/comment.js" ></script>
+	</head>
+
+	<body>
+		<div class="content">
+			<div class="head">
+				<div class="comhead pad">
+					<span class="plun">评论</span>
+					<div class="star">
+						<img src="img/star4.png"/>
+						<img src="img/star4.png"/>
+						<img src="img/star4.png"/>
+						<img src="img/star4.png"/>
+						<img src="img/star4.png"/>
+					</div>
+					<span class="rate">99.9%好评</span>
+				</div>
+				<ul class="list-classify" id="list-classify">
+					<li class="active">全部&nbsp;&nbsp;(999)</li>
+					<li>有图&nbsp;&nbsp;(111)</li>
+					<li>质量不错&nbsp;&nbsp;(111)</li>
+					<li>做工不错&nbsp;&nbsp;(111)</li>
+					<li>差评&nbsp;&nbsp;(19)</li>
+					<li>有图&nbsp;&nbsp;(111)</li>
+					<li>质量不错&nbsp;&nbsp;(111)</li>
+					<li>做工不错&nbsp;&nbsp;(111)</li>
+					<li>差评&nbsp;&nbsp;(19)</li>
+				</ul>
+				<p class="more" id="more"><i class="icon"></i></p>	
+			</div>
+			<ul class="list">
+				<li class="pad">
+					<div class="subhead">
+						<img class="portrait" src="img/portrait.png"/>
+						<span class="name">王先森的账号</span>
+						<div class="star">
+							<img src="img/star4.png"/>
+							<img src="img/star4.png"/>
+							<img src="img/star4.png"/>
+							<img src="img/star4.png"/>
+							<img src="img/star4.png"/>
+						</div>
+					</div>
+					<p class="text">比想象中精致 点缀色略亮 若能电镀得更浅一点会更好看 有两长度可调节 喜欢喜欢</p>
+					<div class="pic">
+						<img src="img/pic1.png"/>
+						<img src="img/pic1.png"/>
+						<img src="img/pic1.png"/>
+						<img src="img/pic1.png"/>
+						<img src="img/pic1.png"/>
+					</div>
+					<p class="info"><span class="time">2017-12-12 12:12</span><span class="color">灰色</span></p>
+				</li>
+				<li class="pad">
+					<div class="subhead">
+						<img class="portrait" src="img/portrait.png"/>
+						<span class="name">王先森</span>
+						<div class="star">
+							<img src="img/star4.png"/>
+							<img src="img/star4.png"/>
+							<img src="img/star4.png"/>
+							<img src="img/star4.png"/>
+							<img src="img/star4.png"/>
+						</div>
+					</div>
+					<p class="text">比想象中精致 点缀色略亮 若能电镀得更浅一点会更好看 有两长度可调节 喜欢喜欢</p>
+					<div class="pic">
+						<img src="img/pic1.png"/>
+						<img src="img/pic1.png"/>
+					</div>
+					<p class="info"><span class="time">2017-12-12 12:12</span><span class="color">灰色</span></p>
+				</li>
+			</ul>
+		</div>
+		<script>
+			//查看更多评论分类
+			$("#more").on("click",function(){
+				if($(this).children().hasClass("icon-top")){
+					$(this).children().removeClass("icon-top");
+					$("#list-classify").css("overflow","hidden");
+					$("#list-classify").css("height","1.64rem");
+				}
+				else{
+					$(this).children().addClass("icon-top");
+					$("#list-classify").css("overflow","auto");
+					$("#list-classify").css("height","auto");
+				}
+			});
+			//账户名称隐藏
+			$(".subhead .name").each(function(){
+				if($(this).html().length==2){
+					$(this).html($(this).html().substr(0,1)+"****");
+				}
+				if($(this).html().length>2){
+					$(this).html($(this).html().substr(0,1)+"****"+$(this).html().substr($(this).html().length-1,1));
+				}
+			})
+		</script>
+	</body>
+
+</html>

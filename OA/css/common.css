@@ -1,0 +1,76 @@
+* {
+	-webkit-user-select: none;
+	-ms-touch-select: none;
+	margin: 0;
+	padding: 0;
+/*
+	-ms-touch-action: none;
+*/
+}
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+	font-size: 0.26rem;
+	-webkit-touch-callout:none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-text-size-adjust:none;
+	background: none;
+	line-height: normal;
+	background: url(../img/waiter.png);
+	background-size: 100%;
+}
+p{margin-bottom: 0;}
+i,em,var{font-style: normal;}
+li{list-style: none;}
+.fl-cb{clear: both;}
+a{color: inherit;}
+a:active{color: inherit;}
+.fl-dn{display: none;}
+.header{
+	height: 1rem;
+	line-height: 1rem;
+	background: #00abe6;
+	color: white;
+}
+.wrap_pad{padding: 0 0.34rem;}
+.fl_lt{float: left;}
+.fl_rt{float: right;}
+.header .fl_lt{
+	font-size: 0.42rem;
+}
+.header .fl_lt img{
+	width: 0.45rem;
+	margin-left: 0.1rem;
+}
+.header .fl_rt{
+	width: 0.42rem;
+	margin-top: calc(0.5rem - 0.21rem);
+}
+.br_bm{
+	border-bottom: 0.2rem solid #f3f3f3;
+}
+.fn_flex{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.content{
+	padding-bottom: 0.98rem;
+}
+.badge,.badge2{
+	position: absolute;
+	background: red;
+	color: #fff;
+	width: 0.4rem;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	text-align: center;
+	/*font-size: 0.1rem;*/
+	border-radius: 50%;
+	top: 0.08rem;
+	left: 55%;
+}
